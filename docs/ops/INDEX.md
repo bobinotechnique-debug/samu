@@ -2,6 +2,8 @@
 
 This index governs operational records, including guard behaviors and error logs.
 
+- Status and inventory: docs/STATUS_SUMMARY.md.
+
 ## Files
 - docs/ops/agent_errors.md - mandatory failure memory log.
 

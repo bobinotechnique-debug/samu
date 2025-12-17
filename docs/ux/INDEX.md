@@ -2,6 +2,8 @@
 
 This index mirrors ux/INDEX.md and consolidates UX research, flow documentation, and component contracts.
 
+- Status and inventory: docs/STATUS_SUMMARY.md.
+
 - Primary UX notes live in ux/INDEX.md.
 - Roadmap alignment and AGENT.md precedence are mandatory before changes.
 - Maintain ASCII-only content for automation compatibility.
