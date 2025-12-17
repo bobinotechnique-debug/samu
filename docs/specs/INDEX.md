@@ -10,6 +10,9 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/04_architecture_principles.md - authoritative architecture rules and enforcement tests.
 - docs/specs/05_domain_contracts.md - explicit inputs/outputs/ownership for core domain interactions.
 - docs/specs/06_known_failure_patterns.md - detection and prevention rules for recurrent errors and drifts.
+- docs/specs/07_data_ownership.md - authoritative ownership boundaries and required identifiers.
+- docs/specs/08_rbac_model.md - enforceable role definitions, permissions, and evaluation order.
+- docs/specs/09_audit_and_traceability.md - mandatory audit coverage, fields, retention, and correlation rules.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
