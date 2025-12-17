@@ -56,3 +56,10 @@ Describe the canonical board UX for mission planning and assignment coordination
 ## Ownership and Audit Notes
 - Cards MUST display organization_id and project_id context; cross-organization mixing is forbidden.
 - Audit links from mission cards SHOULD reference docs/specs/09_audit_and_traceability.md requirements without duplicating audit payloads.
+
+## Component Cross-links
+- Card-level collaborator display MUST follow docs/ux/components/03_avatar_stack.md.
+- Inline conflict or restriction cues MUST use docs/ux/components/04_conflict_badge.md.
+- Board filter controls MUST align with docs/ux/components/05_filter_bar.md and use only API-compliant parameters.
+- Tabular mission details rendered from the board MUST apply docs/ux/components/01_data_table.md.
+- Timeline previews or jumps from the board MUST use docs/ux/components/02_timeline_bar.md for consistent range depiction.

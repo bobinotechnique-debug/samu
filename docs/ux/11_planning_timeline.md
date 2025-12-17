@@ -56,3 +56,10 @@ Define the authoritative timeline UX for viewing and coordinating mission schedu
 ## Ownership and Audit Notes
 - All views MUST display organization_id and project_id context prominently.
 - Mission selections SHOULD surface audit links aligned with docs/specs/09_audit_and_traceability.md without duplicating audit payloads.
+
+## Component Cross-links
+- Timeline bars MUST follow docs/ux/components/02_timeline_bar.md for rendering mission ranges and inspection intents.
+- Filter controls MUST follow docs/ux/components/05_filter_bar.md for applying timeline filters without custom parameters.
+- Inline conflict indicators MUST use docs/ux/components/04_conflict_badge.md.
+- Mission detail tables or listings within the timeline context MUST apply docs/ux/components/01_data_table.md.
+- Collaborator presence shown alongside missions MUST follow docs/ux/components/03_avatar_stack.md.
