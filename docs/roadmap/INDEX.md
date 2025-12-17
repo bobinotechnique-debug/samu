@@ -21,6 +21,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-08.md - Phase 1 Step 08: Roadmap and execution sheets (Proposed).
 - docs/roadmap/phase1/step-09.md - Phase 1 Step 09: Inventory and equipment management (Proposed).
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Proposed).
+- docs/roadmap/phase1/step-11.md - Phase 1 Step 11: cross-domain read models and integration rules (Active).
 - docs/specs/18_cross_domain_read_models.md - Phase 1 Step 11: cross-domain read models and projections (Active).
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.

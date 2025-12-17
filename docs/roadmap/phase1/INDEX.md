@@ -14,7 +14,7 @@ Active; executing Step 04 to lock API and integration conventions; Steps 05-07 c
 - docs/roadmap/phase1/step-08.md - Phase 1 Step 08: Roadmap and execution sheets (Status: Proposed).
 - docs/roadmap/phase1/step-09.md - Phase 1 Step 09: Inventory and equipment management (Status: Proposed).
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Status: Proposed).
-- Phase 1 Step 11: Cross-domain read models and integration rules documented in docs/specs/18_cross_domain_read_models.md and docs/specs/19_domain_integration_rules.md (Status: Active).
+- docs/roadmap/phase1/step-11.md - Phase 1 Step 11: Cross-domain read models and integration rules (Status: Active; delivers docs/specs/18_cross_domain_read_models.md and docs/specs/19_domain_integration_rules.md).
 
 ## Notes
 - Phase 1 prohibits backend, frontend, and infrastructure code changes; scope is limited to documentation artifacts.
