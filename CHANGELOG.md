@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-22 - Phase 1 Extended Domain Specifications (Proposed Steps 08-10)
+- Added docs/specs/17_phase1_extended_domains.md capturing roadmap execution, inventory/equipment, and finance/accounting contracts under documentation-only scope.
+- Registered Phase 1 roadmap Steps 08-10 as Proposed with dedicated step files and index updates for navigation and dependencies.
+- Updated roadmap next steps to include the extended domains while keeping Phase 1 constraints and sequencing intact.
+
 ## 2025-12-21 - Phase 1 Step 07 UI Page Contracts Registration
 - Registered Phase 1 Step 07 roadmap entry with status Done and linked deliverables.
 - Updated roadmap indexes and next steps to include the Step 07 UI page contracts alongside prior steps.
