@@ -21,6 +21,7 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/14_visual_language.md - Semantic visual language and interaction tokens for UX surfaces.
 - docs/specs/15_ui_component_contracts.md - UI component rules, state model, and accessibility baseline aligned to visual language and API conventions.
 - docs/specs/16_ui_page_contracts.md - UI page contract rules, navigation, shared state, and forbidden patterns.
+- docs/specs/17_phase1_extended_domains.md - Extended Phase 1 contracts for roadmap execution, inventory/equipment, and finance/accounting domains (Proposed Steps 08-10).
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents

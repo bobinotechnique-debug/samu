@@ -20,6 +20,7 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/14_visual_language.md - semantic visual tokens and state rules for consistent UX surfaces.
 - docs/specs/15_ui_component_contracts.md - global UI component rules, state model, accessibility, and forbidden patterns.
 - docs/specs/16_ui_page_contracts.md - page-level contracts assembling approved components with navigation, RBAC, and audit rules.
+- docs/specs/17_phase1_extended_domains.md - extended Phase 1 contracts for roadmap execution, inventory/equipment, and finance/accounting domains (Proposed Steps 08-10).
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
