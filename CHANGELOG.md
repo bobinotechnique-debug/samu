@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-19 - Phase 1 Step 03 Data Ownership, RBAC, and Audit Rules
+- Added Phase 1 Step 03 roadmap entry to lock data ownership, RBAC, and audit constraints.
+- Published authoritative data ownership, RBAC, and audit/traceability specifications under docs/specs/ with index updates.
+- Updated roadmap navigation and cross-links in existing specs to reference the new authoritative rules.
+
 ## 2025-12-18 - Phase 1 Step 02 Documentation Guardrails
 - Added Phase 1 Step 02 roadmap entry covering architecture principles, domain contracts, and failure patterns.
 - Published architecture principles, domain interaction contracts, and known failure patterns under docs/specs/ with index updates.
