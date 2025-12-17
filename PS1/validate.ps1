@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
-
 param(
     [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')),
     [switch]$Strict
 )
+
+$ErrorActionPreference = 'Stop'
 
 $resolvedRepoRoot = (Resolve-Path -Path $RepoRoot).Path
 
