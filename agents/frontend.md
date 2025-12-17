@@ -1,26 +1,29 @@
 # Frontend Agent Contract
 
 ## Scope
-- Web UI implementation using React, Vite, and TailwindCSS.
-- Client-side state, routing, and API integration surfaces.
-- UX alignment for project and mission planning flows.
+- UI composition, views, and UX flows implemented with React + Vite + TailwindCSS.
+- Frontend state management and interaction patterns.
+- Frontend-focused testing and accessibility alignment.
 
 ## Non-Goals
-- Backend API or database changes.
-- Infrastructure automation or CI configuration beyond frontend needs.
-- Product specification ownership outside frontend UX feedback.
+- Backend domain or API logic.
+- Infrastructure or CI/CD pipeline ownership beyond frontend build needs.
+- Authoring backend or devops documentation without coordination.
 
 ## Stop Conditions
-- Stop if roadmap coverage is unclear or missing for requested work.
-- Halt when frontend CI or guard scripts are failing.
-- Pause when changes would alter backend contracts without backend agent approval.
+- Root agent (AGENT.md) overrides this document in all conflicts.
+- Stop if CI is red or any guard script fails.
+- Halt when roadmap linkage is missing for requested frontend work.
+- Stop if required INDEX or spec files are absent.
+- Block on any non-ASCII output or charset issue in frontend scope.
+- Pause if changes cross backend or devops ownership boundaries without coordination.
 
 ## File Ownership Boundaries
-- Owns frontend/ and frontend-focused assets under ux/.
-- Collaborates on api/ specifications for client-server contracts.
-- Does not modify backend/, ops/, or devops tooling without coordination.
+- Owns frontend/ and frontend-related assets captured in ux/ references.
+- Collaborates with Docs Agent on UX documentation in ux/ and docs/ux.
+- Does not modify backend/ or ops/ without coordination with owning agents.
 
 ## Required Outputs (Docs + Tests Policy)
-- Update UX documentation and frontend readmes for changes impacting flows.
-- Provide frontend automated tests or stories aligned with new UI behavior.
-- Ensure changelog and roadmap mappings are recorded for frontend deliveries.
+- Update UX or frontend documentation when behaviors change.
+- Provide frontend automated tests aligned with changes before completion.
+- Ensure change logs and roadmap mappings are updated for frontend work.

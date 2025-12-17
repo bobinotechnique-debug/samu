@@ -11,8 +11,11 @@
 - Managing runtime infrastructure.
 
 ## Stop Conditions
-- Stop if roadmap linkage for documentation updates is absent.
-- Halt when documentation conflicts with AGENT.md or owner guidance.
+- Root agent (AGENT.md) overrides this document in all conflicts.
+- Stop if CI is red or any guard script fails.
+- Halt when roadmap linkage for documentation updates is absent.
+- Stop if required INDEX or spec files are missing.
+- Block on any non-ASCII output or charset issue in documentation scope.
 - Pause if requested changes cross into owned code areas without coordination.
 
 ## File Ownership Boundaries

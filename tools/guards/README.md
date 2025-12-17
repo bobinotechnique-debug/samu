@@ -1,11 +1,12 @@
-# Guard Framework Placeholder
+# Guard Framework
 
-This directory will host guard definitions and supporting scripts for CI and local validation.
+Phase 0 introduces guard stubs to enforce repository hygiene. All scripts are ASCII-only PowerShell files and must fail loudly on violations.
 
-Planned guard categories:
-- Security and secret scanning
-- Formatting and linting enforcement
-- Dependency and supply chain validation
-- Environment readiness checks
+## Scripts
+- ascii_guard.ps1 — scans the repository for non-ASCII characters.
+- docs_guard.ps1 — ensures required documentation index files are present.
+- roadmap_guard.ps1 — validates that Phase 0 roadmap status is marked Done.
+- agents_guard.ps1 — confirms sub-agent files exist and restate AGENT.md precedence.
 
-No guards are implemented during Phase 0. Future phases must populate this directory with documented guard behaviors and invocation instructions.
+## Usage
+Run guards individually or chain them from PS1/guards.ps1. Any failure blocks progress per AGENT.md stop conditions.

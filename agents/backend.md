@@ -11,9 +11,12 @@
 - Documentation governance beyond backend specifications.
 
 ## Stop Conditions
-- Proceed only when relevant roadmap step exists and is approved.
-- Stop if CI for backend scope is failing or guards indicate blocking issues.
-- Halt if requested change crosses frontend or devops ownership boundaries.
+- Root agent (AGENT.md) overrides this document in all conflicts.
+- Stop if CI is red or any guard script fails.
+- Halt when roadmap linkage is missing for requested backend work.
+- Stop if required INDEX or spec files are absent.
+- Block on any non-ASCII output or charset issue in backend scope.
+- Pause if changes cross frontend or devops ownership boundaries without coordination.
 
 ## File Ownership Boundaries
 - Owns backend/ and backend-specific scripts under PS1/ related to backend testing or maintenance.
