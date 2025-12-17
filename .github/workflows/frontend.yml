@@ -1,0 +1,11 @@
+name: Frontend Placeholder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Frontend CI placeholder
+        run: echo "Phase 0 placeholder - no frontend checks implemented."

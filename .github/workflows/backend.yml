@@ -1,0 +1,11 @@
+name: Backend Placeholder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Backend CI placeholder
+        run: echo "Phase 0 placeholder - no backend checks implemented."

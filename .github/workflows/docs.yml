@@ -1,0 +1,11 @@
+name: Docs Placeholder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docs CI placeholder
+        run: echo "Phase 0 placeholder - no docs checks implemented."
