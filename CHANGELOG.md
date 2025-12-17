@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2025-12-24 - Phase 1 Step 11 Roadmap Registration
+- Added docs/roadmap/phase1/step-11.md to log scope, deliverables, and acceptance criteria for cross-domain read models and integration guardrails.
+- Updated roadmap indexes and next steps to register Step 11 navigation alongside existing Phase 1 sequencing.
+
 ## 2025-12-23 - Phase 1 Step 11 Cross-Domain Read Models and Integration Rules
 - Added docs/specs/18_cross_domain_read_models.md documenting authoritative read-only projections across Planning, Inventory, Finance, and Operations with snapshot and versioning requirements.
 - Added docs/specs/19_domain_integration_rules.md capturing read-layer integration guardrails to prevent hidden coupling and enforce Phase 1 constraints.
