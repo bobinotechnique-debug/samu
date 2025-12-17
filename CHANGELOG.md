@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-25 - Phase 1 Lock Charter and AGENT 2.5.0
+- Added docs/roadmap/phase1/step-14.md to seal Phase 1 with immutability, amendment, and non-regression rules.
+- Updated roadmap indexes and next steps to mark Phase 1 as LOCKED and register Step 14 navigation.
+- Bumped AGENT.md to version 2.5.0 declaring the locked Phase 1 baseline and enforcement rules.
+
 ## 2025-12-24 - Phase 1 Step 11 Roadmap Registration
 - Added docs/roadmap/phase1/step-11.md to log scope, deliverables, and acceptance criteria for cross-domain read models and integration guardrails.
 - Updated roadmap indexes and next steps to register Step 11 navigation alongside existing Phase 1 sequencing.
