@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-27 - Phase 1 Step 16 UI Page Contracts and Roadmap Reconciliation
+- Registered Phase 1 Steps 15-20 in the roadmap index with reconciliation notes for the Step 07 numbering gap.
+- Added roadmap entries for Steps 15 and 16, including a reconciliation note and deliverable tracking.
+- Published Step 16 UI page contracts for planning, mission, collaborator, and project pages using approved components and updated UX indexes.
+
 ## 2025-12-26 - Phase 1 Repo Consistency
 - Phase 1 repo consistency: created missing step/spec/index files for Steps 01 and 13.
 

@@ -19,6 +19,12 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: Locations and maps contracts (Status: Proposed).
 - docs/roadmap/phase1/step-13-notifications-and-messaging.md - Phase 1 Step 13: Notifications and messaging contracts (Status: Proposed).
 - docs/roadmap/phase1/step-14.md - Phase 1 Step 14: Global lock and non-regression charter (Status: Locked; seals Phase 1 scope and establishes amendment path).
+- docs/roadmap/phase1/step-15.md - Phase 1 Step 15: UI component contracts (Status: Done; reconciled registration to align numbering).
+- docs/roadmap/phase1/step-16.md - Phase 1 Step 16: UI page contracts for planning, mission, collaborator, and project surfaces (Status: Done; resumes numbering without renumbering prior artifacts).
+- docs/roadmap/phase1/step-17.md - Phase 1 Step 17: Domain object contracts (Status: Proposed).
+- docs/roadmap/phase1/step-18.md - Phase 1 Step 18: Planning rules and constraints contract (Status: Proposed).
+- docs/roadmap/phase1/step-19.md - Phase 1 Step 19: State machines and lifecycles (Status: Proposed).
+- docs/roadmap/phase1/step-20.md - Phase 1 Step 20: Permissions and responsibility matrix (Status: Proposed).
 
 ## Notes
 - Step 14 lock: statuses listed above are historical; all artifacts are sealed and any update requires a Step 14 amendment with migration notes.
@@ -33,3 +39,5 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - Step 09 documents equipment catalog, availability, and conflict rules bound to organization/project scopes under Steps 02-04 constraints.
 - Step 10 records finance and accounting contracts aligned to ownership, RBAC, audit, identifier, and API conventions defined in Steps 02-04.
 - Step 14 locks the entire Phase 1 roadmap and requires formal amendment specs for any changes to the sealed artifacts.
+- Step 15 registers the validated UI component contracts without renumbering earlier artifacts and anchors the numbering sequence after the Step 07 registration gap.
+- Step 16 assembles the validated components into page contracts and continues the roadmap numbering for subsequent steps.
