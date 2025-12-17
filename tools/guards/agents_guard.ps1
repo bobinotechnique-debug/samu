@@ -1,6 +1,10 @@
+param(
+    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..' '..')).Path,
+    [switch]$Strict
+)
+
 $ErrorActionPreference = 'Stop'
 
-$repoRoot = Split-Path -Path (Split-Path -Path $PSScriptRoot -Parent) -Parent
 $agents = @(
     'agents/backend.md',
     'agents/frontend.md',
@@ -9,29 +13,41 @@ $agents = @(
 )
 
 $missing = @()
-$violations = @()
+$precedenceViolations = @()
+$headerViolations = @()
 
 foreach ($agent in $agents) {
-    $fullPath = Join-Path $repoRoot $agent
+    $fullPath = Join-Path $RepoRoot $agent
     if (-not (Test-Path -Path $fullPath)) {
         $missing += $agent
         continue
     }
 
     $content = Get-Content -Path $fullPath -Raw
+
     if ($content -notmatch 'Root agent \(AGENT\.md\) overrides') {
-        $violations += $agent
+        $precedenceViolations += $agent
+    }
+
+    $headerLine = ($content -split "`n")[0]
+    if (-not $headerLine.Trim().StartsWith('#')) {
+        $headerViolations += $agent
     }
 }
 
 if ($missing.Count -gt 0) {
     Write-Error "Agents guard failed. Missing agents: $($missing -join ', ')"
-    exit 1
+    throw 'Required agent files are missing.'
 }
 
-if ($violations.Count -gt 0) {
-    Write-Error "Agents guard failed. Precedence not declared in: $($violations -join ', ')"
-    exit 1
+if ($precedenceViolations.Count -gt 0) {
+    Write-Error "Agents guard failed. Precedence not declared in: $($precedenceViolations -join ', ')"
+    throw 'Agent precedence violations detected.'
+}
+
+if ($headerViolations.Count -gt 0) {
+    Write-Error "Agents guard failed. Missing agent header lines in: $($headerViolations -join ', ')"
+    throw 'Agent headers are missing.'
 }
 
 Write-Output 'Agents guard passed.'
