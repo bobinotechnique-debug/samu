@@ -51,6 +51,12 @@ Provide a structured tabular presentation of mission, project, or assignment dat
 - Focus order MUST follow row and column order; keyboard shortcuts MUST cover sorting and pagination intents.
 - Error and state messages MUST be announced to assistive technologies.
 
+## Integration Notes
+- Sorting, pagination, and filtering tokens MUST match docs/specs/10_api_conventions.md without adding derived fields or client-only parameters.
+- Ownership context (organization_id, project_id) MUST be visible when provided and masked only by parent RBAC decisions.
+- correlation_id from docs/specs/11_api_error_model.md MUST be displayed when supplied; retry intents MUST not mutate state directly.
+- Time fields or identifiers shown in rows MUST honor docs/specs/13_identifiers_and_time.md formatting and cannot be reformatted locally.
+
 ## Allowed Usage Contexts
 - Mission detail drawers, planning board cards expanding into tables, timeline side panels, and mission flow summaries.
 

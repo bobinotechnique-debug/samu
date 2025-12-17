@@ -45,6 +45,12 @@ Display grouped collaborator presence and availability cues for missions or assi
 - Focus order MUST respect visual order; keyboard activation MUST trigger inspection intents.
 - Overflow indicators MUST be reachable via keyboard and announce the number of hidden collaborators.
 
+## Integration Notes
+- Collaborator attributes (roles, availability, conflicts) MUST originate from parent views that enforce docs/specs/08_rbac_model.md; the component MUST NOT infer or recalc permissions.
+- correlation_id or audit cues associated with assignment issues MUST be shown when provided and follow docs/specs/11_api_error_model.md messaging.
+- Ownership context MUST be displayed when available; masking rules for forbidden states are determined by the parent view.
+- Image resolution, CDN choices, and caching strategies are entirely upstream; this contract only renders supplied tokens.
+
 ## Allowed Usage Contexts
 - Mission cards on the planning board, timeline row headers, mission detail side panels, and assignment summary sections.
 

@@ -8,6 +8,20 @@ Lock a minimal, reusable design system through authoritative UI component contra
 - Global component behaviors, state model, accessibility baseline, and forbidden patterns.
 - References for UX component specifications under docs/ux/components/.
 
+## Component Catalog (Authoritative Contracts)
+- docs/ux/components/01_data_table.md - tabular presentation of project, mission, or assignment records with sortable, paginated intents only.
+- docs/ux/components/02_timeline_bar.md - time-axis visualization of missions and milestones with navigation and inspection intents.
+- docs/ux/components/03_avatar_stack.md - grouped collaborator avatars with availability or conflict cues provided by parent views.
+- docs/ux/components/04_conflict_badge.md - compact conflict or alert badges that surface severity and lock/forbidden status without resolving issues.
+- docs/ux/components/05_filter_bar.md - consistent filter surface aligned to API parameters and parent-owned query execution.
+
+## Integration Guardrails
+- Contracts are locked for Phase 1 Step 06 and MUST remain documentation-only; any implementation proposals require new roadmap coverage.
+- Inputs and outputs MUST align with docs/specs/10_api_conventions.md, docs/specs/11_api_error_model.md, and docs/specs/13_identifiers_and_time.md with no additional parameters or formats.
+- RBAC, audit, and ownership cues MUST remain visible and unmodified per docs/specs/07_data_ownership.md, docs/specs/08_rbac_model.md, and docs/specs/09_audit_and_traceability.md; masking rules are enforced by parents, not components.
+- Visual language tokens from docs/specs/14_visual_language.md are mandatory; components cannot override spacing, focus rings, or semantic colors.
+- Parent views are responsible for data fetching, mutation, and error correlation; components emit intents only and never call APIs directly.
+
 ## Assumptions
 - Phase 1 prohibits implementation; contracts describe behavior and structure without code or library choices.
 - All API interactions follow docs/specs/10_api_conventions.md and docs/specs/11_api_error_model.md without deviation.

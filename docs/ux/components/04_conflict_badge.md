@@ -41,6 +41,12 @@ Surface conflicts or alerts (e.g., overlapping assignments, permission restricti
 - Badge MUST include accessible text describing the conflict, severity, and state (locked/forbidden) when present.
 - Keyboard activation MUST trigger inspection intent; focus indicator MUST follow docs/specs/14_visual_language.md.
 
+## Integration Notes
+- Conflict detection sources MUST conform to docs/specs/10_api_conventions.md payloads; the badge displays supplied severity without remapping.
+- correlation_id and audit cues MUST be displayed when provided to align with docs/specs/11_api_error_model.md and docs/specs/09_audit_and_traceability.md.
+- RBAC and ownership masking rules remain parent responsibilities; the badge only renders permissible labels and states provided upstream.
+- The badge MUST NOT trigger remediation or mutation flows; inspection intents route to parent-controlled experiences.
+
 ## Allowed Usage Contexts
 - Mission board cards, timeline bars, data table cells, and mission detail headers.
 

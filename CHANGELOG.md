@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-20 - Phase 1 Step 06 UI Component Contracts
+- Registered Phase 1 Step 06 completion in the roadmap with authoritative UI component contracts.
+- Expanded docs/specs/15_ui_component_contracts.md with catalog, integration guardrails, and alignment to prior specs.
+- Added integration notes across docs/ux/components/ contracts to lock API, RBAC, ownership, and audit expectations.
+
 ## 2025-12-19 - Phase 1 Step 03 Data Ownership, RBAC, and Audit Rules
 - Added Phase 1 Step 03 roadmap entry to lock data ownership, RBAC, and audit constraints.
 - Published authoritative data ownership, RBAC, and audit/traceability specifications under docs/specs/ with index updates.
