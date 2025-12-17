@@ -23,6 +23,7 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/17_phase1_extended_domains.md - extended Phase 1 contracts for roadmap execution, inventory/equipment, and finance/accounting domains (Proposed Steps 08-10).
 - docs/specs/18_cross_domain_read_models.md - cross-domain read-only projections for Planning, Inventory, Finance, and Operations (Phase 1 Step 11).
 - docs/specs/19_domain_integration_rules.md - integration guardrails preventing hidden coupling across domains at the read layer (Phase 1 Step 11).
+- docs/specs/20_location_and_maps_contracts.md - location identifiers, hierarchy, and read-only map references for Phase 1 Step 12.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
