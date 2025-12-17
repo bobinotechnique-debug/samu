@@ -10,6 +10,9 @@
 - Infrastructure provisioning outside backend application needs.
 - Documentation governance beyond backend specifications.
 
+## Phase 1 Constraint
+- Phase 1 is documentation-only; pause backend code or infrastructure changes unless a roadmap step authorizes them.
+
 ## Stop Conditions
 - Root agent (AGENT.md) overrides this document in all conflicts.
 - Stop if CI is red or any guard script fails.

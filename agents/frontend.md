@@ -10,6 +10,9 @@
 - Infrastructure or CI/CD pipeline ownership beyond frontend build needs.
 - Authoring backend or devops documentation without coordination.
 
+## Phase 1 Constraint
+- Phase 1 is documentation-only; frontend code or build changes require a roadmap step beyond Phase 1 scope.
+
 ## Stop Conditions
 - Root agent (AGENT.md) overrides this document in all conflicts.
 - Stop if CI is red or any guard script fails.

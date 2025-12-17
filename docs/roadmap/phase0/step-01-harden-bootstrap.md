@@ -19,6 +19,9 @@ Enforce Phase 0 guardrails so bootstrap scaffolding is validated deterministical
 - Local: `pwsh -File PS1/validate.ps1` from the repository root.
 - CI: GitHub Actions validate workflow runs `PS1/validate.ps1` on Windows with pwsh.
 
+## Status
+Done on 2025-12-17; Phase 0 closed after this validation hardening.
+
 ## Risks
 - Guards may need tightening in later phases; extension points should remain clear for future strictness.
 - Non-ASCII content or missing indexes will block merges until corrected.
