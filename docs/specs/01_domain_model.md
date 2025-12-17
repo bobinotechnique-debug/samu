@@ -14,3 +14,8 @@ Capture the high-level entities and relationships for the project-centric planni
 ## Exclusions
 - Detailed API contract payloads or database schemas.
 - Scheduling algorithms or optimization logic.
+
+## Related Specifications
+- Data ownership invariants are expanded in docs/specs/07_data_ownership.md.
+- RBAC scoping aligned to domain entities is defined in docs/specs/08_rbac_model.md.
+- Audit and traceability expectations per entity appear in docs/specs/09_audit_and_traceability.md.

@@ -45,3 +45,8 @@ Define explicit, testable contracts governing interactions between core domains 
 - Outputs: planning timeline draft, dependency map, risk register hook, readiness checks for mission execution.
 - Ownership: Shared between Backend Agent (planning engines) and Docs Agent (spec alignment) when implemented; remains documentation-only in Phase 1.
 - Forbidden Dependencies: Planning without project_id; data ingestion from other organizations; frontend-owned planning calculations; execution triggers without backend validation.
+
+## Related Specifications
+- Data ownership constraints and required identifiers are defined in docs/specs/07_data_ownership.md.
+- Role and permission expectations that govern contract execution are detailed in docs/specs/08_rbac_model.md.
+- Audit obligations for contract-driven events are outlined in docs/specs/09_audit_and_traceability.md.
