@@ -31,6 +31,12 @@ Display grouped collaborator presence and availability cues for missions or assi
 - overflow_expand_requested()
 - retry_requested()
 
+## Stacking, Overflow, and Identity Rules
+- Stacking order follows collaborator priority provided by parents; primary_contact pins to the front and retains a role badge even in overflow.
+- Overflow indicator displays "+N" with a tooltip listing hidden collaborator labels when permitted by RBAC; keyboard focus MUST be able to reach overflow and expand details.
+- Fallback visuals: when images are missing, two-letter initials use deterministic background colors derived from collaborator_id to avoid accidental role encoding; forbidden states replace initials with anonymized silhouettes.
+- Role and availability badges remain visible on each avatar; privacy constraints from parents dictate whether roles are replaced with generic placeholders when collaborator_view is missing.
+
 ## States
 - Loading: placeholder circles with consistent sizing; interactions disabled.
 - Empty: placeholder avatar silhouette with guidance text; no auto-fetch occurs.

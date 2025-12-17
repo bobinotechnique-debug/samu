@@ -36,6 +36,14 @@ Define the authoritative timeline UX for viewing and coordinating mission schedu
 - Navigate to mission board: intent to open the related planning board for the selected mission.
 - Export snapshot: intent to request an export using available API endpoints without redefining payloads.
 
+## Drag and Drop Interaction Contract (Intent Only)
+- Drag sources: mission bars and assignment segments originating from the timeline or handed off from the planning board; collaborator avatars are not draggable in Phase 1.
+- Drop targets: timeline slots within the current project and timeframe; drops outside the visible range require a scroll or jump intent before acceptance. Table rows are NOT valid drop targets.
+- Allowed vs forbidden: drops onto locked or forbidden missions are blocked; conflicted missions may accept drops but badge the ghost with the highest severity present. RBAC validation occurs before enabling drag handles.
+- Ghost preview and snap: ghost shows mission title, new proposed start/end, and conflict/lock badges; snaps to nearest day boundary unless parent provides coarser granularity. No persistence occurs until parent confirms.
+- Multi-select drag: not supported; sequencing changes must be requested through bulk intents in the data table.
+- Keyboard alternative: Alt+Arrow proposes shifting the focused bar by the smallest granularity; Enter confirms intent, Escape cancels; screen readers announce proposed range and whether the drop is permitted.
+
 ## States
 - Loading: skeleton timeline grid preserves column and row structure; filters are disabled until API responses return.
 - Empty: when filters return no missions, show guidance to reset filters or create missions via designated flows.
@@ -52,6 +60,16 @@ Define the authoritative timeline UX for viewing and coordinating mission schedu
 - Filters and sorters MUST pass query parameters defined in docs/specs/10_api_conventions.md and MUST NOT invent new fields.
 - Pagination MUST follow the collection pagination contract from docs/specs/10_api_conventions.md; infinite scroll MUST honor server cursors if provided.
 - Errors MUST display messages from docs/specs/11_api_error_model.md, including correlation_id when available.
+
+## Performance, Scale, and Refresh
+- Timeline rows MAY be virtualized when more than 40 missions are visible; virtualization MUST preserve keyboard traversal order and ensure off-screen rows are not announced to assistive tech.
+- Large time ranges MUST chunk data per docs/specs/10_api_conventions.md pagination; auto-extend scrolling is forbidden unless driven by server cursors.
+- Stale data indicators (last_refreshed timestamp supplied by parents) SHOULD appear above the timeline controls with a manual refresh intent; silent refresh loops are not allowed.
+
+## Exports and Print
+- Export snapshot intent produces a planning run sheet limited to the currently filtered missions and timeframe; export payloads MUST carry organization_id, project_id, timeframe, filter tokens, and generation timestamp.
+- Audit stamp: export metadata MUST include correlation_id when supplied by APIs and the actor who initiated export; badge or footer text MUST display this information.
+- Printable views MUST preserve color-independent indicators (icons and labels for conflicts/locks) to remain legible in grayscale.
 
 ## Ownership and Audit Notes
 - All views MUST display organization_id and project_id context prominently.

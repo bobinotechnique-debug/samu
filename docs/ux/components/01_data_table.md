@@ -37,6 +37,11 @@ Provide a structured tabular presentation of mission, project, or assignment dat
 - row_inspect_requested(row_id)
 - retry_requested()
 
+## Selection and Bulk Actions
+- Selection modes: single-select by default; multi-select enabled only when parent passes a selectable flag. Shift-click extends a contiguous range, Ctrl/Cmd-click toggles individual rows, and keyboard users can use Space to toggle and Shift+Arrow to extend range.
+- Bulk actions: component exposes a bulk_action_requested(action_id, row_ids) intent when parents register available bulk actions; actions MUST be disabled when RBAC or lock flags are present in selection metadata.
+- Confirmation and conflicts: parents MUST surface confirmation copy and conflict summaries before executing bulk intents; the table only surfaces a conflict-present indicator when selection contains rows flagged as conflicted or locked.
+
 ## States
 - Loading: skeleton headers and rows; interaction controls disabled.
 - Empty: table chrome persists with guidance text; no automatic data fetch is triggered.
@@ -56,6 +61,10 @@ Provide a structured tabular presentation of mission, project, or assignment dat
 - Ownership context (organization_id, project_id) MUST be visible when provided and masked only by parent RBAC decisions.
 - correlation_id from docs/specs/11_api_error_model.md MUST be displayed when supplied; retry intents MUST not mutate state directly.
 - Time fields or identifiers shown in rows MUST honor docs/specs/13_identifiers_and_time.md formatting and cannot be reformatted locally.
+
+## Performance and Scale
+- Pagination remains authoritative; virtualization MAY be used for visible rows but MUST preserve keyboard focus order and announce only rendered rows to assistive technologies.
+- Stale data cues (last_refreshed timestamp provided by parent) SHOULD appear above the table when available; refresh_requested intents are not emitted by the component.
 
 ## Allowed Usage Contexts
 - Mission detail drawers, planning board cards expanding into tables, timeline side panels, and mission flow summaries.

@@ -31,8 +31,9 @@ Lock page-level contracts that assemble approved Phase 1 components into authori
 
 ## Navigation and Deep Links
 - Canonical routes must be stable and singular per page; query params carry selection, filter, sort, page cursor, and timeframe.
-- Anchors target structural regions (header, primary surface, side panels) and must not depend on client-only IDs.
-- Deep links preserve filters and time ranges so other users can reproduce the view state.
+- Anchors target structural regions (header, primary surface, side panels) and must not depend on client-only IDs; deep link anchors for mission_id, assignment_id, and conflict_id MUST map to visible UI elements.
+- Deep links preserve filters and time ranges so other users can reproduce the view state; saved view identifiers, when present, MUST also be encoded.
+- State restore: navigating back to a page MUST reapply the last known selection and filter tokens from the URL or saved view; transient modal state (e.g., inspection drawer) is not restored automatically.
 
 ## Audit and RBAC Binding Rules
 - RBAC decisions follow docs/specs/08_rbac_model.md with explicit organization_id and project_id gating.

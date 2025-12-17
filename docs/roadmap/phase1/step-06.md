@@ -22,3 +22,6 @@ Done
 ## Links
 - Specs: docs/specs/15_ui_component_contracts.md
 - UX Components: docs/ux/components/01_data_table.md, docs/ux/components/02_timeline_bar.md, docs/ux/components/03_avatar_stack.md, docs/ux/components/04_conflict_badge.md, docs/ux/components/05_filter_bar.md
+
+## Audit Notes
+- Phase 1 UI/UX gap audit hardened selection/bulk action rules, avatar privacy and overflow handling, conflict severity/type enumeration, filter saved view intents, and performance/refresh expectations without altering implementation scope.

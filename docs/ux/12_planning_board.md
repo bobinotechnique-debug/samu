@@ -36,6 +36,14 @@ Describe the canonical board UX for mission planning and assignment coordination
 - Switch grouping: intent to toggle between status-based and phase-based columns if supported by existing API fields.
 - Refresh data: intent to request the latest board data using pagination or cursor tokens when provided.
 
+## Drag and Drop Interaction Contract (Intent Only)
+- Drag sources: mission cards and assignment chips embedded within cards. Collaborators or equipment are NOT draggable in Phase 1; parents MUST provide alternate intents for reassignment.
+- Drop targets: board columns/lanes that share the same project_id; drops across organizations are forbidden. Timeline drop handoffs emit schedule_proposal intents only when the parent wires them to the planning timeline.
+- Allowed vs forbidden: drops into locked or forbidden columns are blocked with tooltip messaging; RBAC checks must be performed by the parent before enabling drag handles. Conflicted cards may be dragged but MUST show a "conflict present" ghost label.
+- Ghost preview and snap: dragged cards render a ghost showing mission title, status, and conflict/lock badges; ghost snaps to lane boundaries only, never between rows, and does not reorder cards until parent confirms.
+- Multi-select drag: not supported in Phase 1; bulk actions must use the data table selection contract instead.
+- Keyboard alternative: focusable drag handle supports Ctrl/Cmd+Arrow to propose moving to adjacent lanes; Enter confirms intent, Escape cancels. Screen readers announce current lane, target lane, and whether the drop is permitted.
+
 ## States
 - Loading: skeleton columns and cards maintain layout; filters and sorting controls are disabled until data arrives.
 - Empty: present guidance for filter resets or mission creation entry points; no auto-navigation occurs.
@@ -52,6 +60,10 @@ Describe the canonical board UX for mission planning and assignment coordination
 - Filters and sorters MUST use parameters defined in docs/specs/10_api_conventions.md; client-side sorting MUST NOT conflict with server ordering indicators.
 - Pagination or cursor tokens MUST follow docs/specs/10_api_conventions.md; partial reloads MUST honor server-provided cursors.
 - Errors MUST follow docs/specs/11_api_error_model.md; forbidden and locked states MUST align with RBAC responses defined in docs/specs/08_rbac_model.md.
+
+## Performance and Scale
+- Boards with more than 50 cards per lane SHOULD enable virtualization or windowing without breaking keyboard traversal order; only rendered cards may be announced to assistive tech.
+- Stale data indicators (timestamp supplied by parent) SHOULD appear in the header with a manual refresh intent; auto-refresh is forbidden in Phase 1.
 
 ## Ownership and Audit Notes
 - Cards MUST display organization_id and project_id context; cross-organization mixing is forbidden.
