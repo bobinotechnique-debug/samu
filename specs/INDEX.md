@@ -4,6 +4,7 @@
 Catalog technical and product specifications that guide implementation.
 
 ## Expected Documents
+### Phase 1 (Locked)
 - docs/specs/00_glossary.md - Glossary for shared terminology.
 - docs/specs/01_domain_model.md - Domain entity relationships and boundaries.
 - docs/specs/02_project_mission_model.md - Project and mission structure guidelines.
@@ -26,6 +27,8 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/19_domain_integration_rules.md - Integration guardrails preventing hidden coupling across domains at the read layer (Phase 1 Step 11).
 - docs/specs/20_location_and_maps_contracts.md - Location identifiers, hierarchy, and read-only map references for Phase 1 Step 12.
 - docs/specs/21_notifications_and_messaging_contracts.md - Notification and messaging contracts for Phase 1 Step 13 (Proposed).
+
+### Phase 2 (In Progress)
 - docs/specs/20_architecture_HLD.md - High Level Architecture (context, boundaries, sync/async flows, trust boundaries) for Phase 2 Step 01.
 - docs/specs/21_architecture_LLD.md - Low Level Architecture (package layout, layering, dependency rules) for Phase 2 Step 02.
 - docs/specs/22_persistence_model.md - Persistence model with tables, relations, indexes, and soft delete rules for Phase 2 Step 03.

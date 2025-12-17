@@ -18,6 +18,7 @@ Provide a routing map for all high-level documentation artifacts.
 - Planning and process guides
 - Error learning records (see docs/ops/agent_errors.md)
 - Supporting references linked from specs/, api/, ux/, and ops/
+- Phase 2 architecture specs (see docs/specs/20_architecture_HLD.md)
 
 ## Ownership
 Docs Agent (agents/docs.md)
