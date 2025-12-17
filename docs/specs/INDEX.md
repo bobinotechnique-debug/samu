@@ -7,6 +7,9 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/01_domain_model.md - high-level entities and relationships.
 - docs/specs/02_project_mission_model.md - project and mission structuring rules.
 - docs/specs/03_multi_tenancy_and_security.md - tenancy and security guidance.
+- docs/specs/04_architecture_principles.md - authoritative architecture rules and enforcement tests.
+- docs/specs/05_domain_contracts.md - explicit inputs/outputs/ownership for core domain interactions.
+- docs/specs/06_known_failure_patterns.md - detection and prevention rules for recurrent errors and drifts.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.

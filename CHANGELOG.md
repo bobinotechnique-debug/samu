@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-18 - Phase 1 Step 02 Documentation Guardrails
+- Added Phase 1 Step 02 roadmap entry covering architecture principles, domain contracts, and failure patterns.
+- Published architecture principles, domain interaction contracts, and known failure patterns under docs/specs/ with index updates.
+- Updated agent contracts to enforce alignment with new guardrails and recorded roadmap navigation updates.
+
 ## 2025-12-17 - Phase 1 Initiation
 - Closed Phase 0 after completing docs/roadmap/phase0/step-01-harden-bootstrap.md and sealing guardrail validation.
 - Initialized Phase 1 roadmap (docs/roadmap/phase1/step-00.md) focused on foundational documentation with Phase 1 constraints.

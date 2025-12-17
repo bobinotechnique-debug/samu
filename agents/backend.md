@@ -30,3 +30,4 @@
 - Update backend-focused documentation and specs for any behavior or contract change.
 - Provide backend automated tests aligned with changes before completion.
 - Ensure change logs and roadmap mappings are updated for backend work.
+- Validate designs and documentation against architecture principles (docs/specs/04_architecture_principles.md), domain contracts (docs/specs/05_domain_contracts.md), and failure patterns (docs/specs/06_known_failure_patterns.md) before approval.

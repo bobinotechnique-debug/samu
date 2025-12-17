@@ -30,3 +30,4 @@
 - Update UX or frontend documentation when behaviors change.
 - Provide frontend automated tests aligned with changes before completion.
 - Ensure change logs and roadmap mappings are updated for frontend work.
+- Confirm frontend proposals align with architecture principles (docs/specs/04_architecture_principles.md), respect domain contracts (docs/specs/05_domain_contracts.md), and avoid failure patterns (docs/specs/06_known_failure_patterns.md).
