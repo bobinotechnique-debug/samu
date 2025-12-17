@@ -47,6 +47,12 @@ Provide consistent filter controls for planning views without embedding filterin
 - Screen readers MUST announce field labels, selected values, and state (disabled, read-only, locked, forbidden).
 - Clear reset control MUST be focusable and announce the consequence of resetting filters.
 
+## Integration Notes
+- Filter definitions MUST mirror docs/specs/10_api_conventions.md query parameters; the component MUST NOT invent or reorder filters beyond parent instructions.
+- Ownership and RBAC-sensitive filter options MUST be masked by parents; the component displays only what is allowed and never infers permissions.
+- Error displays MUST surface correlation_id when provided to align with docs/specs/11_api_error_model.md and audit requirements.
+- Time and identifier fields MUST retain formatting from docs/specs/13_identifiers_and_time.md; the component MUST NOT localize or coerce values.
+
 ## Allowed Usage Contexts
 - Planning timeline headers, board filter panels, data table toolbars, and mission flow entry points.
 

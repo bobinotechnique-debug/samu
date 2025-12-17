@@ -48,6 +48,12 @@ Visualize mission duration blocks, milestones, and availability windows along a 
 - Each bar MUST provide an accessible name including label, date range, status, and lock/forbidden state.
 - Focus indicators MUST follow docs/specs/14_visual_language.md; Escape MUST close overlays triggered by inspection intents.
 
+## Integration Notes
+- Timeline ranges MUST remain in UTC and follow docs/specs/13_identifiers_and_time.md; components MUST NOT adjust offsets or infer availability windows.
+- Ownership context and correlation identifiers provided by parents MUST be surfaced when present and never concealed by the component.
+- Navigation, inspection, and range change intents MUST align with docs/specs/10_api_conventions.md pagination and filtering patterns when parents translate requests to APIs.
+- Lock, forbidden, and audit cues MUST mirror upstream RBAC and audit decisions rather than component-level heuristics.
+
 ## Allowed Usage Contexts
 - Planning timeline view bars, mission flow summaries, and board-to-timeline navigation previews.
 
