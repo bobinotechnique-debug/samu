@@ -2,6 +2,9 @@
 
 This index mirrors the authoritative specs/INDEX.md and is maintained by the Docs Agent.
 
+## Status Summary
+- See docs/STATUS_SUMMARY.md for cross-area status and inventory.
+
 ## Catalog
 - docs/specs/00_glossary.md - terminology grounding for the planning platform.
 - docs/specs/01_domain_model.md - high-level entities and relationships.

@@ -3,6 +3,9 @@
 ## Purpose
 Provide a routing map for all high-level documentation artifacts.
 
+## Status Summary
+- docs/STATUS_SUMMARY.md - consolidated documentation status, inventory, and numbering notes.
+
 ## Indexes
 - docs/roadmap/INDEX.md - roadmap navigation and status.
 - docs/specs/INDEX.md - link to specifications catalog.
