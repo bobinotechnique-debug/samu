@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2025-12-26 - Phase 1 Repo Consistency
+- Phase 1 repo consistency: created missing step/spec/index files for Steps 01 and 13.
+
 ## 2025-12-25 - Phase 1 Lock Charter and AGENT 2.5.0
 - Added docs/roadmap/phase1/step-14.md to seal Phase 1 with immutability, amendment, and non-regression rules.
 - Updated roadmap indexes and next steps to mark Phase 1 as LOCKED and register Step 14 navigation.
