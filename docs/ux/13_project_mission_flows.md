@@ -56,3 +56,10 @@ Define the end-to-end UX flows for creating, reviewing, and progressing missions
 ## Ownership and Audit Notes
 - Every flow step MUST display organization_id and project_id; mission_id MUST appear after creation.
 - Audit visibility MUST align with docs/specs/09_audit_and_traceability.md; flows SHOULD surface correlation identifiers when provided.
+
+## Component Cross-links
+- Timeline checkpoints or previews within flows MUST use docs/ux/components/02_timeline_bar.md to represent ranges and locks.
+- Assignment visibility MUST follow docs/ux/components/03_avatar_stack.md for collaborator cues.
+- Conflict or approval blockers MUST use docs/ux/components/04_conflict_badge.md to surface severity without embedding resolution logic.
+- Filter or step selection controls MUST align with docs/ux/components/05_filter_bar.md when presenting filterable lists.
+- Tabular mission summaries within the flow MUST apply docs/ux/components/01_data_table.md for consistent pagination and sorting intents.
