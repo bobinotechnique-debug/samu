@@ -1,7 +1,7 @@
 # Phase 1 Roadmap Index
 
 ## Status
-Active; executing Step 04 to lock API and integration conventions; Steps 05-07 completed and registered; Step 11 active to document cross-domain read models and integration rules; Steps 08-10 proposed for extended domains; Step 12 proposed for locations and maps contracts.
+LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-regression for all prior steps (00-13). Any amendment requires a new spec with migration notes and explicit references to the locked artifacts.
 
 ## Steps
 - docs/roadmap/phase1/step-00.md - Phase 1 Step 00: initiate documentation-focused phase (Status: Done).
@@ -16,9 +16,11 @@ Active; executing Step 04 to lock API and integration conventions; Steps 05-07 c
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Status: Proposed).
 - docs/roadmap/phase1/step-11.md - Phase 1 Step 11: Cross-domain read models and integration rules (Status: Active; delivers docs/specs/18_cross_domain_read_models.md and docs/specs/19_domain_integration_rules.md).
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: Locations and maps contracts (Status: Proposed).
+- docs/roadmap/phase1/step-14.md - Phase 1 Step 14: Global lock and non-regression charter (Status: Locked; seals Phase 1 scope and establishes amendment path).
 
 ## Notes
-- Phase 1 prohibits backend, frontend, and infrastructure code changes; scope is limited to documentation artifacts.
+- Step 14 lock: statuses listed above are historical; all artifacts are sealed and any update requires a Step 14 amendment with migration notes.
+- Phase 1 prohibits backend, frontend, and infrastructure code changes; scope is limited to documentation artifacts unless amended through Step 14 rules.
 - Step 02 depends on foundational domain documentation outcomes from Step 01 (glossary, domain model, project/mission model).
 - Step 03 depends on Step 01 for terminology and Step 02 for architecture and contract guardrails.
 - Step 04 depends on Steps 02 and 03 to align API contracts with architecture, ownership, RBAC, and audit invariants.
@@ -28,3 +30,4 @@ Active; executing Step 04 to lock API and integration conventions; Steps 05-07 c
 - Step 08 captures operational roadmap execution artifacts and relies on Steps 02-04 for ownership, RBAC, audit, and API conventions.
 - Step 09 documents equipment catalog, availability, and conflict rules bound to organization/project scopes under Steps 02-04 constraints.
 - Step 10 records finance and accounting contracts aligned to ownership, RBAC, audit, identifier, and API conventions defined in Steps 02-04.
+- Step 14 locks the entire Phase 1 roadmap and requires formal amendment specs for any changes to the sealed artifacts.

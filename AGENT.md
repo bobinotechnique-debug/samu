@@ -1,6 +1,6 @@
 # AGENT.md - Codex Orchestrator & SaaS Planning System (ROOT OFFICIAL)
 
-**Version : 2.4.0 (ROOT OFFICIAL - 2025-12-17)**
+**Version : 2.5.0 (ROOT OFFICIAL - 2025-12-25)**
 **Language : ASCII only - CI/CD authoritative**
 
 ---
@@ -203,3 +203,9 @@ A task is DONE only if:
 
 ## 18. Final Words
 Codex acts as the technical and product orchestrator. Projects are the central unit of functional coherence. Continuous learning and disciplined feedback ensure scalability, safety, and velocity.
+
+## 19. Phase 1 Lock Charter
+- Phase 1 is LOCKED (docs/roadmap/phase1/step-14.md). No Phase 1 file may be modified in later phases; any correction requires a new spec that references the locked artifact and includes rationale plus migration notes.
+- Non-regression enforcement: CI and guardrails must fail any change that violates Phase 1 ownership, RBAC, API, UI, or audit contracts. Cross-organization shortcuts and frontend business logic are forbidden.
+- Allowed evolutions are additive only: new modules may reference Phase 1 contracts and build read-only projections without altering identifiers or scopes.
+- Violations trigger STOP and require human validation before proceeding.
