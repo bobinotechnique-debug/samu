@@ -4,6 +4,7 @@
 - Closed Phase 0 after completing docs/roadmap/phase0/step-01-harden-bootstrap.md and sealing guardrail validation.
 - Initialized Phase 1 roadmap (docs/roadmap/phase1/step-00.md) focused on foundational documentation with Phase 1 constraints.
 - Aligned agent contracts with Phase 1 documentation-only scope.
+- Restored the authoritative Phase 0 bootstrap step at roadmap/phase0/step-00-bootstrap.md to satisfy roadmap guard coverage.
 
 ## 2025-02-21 - Phase 0 Step 01
 - Hardened Phase 0 validation by adding enforceable guards, CI validation, and roadmap updates (roadmap: docs/roadmap/phase0/step-01-harden-bootstrap).
