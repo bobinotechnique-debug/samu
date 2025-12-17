@@ -46,3 +46,7 @@ Define authoritative ownership and boundary rules for data across the platform t
 - Any data flow lacking org_id validation MUST be rejected during design reviews.
 - Any artifact that references mission_id or assignment_id without matching project_id and org_id MUST be treated as invalid.
 - Any dataset or API that attempts to aggregate across organizations without explicit roadmap authorization MUST be blocked.
+
+## Related Specifications
+- API scoping, pagination, and idempotency expectations that enforce these ownership rules are defined in docs/specs/10_api_conventions.md.
+- Identifier and timestamp constraints are defined in docs/specs/13_identifiers_and_time.md to avoid leaking ownership context through IDs or time handling.

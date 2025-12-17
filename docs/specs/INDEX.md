@@ -13,6 +13,10 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/07_data_ownership.md - authoritative ownership boundaries and required identifiers.
 - docs/specs/08_rbac_model.md - enforceable role definitions, permissions, and evaluation order.
 - docs/specs/09_audit_and_traceability.md - mandatory audit coverage, fields, retention, and correlation rules.
+- docs/specs/10_api_conventions.md - authoritative REST design, URL structure, and pagination rules.
+- docs/specs/11_api_error_model.md - contractual error envelope and code stability guarantees.
+- docs/specs/12_api_versioning.md - versioning strategy, compatibility, and deprecation governance.
+- docs/specs/13_identifiers_and_time.md - opaque identifier rules and UTC/ISO 8601 time handling.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
