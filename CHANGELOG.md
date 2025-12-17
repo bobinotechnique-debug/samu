@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2025-12-29 - Phase 2 Step 02 Low Level Architecture
+- Elaborated docs/specs/21_architecture_LLD.md with per-module layering, dependency rules, and async/job boundaries aligned to Phase 1 contracts.
+- Confirmed backend package layout and cross-cutting rules for IDs, time, RBAC, audit, and repository/UoW patterns for services.
+
 ## 2025-12-28 - Phase 2 Architecture Kickoff
 - Registered Phase 2 roadmap with Steps 01-08 covering HLD, LLD, persistence, API architecture, async jobs, security, frontend architecture, and deployment environments.
 - Authored Phase 2 architecture specifications and updated indexes/status summary to align Phase 2 documentation with Phase 1 contracts.
