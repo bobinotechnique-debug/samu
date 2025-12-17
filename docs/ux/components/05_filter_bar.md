@@ -32,6 +32,13 @@ Provide consistent filter controls for planning views without embedding filterin
 - filters_reset_requested()
 - search_requested(term)
 - retry_requested()
+- saved_view_requested(view_id) (optional, when enabled by parent)
+- save_view_requested(name, filters) (optional, when enabled by parent)
+
+## Saved Views and URL State
+- Saved view intents are optional and scoped to Phase 1 documentation: when parents enable them, the component exposes saved_view_requested(view_id) and save_view_requested(name, filters) intents while rendering owner badges provided by the parent.
+- Ownership and sharing: saved views default to private ownership; parents MUST enforce RBAC before exposing shared views and indicate sharing status via labels; component MUST NOT persist or fetch views directly.
+- URL/deep link mapping: every active filter, search term, and saved_view_id MUST be representable in query params supplied by the parent to allow reproducible links; reset controls clear the params and revert to parent-provided defaults.
 
 ## States
 - Loading: controls show skeletons or disabled placeholders; no filter events emitted.

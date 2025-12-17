@@ -28,6 +28,16 @@ Surface conflicts or alerts (e.g., overlapping assignments, permission restricti
 - conflict_inspect_requested(conflict_id)
 - retry_requested()
 
+## Conflict Types and Severity
+- Supported types: assignment_overlap, over_capacity, missing_clearance (RBAC restriction), schedule_lock_violation, data_stale, and dependency_blocked. Parents MAY provide additional display labels but MUST map them to one of these types for consistent iconography.
+- Severity levels: info, warning, critical. Critical MUST render the lock overlay when lock/forbidden flags are present; warning shows striped highlight; info uses neutral outline only.
+- Badge highlight rules: conflict badges inherit severity color tokens and MUST never rely solely on color; include iconography and text labels.
+
+## Conflict Panel Behavior
+- Inspection intent opens a parent-controlled panel that lists conflict type, severity, affected mission/assignment ids, and correlation_id when available; badge only emits the intent.
+- Resolution hints are read-only: badge tooltip and inspection panel may show "contact planner" or "review mission lock" notes supplied by parents; no remediation controls or auto-resolution are permitted.
+- When multiple conflicts are aggregated on a single badge, parent MUST provide a count; badge cycles through labels with left/right keyboard controls and announces the active conflict to assistive tech.
+
 ## States
 - Loading: placeholder badge with neutral styling; interactions disabled.
 - Empty: no badge rendered; optional guidance text from parent.

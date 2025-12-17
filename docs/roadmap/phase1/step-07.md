@@ -22,3 +22,6 @@ Done
 ## Links
 - Specs: docs/specs/16_ui_page_contracts.md
 - UX Pages: docs/ux/pages/01_planning.md, docs/ux/pages/02_mission.md, docs/ux/pages/03_collaborator.md, docs/ux/pages/04_project.md
+
+## Audit Notes
+- Phase 1 gap audit added drag-and-drop intent contracts, deep link/state restore rules, bulk action confirmations, and export/print metadata expectations to keep page contracts actionable without enabling implementation.

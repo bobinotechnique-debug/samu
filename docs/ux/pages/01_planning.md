@@ -33,7 +33,8 @@
 ## 6. Interactions
 - Selection model: clicking a mission or assignment in timeline or data table syncs selection across both surfaces; selected item reflected in query param selection.
 - Primary actions: open mission details via selection; initiate new planning action only when RBAC allows (control disabled otherwise).
-- Bulk actions: multi-select in data table for bulk reassignment or schedule shift when RBAC permits; operations routed through server mutations (not defined here).
+- Bulk actions: multi-select in data table for bulk reassignment or schedule shift when RBAC permits; Shift+click extends ranges, Ctrl/Cmd+click toggles; conflicts or locks in the selection require an explicit confirmation step before mutation intents are sent.
+- Drag and drop: mission cards from the board and mission/assignment bars in the timeline follow the Phase 1 DnD intent contract (no direct persistence). Drops into locked or forbidden slots are blocked; keyboard equivalents use focused handles with Ctrl/Cmd+Arrow and Enter to confirm.
 - Keyboard accessibility baseline: tab order follows header -> timeline -> list; arrow keys navigate timeline focus; Enter activates selection.
 
 ## 7. RBAC and ownership
