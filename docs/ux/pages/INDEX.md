@@ -7,3 +7,4 @@ Authoritative index for Phase 1 Step 07 UI page contracts. All page docs follow 
 - docs/ux/pages/02_mission.md - Mission page contract.
 - docs/ux/pages/03_collaborator.md - Collaborator page contract.
 - docs/ux/pages/04_project.md - Project page contract.
+- docs/ux/pages/08_locations.md - Locations page contract (read-only catalog for venues, sites, and rooms).

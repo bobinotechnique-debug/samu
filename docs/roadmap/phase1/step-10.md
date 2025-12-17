@@ -1,7 +1,7 @@
 # Phase 1 - Step 10: Finance and Accounting (Proposed)
 
 ## Purpose
-Capture finance and accounting documentation—cost tracking, rates and budgets, invoicing exports, and accounting read models—before any code or integration work begins.
+Capture finance and accounting documentation-cost tracking, rates and budgets, invoicing exports, and accounting read models-before any code or integration work begins.
 
 ## Scope
 - Documentation only; no backend, frontend, infrastructure, or CI modifications.

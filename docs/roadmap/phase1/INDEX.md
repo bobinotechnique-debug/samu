@@ -1,7 +1,7 @@
 # Phase 1 Roadmap Index
 
 ## Status
-Active; executing Step 04 to lock API and integration conventions; Steps 05-07 completed and registered; Step 11 active to document cross-domain read models and integration rules; Steps 08-10 proposed for extended domains.
+Active; executing Step 04 to lock API and integration conventions; Steps 05-07 completed and registered; Step 11 active to document cross-domain read models and integration rules; Steps 08-10 proposed for extended domains; Step 12 proposed for locations and maps contracts.
 
 ## Steps
 - docs/roadmap/phase1/step-00.md - Phase 1 Step 00: initiate documentation-focused phase (Status: Done).
@@ -15,6 +15,7 @@ Active; executing Step 04 to lock API and integration conventions; Steps 05-07 c
 - docs/roadmap/phase1/step-09.md - Phase 1 Step 09: Inventory and equipment management (Status: Proposed).
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Status: Proposed).
 - docs/roadmap/phase1/step-11.md - Phase 1 Step 11: Cross-domain read models and integration rules (Status: Active; delivers docs/specs/18_cross_domain_read_models.md and docs/specs/19_domain_integration_rules.md).
+- docs/roadmap/phase1/step-12.md - Phase 1 Step 12: Locations and maps contracts (Status: Proposed).
 
 ## Notes
 - Phase 1 prohibits backend, frontend, and infrastructure code changes; scope is limited to documentation artifacts.
