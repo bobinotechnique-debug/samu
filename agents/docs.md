@@ -10,6 +10,9 @@
 - Defining CI/CD automation outside documentation requirements.
 - Managing runtime infrastructure.
 
+## Phase 1 Constraint
+- Phase 1 is documentation-only; produce specs and records without modifying backend, frontend, or infrastructure code.
+
 ## Stop Conditions
 - Root agent (AGENT.md) overrides this document in all conflicts.
 - Stop if CI is red or any guard script fails.

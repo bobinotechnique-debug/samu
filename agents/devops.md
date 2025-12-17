@@ -10,6 +10,9 @@
 - Owning product specifications outside operational implications.
 - Editing UX artifacts without coordination.
 
+## Phase 1 Constraint
+- Phase 1 restricts work to documentation; defer infrastructure or CI changes unless a roadmap step explicitly authorizes them.
+
 ## Stop Conditions
 - Root agent (AGENT.md) overrides this document in all conflicts.
 - Stop if CI is red or any guard script fails.
