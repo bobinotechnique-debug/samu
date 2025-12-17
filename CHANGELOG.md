@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-23 - Phase 1 Step 11 Cross-Domain Read Models and Integration Rules
+- Added docs/specs/18_cross_domain_read_models.md documenting authoritative read-only projections across Planning, Inventory, Finance, and Operations with snapshot and versioning requirements.
+- Added docs/specs/19_domain_integration_rules.md capturing read-layer integration guardrails to prevent hidden coupling and enforce Phase 1 constraints.
+- Updated roadmap and specs indexes to register Step 11 deliverables alongside existing Phase 1 navigation and sequencing.
+
 ## 2025-12-22 - Phase 1 Extended Domain Specifications (Proposed Steps 08-10)
 - Added docs/specs/17_phase1_extended_domains.md capturing roadmap execution, inventory/equipment, and finance/accounting contracts under documentation-only scope.
 - Registered Phase 1 roadmap Steps 08-10 as Proposed with dedicated step files and index updates for navigation and dependencies.
