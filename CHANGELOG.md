@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-12-21 - Phase 1 Step 07 UI Page Contracts Registration
+- Registered Phase 1 Step 07 roadmap entry with status Done and linked deliverables.
+- Updated roadmap indexes and next steps to include the Step 07 UI page contracts alongside prior steps.
+- Added catalog references for docs/specs/16_ui_page_contracts.md and UX page contract indexes to keep Step 07 discoverable.
+
 ## 2025-12-20 - Phase 1 Step 06 UI Component Contracts
 - Registered Phase 1 Step 06 completion in the roadmap with authoritative UI component contracts.
 - Expanded docs/specs/15_ui_component_contracts.md with catalog, integration guardrails, and alignment to prior specs.

@@ -20,6 +20,7 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/13_identifiers_and_time.md - Opaque identifier rules and UTC/ISO 8601 time handling.
 - docs/specs/14_visual_language.md - Semantic visual language and interaction tokens for UX surfaces.
 - docs/specs/15_ui_component_contracts.md - UI component rules, state model, and accessibility baseline aligned to visual language and API conventions.
+- docs/specs/16_ui_page_contracts.md - UI page contract rules, navigation, shared state, and forbidden patterns.
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents
