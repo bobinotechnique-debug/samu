@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2025-12-28 - Phase 2 Architecture Kickoff
+- Registered Phase 2 roadmap with Steps 01-08 covering HLD, LLD, persistence, API architecture, async jobs, security, frontend architecture, and deployment environments.
+- Authored Phase 2 architecture specifications and updated indexes/status summary to align Phase 2 documentation with Phase 1 contracts.
+
 ## 2025-12-27 - Phase 1 Step 16 UI Page Contracts and Roadmap Reconciliation
 - Registered Phase 1 Steps 15-20 in the roadmap index with reconciliation notes for the Step 07 numbering gap.
 - Added roadmap entries for Steps 15 and 16, including a reconciliation note and deliverable tracking.

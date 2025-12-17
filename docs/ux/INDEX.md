@@ -18,6 +18,7 @@ This index mirrors ux/INDEX.md and consolidates UX research, flow documentation,
 - docs/ux/components/INDEX.md - authoritative Phase 1 UI component contracts.
 - docs/ux/pages/INDEX.md - Phase 1 page contracts for planning, mission, collaborator, and project surfaces.
 - docs/ux/pages/01_planning_page.md - planning page contract (reconciled numbering for Step 16).
+- docs/ux/20_frontend_architecture.md - Phase 2 frontend architecture (app shell, state management, data fetching).
 - docs/ux/pages/02_mission_page.md - mission page contract (reconciled numbering for Step 16).
 - docs/ux/pages/03_collaborator_page.md - collaborator page contract (reconciled numbering for Step 16).
 - docs/ux/pages/04_project_page.md - project page contract (reconciled numbering for Step 16).
