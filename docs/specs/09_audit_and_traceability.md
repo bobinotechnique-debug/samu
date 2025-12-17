@@ -46,3 +46,8 @@ Define mandatory audit and traceability requirements to ensure accountability, r
 - Every request that mutates data MUST include or generate a correlation_id and propagate it through downstream services and audit entries.
 - Audit pipelines MUST preserve ordering per entity where possible and include correlation_id to reconstruct sequences.
 - Audit lookups MUST support filtering by org_id, project_id, entity_type, entity_id, action, and correlation_id to enable investigations.
+
+## Related Specifications
+- Error envelope requirements for audit-friendly responses are defined in docs/specs/11_api_error_model.md.
+- Identifier and timestamp formats required for audit fields are defined in docs/specs/13_identifiers_and_time.md.
+- Versioning rules that govern audit field stability are defined in docs/specs/12_api_versioning.md.

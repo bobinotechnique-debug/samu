@@ -19,3 +19,4 @@ Capture the high-level entities and relationships for the project-centric planni
 - Data ownership invariants are expanded in docs/specs/07_data_ownership.md.
 - RBAC scoping aligned to domain entities is defined in docs/specs/08_rbac_model.md.
 - Audit and traceability expectations per entity appear in docs/specs/09_audit_and_traceability.md.
+- API conventions, identifier formats, and versioning rules governing domain exposure are defined in docs/specs/10_api_conventions.md, docs/specs/12_api_versioning.md, and docs/specs/13_identifiers_and_time.md.

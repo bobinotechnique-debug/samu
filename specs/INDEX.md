@@ -14,6 +14,10 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/07_data_ownership.md - Authoritative ownership boundaries and required identifiers.
 - docs/specs/08_rbac_model.md - Enforceable roles, permissions, and evaluation order.
 - docs/specs/09_audit_and_traceability.md - Mandatory audit coverage, required fields, retention, and correlation guidance.
+- docs/specs/10_api_conventions.md - Authoritative REST design, URL structure, and pagination rules.
+- docs/specs/11_api_error_model.md - Contractual error envelope and code stability guarantees.
+- docs/specs/12_api_versioning.md - Versioning strategy, compatibility, and deprecation governance.
+- docs/specs/13_identifiers_and_time.md - Opaque identifier rules and UTC/ISO 8601 time handling.
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents
