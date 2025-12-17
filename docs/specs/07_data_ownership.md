@@ -50,3 +50,4 @@ Define authoritative ownership and boundary rules for data across the platform t
 ## Related Specifications
 - API scoping, pagination, and idempotency expectations that enforce these ownership rules are defined in docs/specs/10_api_conventions.md.
 - Identifier and timestamp constraints are defined in docs/specs/13_identifiers_and_time.md to avoid leaking ownership context through IDs or time handling.
+- Visual representation of ownership cues in UX views is governed by docs/specs/14_visual_language.md and the view specifications in docs/ux/INDEX.md.

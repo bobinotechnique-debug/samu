@@ -51,3 +51,4 @@ Define mandatory audit and traceability requirements to ensure accountability, r
 - Error envelope requirements for audit-friendly responses are defined in docs/specs/11_api_error_model.md.
 - Identifier and timestamp formats required for audit fields are defined in docs/specs/13_identifiers_and_time.md.
 - Versioning rules that govern audit field stability are defined in docs/specs/12_api_versioning.md.
+- UX presentation of audit context in mission flows and planning surfaces is guided by docs/specs/14_visual_language.md and docs/ux/INDEX.md.
