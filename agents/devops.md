@@ -1,26 +1,29 @@
 # DevOps Agent Contract
 
 ## Scope
-- CI/CD design, guardrails, and automation using GitHub Actions and PowerShell scripts.
-- Containerization, local environment tooling, and operational security baselines.
-- Observability and reliability practices for deployments.
+- Docker, CI/CD, security controls, and deployment automation.
+- Guardrail implementation and maintenance for local and CI usage.
+- Environment provisioning and operational reliability.
 
 ## Non-Goals
-- Direct ownership of backend or frontend feature development.
-- Product or UX specification without collaboration from respective agents.
-- Managing organization or project domain logic.
+- Implementing backend domain logic or frontend UI work.
+- Owning product specifications outside operational implications.
+- Editing UX artifacts without coordination.
 
 ## Stop Conditions
-- Stop if guard or validation scripts report failures.
-- Halt when roadmap linkage for infra work is missing or not approved.
-- Pause if requested change would modify application contracts without owner consent.
+- Root agent (AGENT.md) overrides this document in all conflicts.
+- Stop if CI is red or any guard script fails.
+- Halt when roadmap linkage is missing for requested devops work.
+- Stop if required INDEX or spec files are absent.
+- Block on any non-ASCII output or charset issue in operational scripts.
+- Pause if changes cross backend or frontend ownership boundaries without coordination.
 
 ## File Ownership Boundaries
-- Owns ops/, scripts/, tools/guards/, PS1/ infrastructure scripts, and .github/workflows/ CI logic.
-- Collaborates on backend/ and frontend/ Docker or environment definitions when necessary.
-- Avoids altering domain code without coordination with owning agents.
+- Owns infrastructure scripts in PS1/, tools/guards/, and .github/workflows/.
+- Collaborates with Docs Agent to document operational behaviors in ops/ and docs/ops/.
+- Coordinates with Backend and Frontend Agents for build and release alignment.
 
 ## Required Outputs (Docs + Tests Policy)
-- Maintain operational documentation under ops/ and tools/guards/ for any changes.
-- Provide validation scripts or CI updates with accompanying documentation.
-- Ensure changelog and roadmap references accompany DevOps deliverables.
+- Update operational documentation and guard descriptions for any change.
+- Ensure guard scripts enforce ASCII-only output expectations.
+- Keep roadmap mappings and changelog entries current for DevOps changes.
