@@ -2,6 +2,8 @@
 
 ## Upcoming Work
 - docs/roadmap/phase1/step-04.md - Execute API and integration convention documentation (Active).
+- docs/specs/18_cross_domain_read_models.md - Deliver Phase 1 Step 11 cross-domain read models (Active).
+- docs/specs/19_domain_integration_rules.md - Deliver Phase 1 Step 11 integration guardrails (Active).
 - docs/roadmap/phase1/step-08.md - Document roadmap and execution sheet contracts (Proposed).
 - docs/roadmap/phase1/step-09.md - Document inventory and equipment management contracts (Proposed).
 - docs/roadmap/phase1/step-10.md - Document finance and accounting contracts (Proposed).
