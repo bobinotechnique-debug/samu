@@ -1,11 +1,18 @@
-name: Validate Placeholder
+name: Validate
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
-  placeholder:
-    runs-on: ubuntu-latest
+  validate:
+    runs-on: windows-latest
     steps:
-      - name: Validate placeholder
-        run: echo "Phase 0 placeholder - no validation checks implemented."
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run validate
+        shell: pwsh
+        run: pwsh -File PS1/validate.ps1 -RepoRoot $PWD

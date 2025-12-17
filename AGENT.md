@@ -1,7 +1,7 @@
-# AGENT.md — Codex Orchestrator & SaaS Planning System (ROOT OFFICIAL)
+# AGENT.md - Codex Orchestrator & SaaS Planning System (ROOT OFFICIAL)
 
-**Version : 2.4.0 (ROOT OFFICIAL — 2025-12-17)**
-**Language : ASCII only — CI/CD authoritative**
+**Version : 2.4.0 (ROOT OFFICIAL - 2025-12-17)**
+**Language : ASCII only - CI/CD authoritative**
 
 ---
 
@@ -9,7 +9,7 @@ This document is the **single source of truth** for the repository. AGENT.md ove
 
 ---
 
-## 1. Global Role / Rôle Global
+## 1. Global Role / Role Global
 
 **Codex** is the root orchestrator and single authority for the repository. It governs agents, documentation, CI/CD, architecture, and delivery rules.
 
