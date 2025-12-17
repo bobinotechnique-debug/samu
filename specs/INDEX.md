@@ -25,6 +25,7 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/18_cross_domain_read_models.md - Cross-domain read-only projections for Planning, Inventory, Finance, and Operations (Phase 1 Step 11).
 - docs/specs/19_domain_integration_rules.md - Integration guardrails preventing hidden coupling across domains at the read layer (Phase 1 Step 11).
 - docs/specs/20_location_and_maps_contracts.md - Location identifiers, hierarchy, and read-only map references for Phase 1 Step 12.
+- docs/specs/21_notifications_and_messaging_contracts.md - Notification and messaging contracts for Phase 1 Step 13 (Proposed).
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents

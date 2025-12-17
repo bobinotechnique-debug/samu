@@ -12,6 +12,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase0/INDEX.md - Phase 0 step listing maintained under docs/roadmap/.
 - docs/roadmap/phase1/INDEX.md - Phase 1 step listing.
 - docs/roadmap/phase1/step-00.md - Phase 1 Step 00: foundational documentation scope and rules.
+- docs/roadmap/phase1/step-01-foundational-domain.md - Phase 1 Step 01: foundational domain baselines (Done).
 - docs/roadmap/phase1/step-02.md - Phase 1 Step 02: architecture guardrails, domain contracts, and failure patterns.
 - docs/roadmap/phase1/step-03.md - Phase 1 Step 03: data ownership, RBAC, and audit rules.
 - docs/roadmap/phase1/step-04.md - Phase 1 Step 04: API and integration conventions.
@@ -23,9 +24,11 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Proposed).
 - docs/roadmap/phase1/step-11.md - Phase 1 Step 11: cross-domain read models and integration rules (Active).
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: locations and maps contracts (Proposed).
+- docs/roadmap/phase1/step-13-notifications-and-messaging.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/phase1/step-14.md - Phase 1 Step 14: global lock and non-regression charter (Locked).
 - docs/specs/18_cross_domain_read_models.md - Phase 1 Step 11: cross-domain read models and projections (Active).
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
+- docs/specs/21_notifications_and_messaging_contracts.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
 
 ## Rules

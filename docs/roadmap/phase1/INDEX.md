@@ -5,6 +5,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 
 ## Steps
 - docs/roadmap/phase1/step-00.md - Phase 1 Step 00: initiate documentation-focused phase (Status: Done).
+- docs/roadmap/phase1/step-01-foundational-domain.md - Phase 1 Step 01: foundational domain baselines (Status: Done).
 - docs/roadmap/phase1/step-02.md - Phase 1 Step 02: architecture guardrails, contracts, and failure patterns (Status: Done).
 - docs/roadmap/phase1/step-03.md - Phase 1 Step 03: data ownership, RBAC, and audit rules (Status: Done).
 - docs/roadmap/phase1/step-04.md - Phase 1 Step 04: API and integration conventions (Status: In progress).
@@ -16,6 +17,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-10.md - Phase 1 Step 10: Finance and accounting (Status: Proposed).
 - docs/roadmap/phase1/step-11.md - Phase 1 Step 11: Cross-domain read models and integration rules (Status: Active; delivers docs/specs/18_cross_domain_read_models.md and docs/specs/19_domain_integration_rules.md).
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: Locations and maps contracts (Status: Proposed).
+- docs/roadmap/phase1/step-13-notifications-and-messaging.md - Phase 1 Step 13: Notifications and messaging contracts (Status: Proposed).
 - docs/roadmap/phase1/step-14.md - Phase 1 Step 14: Global lock and non-regression charter (Status: Locked; seals Phase 1 scope and establishes amendment path).
 
 ## Notes
