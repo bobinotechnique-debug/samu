@@ -15,6 +15,8 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-02.md - Phase 1 Step 02: architecture guardrails, domain contracts, and failure patterns.
 - docs/roadmap/phase1/step-03.md - Phase 1 Step 03: data ownership, RBAC, and audit rules.
 - docs/roadmap/phase1/step-04.md - Phase 1 Step 04: API and integration conventions.
+- docs/roadmap/phase1/step-05.md - Phase 1 Step 05: UX visual language and view specifications.
+- docs/roadmap/phase1/step-06.md - Phase 1 Step 06: UI component contracts.
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
 
 ## Rules

@@ -18,7 +18,8 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/11_api_error_model.md - Contractual error envelope and code stability guarantees.
 - docs/specs/12_api_versioning.md - Versioning strategy, compatibility, and deprecation governance.
 - docs/specs/13_identifiers_and_time.md - Opaque identifier rules and UTC/ISO 8601 time handling.
-- docs/specs/14_visual_language.md - Semantic visual tokens and state rules for consistent UX surfaces.
+- docs/specs/14_visual_language.md - Semantic visual language and interaction tokens for UX surfaces.
+- docs/specs/15_ui_component_contracts.md - UI component rules, state model, and accessibility baseline aligned to visual language and API conventions.
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents
