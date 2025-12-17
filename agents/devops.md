@@ -30,3 +30,4 @@
 - Update operational documentation and guard descriptions for any change.
 - Ensure guard scripts enforce ASCII-only output expectations.
 - Keep roadmap mappings and changelog entries current for DevOps changes.
+- Cross-check operational plans against architecture principles (docs/specs/04_architecture_principles.md), domain contracts (docs/specs/05_domain_contracts.md), and failure patterns (docs/specs/06_known_failure_patterns.md) before execution.

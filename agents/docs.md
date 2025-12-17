@@ -30,3 +30,4 @@
 - Update relevant indexes and changelog entries for any documentation activity.
 - Ensure documentation reflects current roadmap steps and outcomes.
 - Validate that referenced tests or guards are documented when applicable.
+- Align all documentation with architecture principles (docs/specs/04_architecture_principles.md), domain contracts (docs/specs/05_domain_contracts.md), and failure pattern guardrails (docs/specs/06_known_failure_patterns.md).
