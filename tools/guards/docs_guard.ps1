@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
-
 param(
     [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..' '..')).Path,
     [switch]$Strict
 )
+
+$ErrorActionPreference = 'Stop'
 
 $required = @(
     'docs/INDEX.md',

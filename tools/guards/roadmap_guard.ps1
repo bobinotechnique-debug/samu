@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
-
 param(
     [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..' '..')).Path,
     [switch]$Strict
 )
+
+$ErrorActionPreference = 'Stop'
 
 $rootStepPath = Join-Path $RepoRoot 'roadmap/phase0/step-00-bootstrap.md'
 $docsStepPath = Join-Path $RepoRoot 'docs/roadmap/phase0/step-01-harden-bootstrap.md'
