@@ -24,9 +24,9 @@ foreach ($guard in $guards) {
         & $guard.Path -RepoRoot $resolvedRepoRoot -Strict:$Strict
         Write-Output "${($guard.Name)} guard: PASS"
     } catch {
-        Write-Error "${($guard.Name)} guard: FAIL"
+        Write-Output "${($guard.Name)} guard: FAIL"
         if ($_.Exception.Message) {
-            Write-Error $_.Exception.Message
+            Write-Output $_.Exception.Message
         }
         exit 1
     }
