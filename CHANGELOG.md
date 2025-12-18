@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026-01-04 - Phase 2 Step 09 Observability and Operations Baseline
+- Added docs/ops/21_observability.md to lock logging, metrics, tracing, health checks, alerting, and runbooks for Phase 2 Step 09.
+- Registered Phase 2 Step 09 in roadmap indexes to keep navigation aligned with the new observability baseline.
+
 # 2026-01-03 - Phase 2 Step 08 Deployment and Environments
 - Replaced docs/ops/20_deployment_architecture.md with the authoritative environment, configuration, secrets, and deployment topology contract for Phase 2 Step 08.
 - Reinforced alignment with locked stack decisions, Windows-first reproducibility, and existing architecture/security specs.
