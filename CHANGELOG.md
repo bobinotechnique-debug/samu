@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2025-12-30 - Phase 2 Step 03 Persistence and Data Model
+- Replaced docs/specs/22_persistence_model.md with the authoritative PostgreSQL table, index, isolation, and soft delete design covering all Phase 1 entities.
+- Captured audit/outbox persistence skeletons, integrity invariants, and retention policies to guide later implementation without semantic drift.
+
 # 2025-12-29 - Phase 2 Step 02 Low Level Architecture
 - Elaborated docs/specs/21_architecture_LLD.md with per-module layering, dependency rules, and async/job boundaries aligned to Phase 1 contracts.
 - Confirmed backend package layout and cross-cutting rules for IDs, time, RBAC, audit, and repository/UoW patterns for services.
