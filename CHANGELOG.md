@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026-01-01 - Phase 2 Step 05 Async and Background Jobs
+- Replaced docs/specs/23_async_jobs.md with the asynchronous execution model covering job categories, queues, payload contract, idempotency, retry/backoff, observability, and dead letter handling aligned to Phase 1 audit and ownership rules.
+- Maintained roadmap and status references for Phase 2 Step 05 while keeping existing architecture indexes intact.
+
 # 2025-12-31 - Phase 2 Step 04 API Architecture and Routing
 - Replaced docs/api/20_api_architecture.md with the authoritative FastAPI routing, versioning, dependency, error mapping, and pagination scaffolds aligned to Phase 1 contracts and Phase 2 wiring goals.
 - Updated docs/api/INDEX.md to register the Phase 2 routing scaffold and reflect the cross-cutting middleware and dependency conventions.
