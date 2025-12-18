@@ -13,6 +13,6 @@
     "strict": true,
     "types": ["vitest/globals", "vite/client", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src", "../tests/frontend"],
   "references": []
 }

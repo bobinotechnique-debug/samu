@@ -75,8 +75,8 @@ Purpose: link users to organizations and capture org-level roles.
 
 Columns:
 - `id uuid PK`
-- `org_id uuid NOT NULL` FK → `organizations(id)`
-- `user_id uuid NOT NULL` FK → `users(id)`
+- `org_id uuid NOT NULL` FK -> `organizations(id)`
+- `user_id uuid NOT NULL` FK -> `users(id)`
 - `role text NOT NULL` (owner | admin | manager | planner | viewer)
 - `created_at timestamptz NOT NULL`
 - `updated_at timestamptz NOT NULL`
@@ -94,15 +94,15 @@ Purpose: functional boundary for planning.
 
 Columns:
 - `id uuid PK`
-- `org_id uuid NOT NULL` FK → `organizations(id)`
+- `org_id uuid NOT NULL` FK -> `organizations(id)`
 - `name text NOT NULL`
 - `code text NULL`
 - `timezone text NOT NULL DEFAULT 'UTC'`
 - `status text NOT NULL DEFAULT 'active'` (active | archived)
 - `start_at timestamptz NULL`
 - `end_at timestamptz NULL`
-- `created_by uuid NULL` FK → `users(id)`
-- `updated_by uuid NULL` FK → `users(id)`
+- `created_by uuid NULL` FK -> `users(id)`
+- `updated_by uuid NULL` FK -> `users(id)`
 - `created_at timestamptz NOT NULL`
 - `updated_at timestamptz NOT NULL`
 - `deleted_at timestamptz NULL`
@@ -118,8 +118,8 @@ Purpose: person/resource that can be assigned to missions.
 
 Columns:
 - `id uuid PK`
-- `org_id uuid NOT NULL` FK → `organizations(id)`
-- `default_project_id uuid NULL` FK → `projects(id)`
+- `org_id uuid NOT NULL` FK -> `organizations(id)`
+- `default_project_id uuid NULL` FK -> `projects(id)`
 - `kind text NOT NULL DEFAULT 'person'` (person | team | vendor)
 - `first_name text NULL`
 - `last_name text NULL`
@@ -127,8 +127,8 @@ Columns:
 - `email text NULL`
 - `phone text NULL`
 - `status text NOT NULL DEFAULT 'active'` (active | inactive)
-- `created_by uuid NULL` FK → `users(id)`
-- `updated_by uuid NULL` FK → `users(id)`
+- `created_by uuid NULL` FK -> `users(id)`
+- `updated_by uuid NULL` FK -> `users(id)`
 - `created_at timestamptz NOT NULL`
 - `updated_at timestamptz NOT NULL`
 - `deleted_at timestamptz NULL`
@@ -163,8 +163,8 @@ Purpose: many-to-many join between collaborators and roles.
 Columns:
 - `id uuid PK`
 - `org_id uuid NOT NULL`
-- `collaborator_id uuid NOT NULL` FK → `collaborators(id)`
-- `role_id uuid NOT NULL` FK → `roles(id)`
+- `collaborator_id uuid NOT NULL` FK -> `collaborators(id)`
+- `role_id uuid NOT NULL` FK -> `roles(id)`
 - `created_at timestamptz NOT NULL`
 - `deleted_at timestamptz NULL`
 
@@ -217,7 +217,7 @@ Purpose: work item inside a project with a time window.
 Columns:
 - `id uuid PK`
 - `org_id uuid NOT NULL`
-- `project_id uuid NOT NULL` FK → `projects(id)`
+- `project_id uuid NOT NULL` FK -> `projects(id)`
 - `title text NOT NULL`
 - `description text NULL`
 - `location text NULL`
@@ -245,9 +245,9 @@ Columns:
 - `id uuid PK`
 - `org_id uuid NOT NULL`
 - `project_id uuid NOT NULL`
-- `mission_id uuid NOT NULL` FK → `missions(id)`
-- `collaborator_id uuid NOT NULL` FK → `collaborators(id)`
-- `role_id uuid NULL` FK → `roles(id)`
+- `mission_id uuid NOT NULL` FK -> `missions(id)`
+- `collaborator_id uuid NOT NULL` FK -> `collaborators(id)`
+- `role_id uuid NULL` FK -> `roles(id)`
 - `status text NOT NULL DEFAULT 'assigned'` (assigned | confirmed | checked_in | completed | canceled)
 - `start_at timestamptz NOT NULL`
 - `end_at timestamptz NOT NULL`
