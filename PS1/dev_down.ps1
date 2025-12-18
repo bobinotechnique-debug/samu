@@ -1,1 +1,13 @@
-Write-Error "Placeholder: dev_down is not implemented during Phase 0."; exit 1
+param(
+    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+)
+
+$ErrorActionPreference = 'Stop'
+Set-Location $RepoRoot
+
+if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
+    Write-Output "Docker not detected. Nothing to stop."
+    exit 0
+}
+
+docker compose down

@@ -8,7 +8,7 @@ This index routes roadmap documentation and status references governed by agents
 ## Phase Overview
 - **Phase 0: Hardening** - Status: Closed on 2025-12-17 (see docs/roadmap/phase0/step-01-harden-bootstrap.md)
 - **Phase 1: Foundational documentation** - Status: LOCKED (see docs/roadmap/phase1/step-14.md for immutability and non-regression charter). Steps 00-13 are sealed; any amendment requires a new spec referencing the locked artifact and migration guidance.
-- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-09 deliverables bound to Phase 1 contracts).
+- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-10 deliverables bound to Phase 1 contracts).
 
 ## Files
 - roadmap/phase0/step-00-bootstrap.md - sealed bootstrap log.
@@ -34,7 +34,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
 - docs/specs/21_notifications_and_messaging_contracts.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
-- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-09 listings for architecture, data, API, async, security, frontend, deployment, and observability scaffolding.
+- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-10 listings for architecture, data, API, async, security, frontend, deployment, and observability scaffolding.
 
 ## Rules
 - Every change must cite a roadmap step before implementation.

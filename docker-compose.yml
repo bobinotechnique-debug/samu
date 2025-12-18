@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  api:
+    build: ./backend
+    env_file:
+      - .env
+    environment:
+      SAMU_DATABASE_URL: ${SAMU_DATABASE_URL:-postgresql+psycopg://postgres:postgres@db:5432/samu}
+      SAMU_REDIS_URL: ${SAMU_REDIS_URL:-redis://cache:6379/0}
+      SAMU_ENVIRONMENT: ${SAMU_ENVIRONMENT:-local}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - cache
+  worker:
+    build: ./backend
+    command: ["python", "-c", "from app.jobs.worker import run_worker; run_worker()"]
+    env_file:
+      - .env
+    environment:
+      SAMU_DATABASE_URL: ${SAMU_DATABASE_URL:-postgresql+psycopg://postgres:postgres@db:5432/samu}
+      SAMU_REDIS_URL: ${SAMU_REDIS_URL:-redis://cache:6379/0}
+      SAMU_ENVIRONMENT: ${SAMU_ENVIRONMENT:-local}
+    depends_on:
+      - db
+      - cache
+  frontend:
+    build: ./frontend
+    env_file:
+      - .env
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8000/api/v1}
+    ports:
+      - "4173:4173"
+    depends_on:
+      - api
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: samu
+    ports:
+      - "5432:5432"
+  cache:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

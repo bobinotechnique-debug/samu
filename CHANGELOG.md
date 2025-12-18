@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026-01-05 - Phase 2 Step 10 Implementation Bootstrap
+- Added backend and frontend runnable scaffolding with FastAPI, routing, health probes, and React shell aligned to Phase 2 architecture docs.
+- Registered Docker Compose baseline, environment samples, and roadmap/doc index updates for Step 10 while keeping guards/tests green.
+
 # 2026-01-04 - Phase 2 Step 09 Observability and Operations Baseline
 - Added docs/ops/21_observability.md to lock logging, metrics, tracing, health checks, alerting, and runbooks for Phase 2 Step 09.
 - Registered Phase 2 Step 09 in roadmap indexes to keep navigation aligned with the new observability baseline.
