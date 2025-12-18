@@ -15,6 +15,7 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-09-observability-and-operations.md - Step 09: Observability and operations baseline (Status: Starting).
 - docs/roadmap/phase2/step-10-implementation-bootstrap.md - Step 10: Implementation bootstrap and runnable skeleton (Status: Starting).
 - docs/roadmap/phase2/step-11-first-vertical-slice.md - Step 11: Auth + org context + RBAC hooks vertical slice (Status: In Progress).
+- docs/roadmap/phase2/diagram.md - Phase 2 diagram capturing architecture steps.
 
 ## Notes
 - Phase 2 must honor the Phase 1 lock (Step 14) while building additive architecture artifacts.

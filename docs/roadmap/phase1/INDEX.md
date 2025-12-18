@@ -25,6 +25,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-18.md - Phase 1 Step 18: Planning rules and constraints contract (Status: Proposed).
 - docs/roadmap/phase1/step-19.md - Phase 1 Step 19: State machines and lifecycles (Status: Proposed).
 - docs/roadmap/phase1/step-20.md - Phase 1 Step 20: Permissions and responsibility matrix (Status: Proposed).
+- docs/roadmap/phase1/diagram.md - Phase 1 diagram showing locked and proposed steps.
 
 ## Notes
 - Step 14 lock: statuses listed above are historical; all artifacts are sealed and any update requires a Step 14 amendment with migration notes.

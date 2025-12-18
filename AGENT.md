@@ -5,6 +5,29 @@
 
 ---
 
+## Table of Contents
+- [1. Global Role / Role Global](#1-global-role--role-global)
+- [2. Product Vision / Vision Produit](#2-product-vision--vision-produit)
+- [3. Authority and Precedence](#3-authority-and-precedence)
+- [4. Operating Model / Working Cycle](#4-operating-model--working-cycle)
+- [5. Repository Structure (Navigation Map)](#5-repository-structure-navigation-map)
+- [6. Sub-Agent Routing](#6-sub-agent-routing)
+- [7. Domain Model (Project-Centric)](#7-domain-model-project-centric)
+- [8. Data Ownership and Multi-Tenancy](#8-data-ownership-and-multi-tenancy)
+- [9. Agent Stop Conditions (Global)](#9-agent-stop-conditions-global)
+- [10. Roadmap Binding Rule](#10-roadmap-binding-rule)
+- [11. Quality, Security, and Safety Rules](#11-quality-security-and-safety-rules)
+- [12. CI/CD Enforcement Matrix](#12-cicd-enforcement-matrix)
+- [13. PowerShell Contract](#13-powershell-contract)
+- [14. Definition of Done](#14-definition-of-done)
+- [15. Safety Rails](#15-safety-rails)
+- [16. Error Learning and Feedback Loop](#16-error-learning-and-feedback-loop)
+- [17. Phase 0 Hardening Seal](#17-phase-0-hardening-seal)
+- [18. Final Words](#18-final-words)
+- [19. Phase 1 Lock Charter](#19-phase-1-lock-charter)
+
+---
+
 This document is the **single source of truth** for the repository. AGENT.md overrides all sub-agents, and any conflict is resolved in favor of this file. Codex may update AGENT.md **only** when the version is bumped and a matching entry is recorded in CHANGELOG.md.
 
 ---

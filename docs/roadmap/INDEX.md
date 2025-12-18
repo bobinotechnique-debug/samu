@@ -11,9 +11,11 @@ This index routes roadmap documentation and status references governed by agents
 - **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-11 deliverables bound to Phase 1 contracts).
 
 ## Files
+- docs/roadmap/README.md - roadmap diagrams and phase overviews.
 - roadmap/phase0/step-00-bootstrap.md - sealed bootstrap log.
 - docs/roadmap/phase0/step-01-harden-bootstrap.md - enforcement scope for Phase 0 guardrail validation.
 - docs/roadmap/phase0/INDEX.md - Phase 0 step listing maintained under docs/roadmap/.
+- docs/roadmap/phase0/diagram.md - Phase 0 visual sequence.
 - docs/roadmap/phase1/INDEX.md - Phase 1 step listing.
 - docs/roadmap/phase1/step-00.md - Phase 1 Step 00: foundational documentation scope and rules.
 - docs/roadmap/phase1/step-01-foundational-domain.md - Phase 1 Step 01: foundational domain baselines (Done).
@@ -30,11 +32,13 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: locations and maps contracts (Proposed).
 - docs/roadmap/phase1/step-13-notifications-and-messaging.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/phase1/step-14.md - Phase 1 Step 14: global lock and non-regression charter (Locked).
+- docs/roadmap/phase1/diagram.md - Phase 1 visual sequence.
 - docs/specs/18_cross_domain_read_models.md - Phase 1 Step 11: cross-domain read models and projections (Active).
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
 - docs/specs/21_notifications_and_messaging_contracts.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
 - docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-10 listings for architecture, data, API, async, security, frontend, deployment, and observability scaffolding.
+- docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
 
 ## Rules
 - Every change must cite a roadmap step before implementation.

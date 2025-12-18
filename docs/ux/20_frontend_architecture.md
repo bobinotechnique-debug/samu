@@ -11,7 +11,7 @@ Define the frontend technical architecture so that the UI stays free of business
 
 ## Core principles
 1) **UI is a rendering layer**: Components render state and dispatch intents; React components must not implement domain decisions.
-2) **One-way data flow**: Intent → client-side service → API → normalized state → UI.
+2) **One-way data flow**: Intent -> client-side service -> API -> normalized state -> UI.
 3) **Server state lives in a dedicated cache**: Do not mirror server data into global client state.
 4) **URL is a first-class state**: Filters, view ranges, and pagination live in URL/query params when possible.
 5) **Strict separation of concerns**: Page = composition + routing + access checks + data orchestration. Feature adapter = input mapping + API calls + response normalization. Shared UI = reusable components that follow contracts.
