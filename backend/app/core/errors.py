@@ -25,3 +25,8 @@ class UnauthorizedError(AppError):
 class ForbiddenError(AppError):
     def __init__(self, message: str = "Forbidden") -> None:
         super().__init__(code="forbidden", message=message, status_code=403)
+
+
+class ValidationError(AppError):
+    def __init__(self, message: str = "Validation error", details: Optional[dict[str, Any]] | None = None) -> None:
+        super().__init__(code="validation_error", message=message, status_code=400, details=details)

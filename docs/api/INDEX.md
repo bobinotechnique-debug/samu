@@ -9,3 +9,4 @@ This index mirrors api/INDEX.md and tracks API contract records under Docs Agent
 - Ensure API docs stay ASCII-only and validated by guards.
 - docs/api/20_api_architecture.md - Phase 2 API architecture and routing scaffolds (routing tree, versioning, dependencies, error mapping, pagination, and middleware).
 - Health and readiness endpoints are wired under /api/v1/health for liveness and DB-ready probes consistent with deployment expectations.
+- Organizations and memberships vertical slice endpoints registered under /api/v1/orgs (context/me, list, create, memberships list/add) per Phase 2 Step 11.

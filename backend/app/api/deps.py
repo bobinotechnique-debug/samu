@@ -1,11 +1,12 @@
 from collections.abc import Generator
 
-from fastapi import Depends
+from fastapi import Depends, Header
 from sqlalchemy.orm import Session
 
 from app.core.config import Settings, get_settings
+from app.core.errors import ForbiddenError
 from app.core.db.session import db_session
-from app.core.security.auth import AuthContext, get_auth_context
+from app.core.security.auth import PrincipalContext, resolve_principal
 
 
 def get_app_settings() -> Settings:
@@ -17,5 +18,22 @@ def get_db_session(_: Settings = Depends(get_app_settings)) -> Generator[Session
         yield session
 
 
-def get_current_auth_context(auth: AuthContext = Depends(get_auth_context)) -> AuthContext:
-    return auth
+def get_principal_context(
+    session: Session = Depends(get_db_session),
+    authorization: str | None = Header(default=None),
+    org_header: str | None = Header(default=None, alias="X-Org-ID"),
+) -> PrincipalContext:
+    return resolve_principal(session=session, authorization=authorization, requested_org_id=org_header)
+
+
+def require_permission(permission: str):
+    def dependency(principal: PrincipalContext = Depends(get_principal_context)) -> PrincipalContext:
+        if permission not in principal.permissions:
+            raise ForbiddenError(f"Missing permission: {permission}")
+        return principal
+
+    return dependency
+
+
+def get_current_auth_context(principal: PrincipalContext = Depends(get_principal_context)) -> PrincipalContext:
+    return principal

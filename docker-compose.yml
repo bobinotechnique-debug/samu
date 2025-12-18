@@ -2,6 +2,7 @@ version: "3.9"
 services:
   api:
     build: ./backend
+    command: ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
     env_file:
       - .env
     environment:
@@ -35,6 +36,20 @@ services:
       - "4173:4173"
     depends_on:
       - api
+  seed:
+    build: ./backend
+    command: ["sh", "-c", "alembic upgrade head && python -m scripts.seed_data"]
+    env_file:
+      - .env
+    environment:
+      SAMU_DATABASE_URL: ${SAMU_DATABASE_URL:-postgresql+psycopg://postgres:postgres@db:5432/samu}
+      SAMU_REDIS_URL: ${SAMU_REDIS_URL:-redis://cache:6379/0}
+      SAMU_ENVIRONMENT: ${SAMU_ENVIRONMENT:-local}
+    depends_on:
+      - db
+      - cache
+    profiles:
+      - seed
   db:
     image: postgres:15-alpine
     environment:

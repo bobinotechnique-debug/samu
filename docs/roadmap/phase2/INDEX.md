@@ -1,7 +1,7 @@
 # Phase 2 Roadmap Index
 
 ## Status
-Starting. Phase 2 focuses on translating Phase 1 contracts into technical architecture with service, data, and deployment skeletons.
+Starting. Phase 2 focuses on translating Phase 1 contracts into technical architecture with service, data, deployment skeletons, and the first vertical slice for auth/org context.
 
 ## Steps
 - docs/roadmap/phase2/step-01-high-level-architecture.md - Step 01: High Level Architecture definition and context boundaries (Status: Starting).
@@ -14,6 +14,7 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-08-deployment-and-environments.md - Step 08: Deployment and environment definitions (Status: Starting).
 - docs/roadmap/phase2/step-09-observability-and-operations.md - Step 09: Observability and operations baseline (Status: Starting).
 - docs/roadmap/phase2/step-10-implementation-bootstrap.md - Step 10: Implementation bootstrap and runnable skeleton (Status: Starting).
+- docs/roadmap/phase2/step-11-first-vertical-slice.md - Step 11: Auth + org context + RBAC hooks vertical slice (Status: In Progress).
 
 ## Notes
 - Phase 2 must honor the Phase 1 lock (Step 14) while building additive architecture artifacts.
