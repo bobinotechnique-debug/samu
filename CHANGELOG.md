@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026-01-02 - Phase 2 Step 06 Security and Trust Model
+- Replaced docs/specs/24_security_model.md with the concrete auth flows, token scopes, RBAC enforcement, and data isolation rules for Phase 2 Step 06.
+- Kept specs indexes aligned with existing navigation while honoring Phase 1 security, ownership, RBAC, and audit dependencies.
+
 # 2026-01-01 - Phase 2 Step 05 Async and Background Jobs
 - Replaced docs/specs/23_async_jobs.md with the asynchronous execution model covering job categories, queues, payload contract, idempotency, retry/backoff, observability, and dead letter handling aligned to Phase 1 audit and ownership rules.
 - Maintained roadmap and status references for Phase 2 Step 05 while keeping existing architecture indexes intact.
