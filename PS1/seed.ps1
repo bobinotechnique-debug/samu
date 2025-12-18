@@ -1,1 +1,7 @@
-Write-Error "Placeholder: seed is not implemented during Phase 0."; exit 1
+param(
+    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+)
+
+$ErrorActionPreference = 'Stop'
+Set-Location $RepoRoot
+Write-Output "No seed data available for bootstrap stage."
