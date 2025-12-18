@@ -14,6 +14,6 @@ describe("AppShell", () => {
       </BrowserRouter>
     );
 
-    expect(screen.getByText(/Samu Frontend/)).toBeInTheDocument();
+    expect(screen.getByText(/Org context console/)).toBeInTheDocument();
   });
 });

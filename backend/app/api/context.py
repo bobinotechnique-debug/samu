@@ -1,6 +1,7 @@
 import contextvars
 import uuid
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+from typing import Optional
 
 from fastapi import Request
 
@@ -9,9 +10,14 @@ from fastapi import Request
 class RequestContext:
     request_id: str
     correlation_id: str
+    actor_id: Optional[str] = None
+    org_id: Optional[str] = None
+    token_id: Optional[str] = None
 
 
-_request_context: contextvars.ContextVar[RequestContext] = contextvars.ContextVar("request_context")
+_request_context: contextvars.ContextVar[RequestContext] = contextvars.ContextVar(
+    "request_context", default=RequestContext(request_id="unset", correlation_id="unset")
+)
 
 
 def request_context_middleware():
@@ -30,3 +36,8 @@ def request_context_middleware():
 
 def get_request_context() -> RequestContext:
     return _request_context.get()
+
+
+def attach_principal(request_context: RequestContext, *, actor_id: str | None, org_id: str | None, token_id: str | None) -> None:
+    updated = replace(request_context, actor_id=actor_id, org_id=org_id, token_id=token_id)
+    _request_context.set(updated)

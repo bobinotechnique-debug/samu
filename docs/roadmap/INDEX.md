@@ -8,7 +8,7 @@ This index routes roadmap documentation and status references governed by agents
 ## Phase Overview
 - **Phase 0: Hardening** - Status: Closed on 2025-12-17 (see docs/roadmap/phase0/step-01-harden-bootstrap.md)
 - **Phase 1: Foundational documentation** - Status: LOCKED (see docs/roadmap/phase1/step-14.md for immutability and non-regression charter). Steps 00-13 are sealed; any amendment requires a new spec referencing the locked artifact and migration guidance.
-- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-10 deliverables bound to Phase 1 contracts).
+- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-11 deliverables bound to Phase 1 contracts).
 
 ## Files
 - roadmap/phase0/step-00-bootstrap.md - sealed bootstrap log.

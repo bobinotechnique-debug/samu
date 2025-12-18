@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# 2026-01-06 - Phase 2 Step 11 First Vertical Slice
+- Implemented auth + organization context slice with bearer token lookup, principal context, RBAC hooks, and org/membership CRUD APIs.
+- Added persistence models, alembic migration, seed script, docker compose updates, and backend/frontend tests for scoped access and error model enforcement.
+- Updated roadmap, API and ops indexes, and new local run documentation for Step 11.
+
 # 2026-01-05 - Phase 2 Step 10 Implementation Bootstrap
 - Added backend and frontend runnable scaffolding with FastAPI, routing, health probes, and React shell aligned to Phase 2 architecture docs.
 - Registered Docker Compose baseline, environment samples, and roadmap/doc index updates for Step 10 while keeping guards/tests green.
