@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2025-12-31 - Phase 2 Step 04 API Architecture and Routing
+- Replaced docs/api/20_api_architecture.md with the authoritative FastAPI routing, versioning, dependency, error mapping, and pagination scaffolds aligned to Phase 1 contracts and Phase 2 wiring goals.
+- Updated docs/api/INDEX.md to register the Phase 2 routing scaffold and reflect the cross-cutting middleware and dependency conventions.
+
 # 2025-12-30 - Phase 2 Step 03 Persistence and Data Model
 - Replaced docs/specs/22_persistence_model.md with the authoritative PostgreSQL table, index, isolation, and soft delete design covering all Phase 1 entities.
 - Captured audit/outbox persistence skeletons, integrity invariants, and retention policies to guide later implementation without semantic drift.
