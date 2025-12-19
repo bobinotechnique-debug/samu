@@ -51,6 +51,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
  - Phase 2 - Step UX-01: UX surface contracts (DONE).
  - Phase 2 - Step UX-02: User journeys (DONE).
+- docs/audits/implementation_readiness.md - Phase 2 implementation readiness audit (roadmap Step 10 prerequisite).
 
 ## Rules
 - Every change must cite a roadmap step before implementation.
