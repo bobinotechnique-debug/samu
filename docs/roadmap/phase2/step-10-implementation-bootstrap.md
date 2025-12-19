@@ -20,6 +20,11 @@ In progress.
 - Defaults target local/CI usage with SQLite fallback in tests to keep pipelines green.
 - Implementation readiness audit recorded at docs/audits/implementation_readiness.md; resolve documented blockers before coding.
 
+## Iteration 2 (V0.001) runtime bootstrap
+- Non-versioned `GET /health/live` and `GET /health/ready` are routed outside `/api/v1`, with `/api/v1/health` kept only as a readiness compatibility alias.
+- Request and correlation IDs are returned on responses via middleware to support probe traceability.
+- Settings loader honors precedence (env vars > .env.local > .env > defaults) with local-safe defaults and a committed `.env.example` for contributors.
+
 ## Prerequisites and acceptance alignment
 - Canonical operational endpoints are non-versioned GET /health/live (liveness only) and GET /health/ready (readiness with at least database checks; add cache/queue only when required to serve traffic).
 - Deployment and CI probes MUST target /health/live and /health/ready; /api/v1/health, if kept, is only a compatibility alias that proxies readiness and is discouraged for probes.
