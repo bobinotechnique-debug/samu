@@ -23,7 +23,7 @@
 - **Contract tests:**
   - Location: `backend\tests\contract` (create as needed).
   - Pin HTTP status codes, error envelope shape, and schema-critical fields for published routes and async job handlers.
-  - Use explicit versioned paths (for example: `/api/v1/health/live`) and stable payloads; avoid snapshot files.
+  - Use explicit, documented paths (for example: `/health/live` and `/health/ready` for operational probes) and stable payloads; avoid snapshot files.
 
 ## 4. Database Isolation Strategy
 - Default to an in-memory SQLite database with `StaticPool` for local and CI runs; connection string `sqlite+pysqlite:///:memory:` must be set by tests.

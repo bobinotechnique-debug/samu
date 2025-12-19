@@ -15,6 +15,7 @@ Provide a routing map for all high-level documentation artifacts.
 - docs/audits/INDEX.md - audit catalog, including implementation readiness coverage.
 - docs/agents/agents_audit.md - latest audit of agent contracts and error logging rules.
 - docs/decisions/INDEX.md - catalog of locked and active decisions.
+- Operational health/readiness contract: canonical /health/live and /health/ready docs live in docs/api/20_api_architecture.md and docs/ops/21_observability.md.
 
 ## Expected Documents
 - Architecture overviews

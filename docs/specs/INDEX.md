@@ -66,3 +66,4 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - Primary specifications live in specs/INDEX.md.
 - Updates must respect AGENT.md stop conditions and roadmap linkage.
 - ASCII-only content is enforced by guard scripts.
+- Operational health/readiness endpoints (/health/live and /health/ready) are documented in docs/api/20_api_architecture.md and docs/ops/21_observability.md and remain non-versioned.

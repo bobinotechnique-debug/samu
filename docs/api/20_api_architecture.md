@@ -86,7 +86,6 @@ Groups below are logical boundaries and should map to HLD services/modules.
 
 Prefix: /api/v1
 
-- /health
 - /meta
 - /auth (if any API-level auth endpoints exist)
 - /orgs
@@ -116,6 +115,7 @@ Prefix: /api/v1
 Notes:
 - Keep groups coarse. Do not fragment routes by tiny sub-domains.
 - Each group should have a single "routes/<group>.py" router entry.
+- Operational health endpoints are mounted separately under /health/* (non-versioned) and are not part of the /api/v1 router except for an optional compatibility alias called out below.
 
 ---
 
@@ -125,7 +125,7 @@ Baseline authority: docs/specs/12_api_versioning.md
 
 Rules:
 - All public endpoints live under /api/v{N}/...
-- No unversioned endpoints, except /health if explicitly allowed by Phase 1.
+- Non-versioned endpoints are limited to the canonical operational probes: GET /health/live and GET /health/ready.
 - Version routers are explicit modules:
   - backend/app/api/v1/router.py
   - (future) backend/app/api/v2/router.py
@@ -135,12 +135,33 @@ Deprecation:
   - OpenAPI metadata (deprecated=True where applicable)
   - Response headers (only if Phase 1 defines a convention)
 - Removing endpoints requires a new major version.
+- /api/v1/health may be exposed only as an explicit compatibility alias for legacy integrations; it must delegate to the readiness contract and SHOULD NOT be used by deployment orchestrators.
 
 ---
 
-## 5. Cross-cutting request context dependencies
+## 5. Operational endpoints (health/readiness)
 
-### 5.1 Request id
+Scope:
+- Canonical operational probes are non-versioned and live outside /api/v1.
+- Paths:
+  - GET /health/live -> process liveness only (fast, no dependency checks).
+  - GET /health/ready -> dependency readiness; at minimum database; add cache/queue if traffic-serving requires them.
+- Auth: no authentication required so orchestrators and load balancers can poll without tokens. If security posture forces auth, document the requirement in the deployment guide and keep probes whitelisted.
+
+Response shape expectations:
+- JSON only, minimal and stable: { "status": "ok" | "error", "timestamp": "<UTC ISO8601>", "checks": { "<dependency>": "ok" | "error" } }.
+- No secrets or stack traces. Keep payload small to minimize probe latency.
+
+Routing rules:
+- Mount a dedicated router (e.g., /health) outside the versioned API. Do not prefix with /api/v1.
+- Compatibility alias /api/v1/health is optional and non-canonical; if present it proxies to readiness semantics. Documented for backward compatibility only and discouraged for orchestrator probes.
+- Deployment readiness/liveness probes MUST use the non-versioned endpoints.
+
+---
+
+## 6. Cross-cutting request context dependencies
+
+### 6.1 Request id
 
 Every request MUST have a request id available in logs and error responses.
 Source:
@@ -151,7 +172,7 @@ Expose it in:
 - response header "X-Request-Id"
 - error payload "request_id" (if Phase 1 error model includes it)
 
-### 5.2 Authentication and actor
+### 6.2 Authentication and actor
 
 An "actor context" dependency provides:
 - actor_id
@@ -163,7 +184,7 @@ Contract:
 - No endpoint with tenant data can run without org_id in context.
 - Actor context resolution is done in deps.py and MUST be usable by all routers.
 
-### 5.3 Organization boundary (tenant isolation)
+### 6.3 Organization boundary (tenant isolation)
 
 All org-scoped endpoints MUST enforce an org boundary.
 Two acceptable patterns (choose one and keep consistent with Phase 1):
@@ -179,7 +200,7 @@ Pattern B (header-scoped org):
 
 If Phase 1 already locked this choice, Phase 2 MUST implement that choice only.
 
-### 5.4 Project boundary (functional isolation)
+### 6.4 Project boundary (functional isolation)
 
 All project-scoped endpoints MUST enforce project belongs to org.
 Dependency:
@@ -190,18 +211,18 @@ Dependency:
 
 ---
 
-## 6. Error mapping (Phase 1 error model)
+## 7. Error mapping (Phase 1 error model)
 
 Baseline authority: docs/specs/11_api_error_model.md
 
-### 6.1 Principles
+### 7.1 Principles
 
 - Domain/service code raises typed exceptions.
 - API layer catches them and returns the canonical error response.
 - No raw tracebacks or unstructured errors leave the API.
 - For unexpected exceptions, return a stable INTERNAL error code.
 
-### 6.2 Canonical mapping table (example scaffold)
+### 7.2 Canonical mapping table (example scaffold)
 
 This table is the wiring contract; the exact codes/fields must match Phase 1.
 
@@ -222,7 +243,7 @@ This table is the wiring contract; the exact codes/fields must match Phase 1.
 - InternalError / Exception -> 500 INTERNAL_SERVER_ERROR
   - code: "internal"
 
-### 6.3 Error response shape
+### 7.3 Error response shape
 
 The error response MUST match Phase 1. This doc only requires:
 - stable "code"
@@ -234,7 +255,7 @@ Additionally:
 - Include a machine-friendly "error_id" if Phase 1 requires it.
 - Never leak secrets, stack traces, SQL, or tokens.
 
-### 6.4 Implementation wiring
+### 7.4 Implementation wiring
 
 - Define exception classes in a shared module (domain or service layer).
 - Define FastAPI exception handlers in backend/app/api/errors.py.
@@ -246,14 +267,14 @@ Rule:
 
 ---
 
-## 7. Pagination rules
+## 8. Pagination rules
 
 Baseline authority: docs/specs/10_api_conventions.md
 
 This section defines how pagination is expressed in request params and response payloads.
 Use ONE style consistently per Phase 1 baseline.
 
-### 7.1 Supported pagination styles
+### 8.1 Supported pagination styles
 
 Option A: Cursor pagination (preferred for large datasets)
 Request:
@@ -279,7 +300,7 @@ Response:
   - limit: int
   - total: int (only if Phase 1 requires total, otherwise omit)
 
-### 7.2 Sorting and filtering
+### 8.2 Sorting and filtering
 
 If endpoints support sorting/filtering:
 - sort: comma-separated fields with optional prefix "-" for desc
@@ -289,14 +310,14 @@ Rules:
 - If sort/filter is not supported, endpoint MUST reject unknown query params only if Phase 1 requires strictness.
 - Do not implement "q=" search unless Phase 1 defines it.
 
-### 7.3 Pagination defaults and limits
+### 8.3 Pagination defaults and limits
 
 - Default limit MUST be stable and documented (Phase 1).
 - Max limit MUST be enforced (reject or clamp as defined in Phase 1).
 
 ---
 
-## 8. Response envelopes and consistency
+## 9. Response envelopes and consistency
 
 This document does not redefine schemas; it defines consistency rules.
 
@@ -308,7 +329,7 @@ Rules:
 
 ---
 
-## 9. OpenAPI and tagging
+## 10. OpenAPI and tagging
 
 Rules:
 - Each route group MUST set tags=[...] for docs clarity.
@@ -318,7 +339,7 @@ Rules:
 
 ---
 
-## 10. CORS, security headers, and middleware (scaffold)
+## 11. CORS, security headers, and middleware (scaffold)
 
 Middleware list (scaffold only):
 - request id propagation
@@ -337,7 +358,7 @@ CORS:
 
 ---
 
-## 11. Reference router skeleton (illustrative)
+## 12. Reference router skeleton (illustrative)
 
 This is a conceptual example to guide implementation and does not lock endpoint lists.
 
@@ -356,7 +377,7 @@ Each route module:
 
 ---
 
-## 12. Acceptance checklist (Phase 2 Step 04)
+## 13. Acceptance checklist (Phase 2 Step 04)
 
 - docs/api/20_api_architecture.md created and registered in docs/api/INDEX.md
 - Routing tree and groups aligned with docs/specs/20_architecture_HLD.md

@@ -33,10 +33,12 @@
 - **Coverage:** inbound HTTP spans, DB queries, Redis calls, queue publish/consume, and job execution spans stitched via `trace_id`/`span_id`.
 
 ## Health checks
-- **Live:** `GET /health/live` returns OK if the process is running (no dependency checks) for container/runtime liveness.
-- **Ready:** `GET /health/ready` checks database connectivity (read/write ping), Redis ping, queue broker reachability, pending migrations flag, and metrics exporter readiness.
-- **Jobs:** worker readiness includes queue subscription status and ability to write heartbeat metrics.
-- **Contracts:** all health responses are JSON with `status`, `timestamp`, and per-dependency fields; no secrets in responses.
+- **Canonical endpoints (non-versioned):**
+  - `GET /health/live` -> process up only, no dependency checks, fast response.
+  - `GET /health/ready` -> readiness for serving traffic; MUST check database connectivity; include cache/queue only when they are required for handling inbound requests.
+- **Compatibility alias:** `/api/v1/health` may exist for legacy callers but is non-canonical and should proxy readiness semantics. Do not wire orchestrator probes to the alias.
+- **Workers:** worker readiness mirrors API readiness and adds queue subscription/heartbeat capability checks when workers must process traffic.
+- **Responses:** JSON only with `status`, `timestamp`, and per-dependency fields under `checks`; no secrets or stack traces. Keep endpoints unauthenticated so platform probes and load balancers can poll directly.
 
 ## Alerting (minimal documented baseline)
 - Alert when any ready check fails for >2 minutes.
