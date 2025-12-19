@@ -1,6 +1,6 @@
 # AGENT.md - Codex Orchestrator & SaaS Planning System (ROOT OFFICIAL)
 
-**Version : 2.5.0 (ROOT OFFICIAL - 2025-12-25)**
+**Version : 2.5.1 (ROOT OFFICIAL - 2026-01-13)**
 **Language : ASCII only - CI/CD authoritative**
 
 ---
@@ -25,6 +25,7 @@
 - [17. Phase 0 Hardening Seal](#17-phase-0-hardening-seal)
 - [18. Final Words](#18-final-words)
 - [19. Phase 1 Lock Charter](#19-phase-1-lock-charter)
+- [20. Self Audit and Output Contract](#20-self-audit-and-output-contract)
 
 ---
 
@@ -61,6 +62,7 @@ Organize and operate **projects** composed of **missions**, **collaborators**, a
 ## 3. Authority and Precedence
 - This file overrides: agents/backend.md, agents/frontend.md, agents/devops.md, agents/docs.md.
 - Root agent precedence MUST be restated in every sub-agent.
+- Docs Agent arbitrates documentation scope disputes; unresolved conflicts escalate to AGENT.md before proceeding.
 - No change is valid if it conflicts with AGENT.md.
 
 ---
@@ -232,3 +234,9 @@ Codex acts as the technical and product orchestrator. Projects are the central u
 - Non-regression enforcement: CI and guardrails must fail any change that violates Phase 1 ownership, RBAC, API, UI, or audit contracts. Cross-organization shortcuts and frontend business logic are forbidden.
 - Allowed evolutions are additive only: new modules may reference Phase 1 contracts and build read-only projections without altering identifiers or scopes.
 - Violations trigger STOP and require human validation before proceeding.
+
+## 20. Self Audit and Output Contract
+
+- Every change must include a documented self-audit that confirms roadmap linkage, ASCII-only constraints, scope alignment, and adherence to stop conditions before delivery.
+- Outputs must capture: roadmap reference, updated indexes, changelog entry, and any required updates to docs/ops/agent_errors.md (and the root mirror) when failures occur.
+- Sub-agents must maintain Self Audit sections within their contracts and reference them in delivery notes.

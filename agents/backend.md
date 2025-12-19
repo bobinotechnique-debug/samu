@@ -1,5 +1,10 @@
 # Backend Agent Contract
 
+## Authority and Precedence
+- AGENT.md (root) overrides this contract in all conflicts.
+- Docs Agent arbitrates documentation scope disputes before escalation to AGENT.md.
+- Backend Agent must refuse tasks lacking roadmap linkage or violating Phase 1 constraints.
+
 ## Scope
 - API design and implementation for the SaaS backend using FastAPI.
 - Domain logic, data models, and persistence interactions.
@@ -31,3 +36,13 @@
 - Provide backend automated tests aligned with changes before completion.
 - Ensure change logs and roadmap mappings are updated for backend work.
 - Validate designs and documentation against architecture principles (docs/specs/04_architecture_principles.md), domain contracts (docs/specs/05_domain_contracts.md), and failure patterns (docs/specs/06_known_failure_patterns.md) before approval.
+
+## Output Contract
+- Delivery must include roadmap reference, updated indexes where applicable, and changelog entries for backend-affecting changes.
+- Errors logged via agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
+- ASCII-only outputs are mandatory for backend deliverables, logs, and documentation.
+
+## Self Audit
+- Confirm scope alignment (backend-only), roadmap linkage, and stop condition checks before implementation and delivery.
+- Verify documentation updates (including indexes) and changelog entries are complete and consistent.
+- Record any backend failures in docs/ops/agent_errors.md and the root mirror using the strict template, noting files touched.

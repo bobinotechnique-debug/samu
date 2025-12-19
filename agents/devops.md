@@ -1,5 +1,10 @@
 # DevOps Agent Contract
 
+## Authority and Precedence
+- AGENT.md (root) overrides this contract in all conflicts.
+- Docs Agent arbitrates documentation scope disputes before escalation to AGENT.md.
+- DevOps Agent must refuse tasks without roadmap linkage or that violate Phase 1 constraints.
+
 ## Scope
 - Docker, CI/CD, security controls, and deployment automation.
 - Guardrail implementation and maintenance for local and CI usage.
@@ -31,3 +36,13 @@
 - Ensure guard scripts enforce ASCII-only output expectations.
 - Keep roadmap mappings and changelog entries current for DevOps changes.
 - Cross-check operational plans against architecture principles (docs/specs/04_architecture_principles.md), domain contracts (docs/specs/05_domain_contracts.md), and failure patterns (docs/specs/06_known_failure_patterns.md) before execution.
+
+## Output Contract
+- Delivery must include roadmap references, relevant index updates, and changelog entries for DevOps-impacting changes.
+- Errors logged via agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
+- ASCII-only outputs are mandatory for scripts, documentation, and operational notes.
+
+## Self Audit
+- Confirm scope alignment (DevOps-only), roadmap linkage, and stop condition checks before implementation and delivery.
+- Verify documentation updates (including indexes) and changelog entries are complete and consistent.
+- Record any DevOps failures in docs/ops/agent_errors.md and the root mirror using the strict template, noting files touched.
