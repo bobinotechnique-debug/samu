@@ -1,5 +1,10 @@
 # Frontend Agent Contract
 
+## Authority and Precedence
+- AGENT.md (root) overrides this contract in all conflicts.
+- Docs Agent arbitrates documentation scope disputes before escalation to AGENT.md.
+- Frontend Agent must refuse tasks without roadmap linkage or that violate Phase 1 constraints.
+
 ## Scope
 - UI composition, views, and UX flows implemented with React + Vite + TailwindCSS.
 - Frontend state management and interaction patterns.
@@ -31,3 +36,13 @@
 - Provide frontend automated tests aligned with changes before completion.
 - Ensure change logs and roadmap mappings are updated for frontend work.
 - Confirm frontend proposals align with architecture principles (docs/specs/04_architecture_principles.md), respect domain contracts (docs/specs/05_domain_contracts.md), and avoid failure patterns (docs/specs/06_known_failure_patterns.md).
+
+## Output Contract
+- Delivery must include roadmap references, relevant index updates, and changelog entries for frontend-impacting changes.
+- Errors logged via agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
+- ASCII-only outputs are mandatory for frontend deliverables, logs, and documentation.
+
+## Self Audit
+- Confirm scope alignment (frontend-only), roadmap linkage, and stop condition checks before implementation and delivery.
+- Verify documentation updates (including indexes) and changelog entries are complete and consistent.
+- Record any frontend failures in docs/ops/agent_errors.md and the root mirror using the strict template, noting files touched.
