@@ -1,11 +1,15 @@
 # Implementation Readiness Audit
 
 ## Scope
-Phase 2 implementation readiness covering backend (API, services, jobs), persistence, observability/ops, CI harness alignment, and frontend scaffolding boundaries.
+Phase 2 implementation readiness covering backend scaffolding (API, services, jobs), persistence, observability/ops, CI harness alignment, and frontend architecture boundaries.
 
 ## Inputs Reviewed
 - AGENT.md
 - docs/INDEX.md
+- docs/specs/INDEX.md
+- docs/api/INDEX.md
+- docs/ux/INDEX.md
+- docs/ops/INDEX.md
 - docs/roadmap/INDEX.md
 - docs/roadmap/phase2/INDEX.md
 - docs/roadmap/phase2/step-01-high-level-architecture.md
@@ -43,9 +47,18 @@ Phase 2 implementation readiness covering backend (API, services, jobs), persist
 - docs/specs/23_async_jobs.md
 - docs/specs/24_security_model.md
 - docs/specs/25_execution_invariants.md
+- docs/specs/25_resilience_and_error_handling.md
 - docs/specs/25_testing_strategy.md
+- docs/specs/25_rate_limiting_and_quotas.md
+- docs/specs/26_rate_limiting_and_abuse_protection.md
+- docs/specs/26_resilience_and_circuit_breakers.md
+- docs/specs/26_caching_strategy.md
+- docs/specs/26_feature_flags.md
+- docs/specs/25_consistency_and_idempotency.md
+- docs/specs/33_assignment_engagement_states.md
+- docs/specs/34_notifications_and_acceptance.md
+- docs/specs/35_contract_generation_pipeline.md
 - docs/api/20_api_architecture.md
-- docs/api/INDEX.md
 - docs/ops/20_deployment_architecture.md
 - docs/ops/21_observability.md
 - docs/ops/21_observability_and_logging.md
@@ -64,7 +77,7 @@ Missing Inputs: None.
 | Phase2-06 Security/Trust | docs/specs/24_security_model.md | Org/RBAC rules; token claim set | READY | None |
 | Phase2-07 Frontend Architecture | docs/ux/20_frontend_architecture.md | API conventions; component/page contracts | READY | None |
 | Phase2-08 Deployment/Envs | docs/ops/20_deployment_architecture.md | Service matrix; config precedence | READY | None |
-| Phase2-09 Observability Baseline | docs/ops/21_observability.md | Logging/metrics/tracing fields defined | PARTIAL | Health endpoint path conflict with API index |
+| Phase2-09 Observability Baseline | docs/ops/21_observability.md | Logging/metrics/tracing fields defined | PARTIAL | Health endpoint path conflict with API docs |
 | Phase2-10 Implementation Bootstrap | docs/roadmap/phase2/step-10-implementation-bootstrap.md; docs/api/20_api_architecture.md; docs/ops/20_deployment_architecture.md | Health/ready endpoint shape; dependency checks; test harness from Step 13 | PARTIAL | Health endpoint path conflict (docs/api/INDEX.md vs docs/ops/21_observability.md) |
 | Phase2-11 First Vertical Slice | docs/roadmap/phase2/step-11-first-vertical-slice.md; docs/specs/24_security_model.md | Auth token storage; org context enforcement; migrations; bootstrap readiness | PARTIAL | Dependent on Step 10 readiness |
 | Phase2-12 Execution Governance | docs/specs/25_execution_invariants.md | Service hooks for invariants; audit propagation | READY | None |
@@ -80,10 +93,10 @@ Missing Inputs: None.
 
 ## Cross-Cutting Contracts Checklist
 ### API
-- PASS - Versioning and routing prefix /api/v1 enforced; additive changes only. (docs/specs/12_api_versioning.md; docs/api/20_api_architecture.md)
-- PASS - Error envelope shape with stable codes, request_id, timestamp. (docs/specs/11_api_error_model.md)
+- PASS - Versioning and routing prefix /api/v1 enforced with additive changes only. (docs/specs/12_api_versioning.md; docs/api/20_api_architecture.md)
+- PASS - Error envelope shape with stable codes, request_id, and timestamp. (docs/specs/11_api_error_model.md)
 - PASS - Pagination/filter/sort query conventions defined. (docs/specs/10_api_conventions.md)
-- PARTIAL - Health endpoint location differs (/api/v1/health in docs/api/INDEX.md vs /health/live,/health/ready in docs/ops/21_observability.md); needs alignment before bootstrap.
+- PARTIAL - Health endpoint locations differ (/api/v1/health in docs/api/INDEX.md vs /health/live and /health/ready in docs/ops/21_observability.md); alignment required before bootstrap.
 
 ### Security
 - PASS - Multi-tenancy and RBAC enforcement points defined (auth dependency, scope intersection). (docs/specs/03_multi_tenancy_and_security.md; docs/specs/24_security_model.md; docs/specs/08_rbac_model.md)
@@ -92,27 +105,27 @@ Missing Inputs: None.
 - PASS - org_id/project_id required on all entities with forbidden cross-org joins. (docs/specs/07_data_ownership.md)
 
 ### Audit/traceability
-- PASS - Audit fields and correlation id requirements documented. (docs/specs/09_audit_and_traceability.md; docs/ops/21_observability_and_logging.md)
+- PASS - Audit fields, request/correlation id propagation, and required events documented. (docs/specs/09_audit_and_traceability.md; docs/ops/21_observability_and_logging.md)
 
 ### Persistence
-- PASS - Soft delete defaults, partial uniqueness indexes, UUID PKs, UTC timestamps. (docs/specs/22_persistence_model.md)
+- PASS - Soft delete defaults, partial uniqueness indexes, UUID PKs, and UTC timestamps. (docs/specs/22_persistence_model.md)
 
 ### Ops
-- PASS - Environment matrix, config precedence, secrets handling documented. (docs/ops/20_deployment_architecture.md)
-- PARTIAL - Health/readiness endpoint paths conflicting across ops vs API docs; readiness contract depends on resolution. (docs/api/INDEX.md; docs/ops/21_observability.md)
+- PASS - Environment matrix, config precedence, and secrets handling documented. (docs/ops/20_deployment_architecture.md)
+- PARTIAL - Health/readiness endpoint paths conflict across ops vs API docs, leaving readiness probes ambiguous. (docs/api/INDEX.md; docs/ops/21_observability.md)
 
 ## Gaps and Decisions Needed
-- Health endpoint path and scope are inconsistent between docs/api/INDEX.md (/api/v1/health) and docs/ops/21_observability.md (/health/live and /health/ready). This blocks Implementation Bootstrap because routing, tests, and deployment checks cannot be aligned. Proposed doc to add/clarify: docs/api/20_api_architecture.md (section clarifying health/readiness path and versioning) plus harmonized note in docs/ops/21_observability.md. Proposed roadmap registration: Phase 2 Step 10 (Implementation Bootstrap) prerequisite update.
+- Health endpoint contract conflict: docs/api/INDEX.md registers `/api/v1/health` while docs/ops/21_observability.md defines `/health/live` and `/health/ready`, leaving the readiness probe path undefined for Step 10 bootstrap. Blocks wiring of routers, observability checks, and deployment health gating. Proposed docs to update: clarify canonical health/readiness paths and versioning in docs/api/20_api_architecture.md and reconcile docs/ops/21_observability.md to match. Proposed roadmap registration: Phase 2 Step 10 (Implementation Bootstrap) prerequisite update.
 
 ## Iteration Plan (Implementation Increments)
-1) Phase 2 Step 10 - Align health/readiness endpoint contract  
-   Acceptance criteria: health and readiness paths/versioning documented consistently across docs/api/20_api_architecture.md and docs/ops/21_observability.md; API index reflects the agreed paths; readiness check dependencies (db/cache) noted.  
-   Deliverables: doc updates only; roadmap step updated with resolved contract; no runtime code.  
-   Validation commands: docs guard scripts (per validate.ps1) after doc update.
-2) Phase 2 Step 10 - V0.001 Baseline: Implementation Bootstrap (after gap resolution)  
-   Acceptance criteria: FastAPI app boots with /health and /v1/version endpoints following error envelope; settings loader per ops config precedence; DB connectivity hook and migration stub; request-id middleware scaffold; multi-tenant org_id enforcement hook placeholder; tests for health/version/error envelope smoke using pytest harness.  
-   Deliverables: backend skeleton, configuration wiring, minimal alembic migration, pytest smoke tests, updated roadmap status.  
-   Validation commands: `python -m pytest backend/tests` (or project-standard test entry), formatting/lint per scripts/test_backend.ps1 when available.
+1) Phase 2 Step 10 - Document health/readiness endpoint alignment  
+   Acceptance criteria: Consistent, versioned health and readiness paths documented in docs/api/20_api_architecture.md and docs/ops/21_observability.md; docs/api/INDEX.md mirrors the contract; readiness dependencies (db/cache/queue) stated.  
+   Deliverables: Documentation updates only; roadmap note reflecting resolved contract.  
+   Validation commands: docs guard scripts per validate.ps1 after doc updates.
+2) Phase 2 Step 10 - V0.001 Baseline: Implementation Bootstrap (unblocked after iteration 1)  
+   Acceptance criteria: FastAPI skeleton with agreed health/readiness endpoints and /api/v1/version route following the error envelope; settings loader honoring config precedence; DB connectivity hook and migration stub; request-id middleware; multi-tenant org_id enforcement hook placeholder; pytest smoke tests for health/version/error envelope.  
+   Deliverables: Backend scaffold, minimal migration, initial tests, updated roadmap status.  
+   Validation commands: `python -m pytest backend/tests` plus repository-standard backend guard scripts.
 
 ## Stop Conditions
-- Coding must not start until the health endpoint path conflict is resolved and registered under Phase 2 Step 10; only documentation alignment is permitted while the blocker stands.
+- No runtime code until the health endpoint conflict is resolved and registered under Phase 2 Step 10. Halt if required indexes are missing, if CI/guards fail, or if roadmap linkage is absent for subsequent iterations.
