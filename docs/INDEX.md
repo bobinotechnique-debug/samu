@@ -14,6 +14,7 @@ Provide a routing map for all high-level documentation artifacts.
 - docs/ops/INDEX.md - operational records and guards.
 - docs/audits/INDEX.md - audit catalog, including implementation readiness coverage.
 - docs/agents/agents_audit.md - latest audit of agent contracts and error logging rules.
+- docs/decisions/INDEX.md - catalog of locked and active decisions.
 
 ## Expected Documents
 - Architecture overviews
