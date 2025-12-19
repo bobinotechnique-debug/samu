@@ -33,6 +33,10 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/29_planning_cost_view.md - Planning-derived cost views per day, mission, and project with display-only, reproducible estimates (Phase 1 extension).
 - docs/specs/30_contract_assignment_link.md - Contract-to-assignment linkage rules, lifecycle, and non-blocking completeness alerts for planning coherence (Phase 1 extension).
 - docs/specs/31_cost_centers.md - Project and mission-scoped cost center classification for derived planning reports without accounting ledgers (Phase 1 extension).
+- docs/specs/32_engagement_acceptance_and_notifications.md - Engagement ladder, enriched acceptance, declarative reminders/escalations, engagement timeline, execution documents, and audit journal for Phase 1 extension.
+
+### Coherence Audits
+- docs/specs/phase1_coherence_audit_engagement_acceptance.md - Audit confirming alignment of engagement, acceptance, reminders, and audit timeline scope with Phase 1 constraints.
 
 ### Phase 2 (In Progress)
 - docs/specs/20_architecture_HLD.md - High Level Architecture (context, boundaries, sync/async flows, trust boundaries) for Phase 2 Step 01.
