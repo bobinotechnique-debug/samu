@@ -84,6 +84,8 @@ graph TD
   P2 --> S209["Step 09: Observability and operations (Starting)"]
   P2 --> S210["Step 10: Implementation bootstrap (Starting)"]
   P2 --> S211["Step 11: First vertical slice (In progress)"]
+  P2 --> S212["Step 12: Execution governance (Starting)"]
+  P2 --> S213["Step 13: Testing strategy and harness (In progress)"]
 ```
 
 See also: [docs/roadmap/phase2/diagram.md](phase2/diagram.md).

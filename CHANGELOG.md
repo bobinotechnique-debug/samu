@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Added
 - Placeholder for upcoming entries.
 
+## [2026-01-08] - Phase 2 Step 13 Testing Strategy
+
+### Added
+- docs/specs/25_testing_strategy.md documenting the backend test pyramid, isolation practices, and forbidden testing patterns for Step 13.
+- Pytest harness fixtures for FastAPI app setup, database session rollback, fake auth context overrides, and a healthcheck probe test to keep CI green.
+
 ## [2026-01-07] - Onboarding and CI improvements
 
 ### Added
