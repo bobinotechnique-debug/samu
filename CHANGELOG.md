@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 
 ### Added
-- Placeholder for upcoming entries.
+- Phase 2 Step 20 documentation for consistency, idempotency, retries, and concurrency control, including new specification, roadmap entry, and index updates.
 
 ## [2026-01-12] - Phase 2 Step 17 Rate Limiting and Quotas
 
