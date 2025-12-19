@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 
 ### Added
+- Phase 2 Step 21 documentation freezing assignment engagement states, notifications/acceptance model, and contract generation pipeline with new specifications, roadmap entry, and index/status updates.
 - Phase 2 Step 20 documentation for consistency, idempotency, retries, and concurrency control, including new specification, roadmap entry, and index updates.
 - Phase 1 Step 21 amendment adding accounting and contracts specifications with coherence audit, roadmap references, and index updates under the Phase 1 lock charter.
 - Phase 1 Step 22 planning economic extension documenting derived cost views, contract-assignment linkage with warnings, and cost center classification with roadmap and index updates.

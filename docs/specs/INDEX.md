@@ -55,6 +55,9 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/26_rate_limiting_and_abuse_protection.md - Rate limiting scopes, throttling rules, headers, and abuse protection expectations for Phase 2 Step 15.
 - docs/specs/26_resilience_and_circuit_breakers.md - Circuit breaker, retry, timeout, and resilience policies to prevent cascading failures for Phase 2 Step 18.
 - docs/specs/26_caching_strategy.md - Caching strategy, key format, TTL rules, invalidation, observability, and safety constraints for Phase 2 Step 19.
+- docs/specs/33_assignment_engagement_states.md - Assignment engagement state machine, transitions, invariants, and audit rules for Phase 2 Step 21.
+- docs/specs/34_notifications_and_acceptance.md - Notification model, payload contract, acceptance flow, and forbidden patterns for Phase 2 Step 21.
+- docs/specs/35_contract_generation_pipeline.md - Event-driven contract generation pipeline with idempotency, auditability, and alerting for Phase 2 Step 21.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
