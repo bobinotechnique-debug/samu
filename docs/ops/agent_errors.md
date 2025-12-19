@@ -10,12 +10,12 @@ Every Codex failure must be logged exactly once using the required template. Ent
 
 ## Entry template (strict, ASCII-only)
 - Date: YYYY-MM-DD
-- Context: roadmap reference such as phase0/step-01-harden-bootstrap
+- Context (step ref): roadmap reference such as phase0/step-01-harden-bootstrap
 - Agent: root or sub-agent name (capitalized, e.g., Backend, Frontend, DevOps, Docs)
 - Symptom: sentence-case description of the observed failure
 - Root cause: sentence-case description of why the failure occurred
 - Fix: sentence-case remediation applied to resolve the issue
-- Prevention rule: guard, documentation, or process update to avoid recurrence
+- Prevention: guard, documentation, or process update to avoid recurrence
 - Files touched: comma-separated list of files modified during remediation or `none`
 
 All field labels must appear exactly as shown. Error or event codes, when present, must be uppercase (e.g., ERR_GUARD_MISSING).
