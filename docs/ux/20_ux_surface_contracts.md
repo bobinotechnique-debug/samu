@@ -1,4 +1,4 @@
-# UX Surface Contracts — Phase 2 Step UX-01
+# UX Surface Contracts - Phase 2 Step UX-01
 
 Authoritative UX surface contracts aligned to Phase 1 page and component agreements. ASCII only. Declarative descriptions; no implementation detail, business logic, or API behavior.
 
