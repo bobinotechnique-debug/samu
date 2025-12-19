@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Clarified agent audit metadata, canonicalized agent error log references to docs/ops/agent_errors.md, and reiterated versioning discipline for AGENT.md without changing contracts.
 - Refreshed Phase 2 Step 10 implementation readiness audit with updated roadmap mapping and health/readiness alignment plan (roadmap: docs/roadmap/phase2/step-10-implementation-bootstrap.md).
 - Standardized governance sections across agents/*.md to enforce precedence, step mode, contract gating, self-audit, stop conditions, and references.
+- Phase 2 Step 10 Iteration 1 - Align health/readiness endpoint contract (docs only) with canonical non-versioned /health/live and /health/ready, optional /api/v1/health compatibility alias, roadmap alignment, and implementation readiness blocker removal.
 
 ## [2026-01-12] - Phase 2 Step 17 Rate Limiting and Quotas
 
