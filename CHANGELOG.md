@@ -14,6 +14,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Phase 1 Step 22 planning economic extension documenting derived cost views, contract-assignment linkage with warnings, and cost center classification with roadmap and index updates.
 - Phase 1 Step 23 amendment detailing engagement ladder, acceptance model, reminders/escalations, engagement timeline, execution documents, and audit journal with new spec, audit doc, roadmap step, and index updates.
 
+### Changed
+- Clarified agent audit metadata, canonicalized agent error log references to docs/ops/agent_errors.md, and reiterated versioning discipline for AGENT.md without changing contracts.
+
 ## [2026-01-12] - Phase 2 Step 17 Rate Limiting and Quotas
 
 ### Added
@@ -208,3 +211,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ### Added
 - Initial Phase 0 orchestration skeleton and documentation scaffolding (roadmap step: phase0/step-00-bootstrap).
+
+---
+
+## Self Audit
+- Scope: documentation-only corrections to agent audit metadata, canonical agent error log path references, and versioning discipline notes.
+- Stop conditions: honored by limiting changes to documentation and contracts; no code or business logic affected.
+- Outputs: changelog updated; canonical path restated; ASCII-only content confirmed.
