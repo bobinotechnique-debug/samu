@@ -38,6 +38,7 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/23_async_jobs.md - Async job model covering job types, queues, and retry policies for Phase 2 Step 05.
 - docs/specs/24_security_model.md - Security and trust model with auth flows, token scopes, and data isolation for Phase 2 Step 06.
 - docs/specs/25_execution_invariants.md - Execution governance rules, enforcement matrix, and stop conditions for Phase 2 Step 12.
+- docs/specs/25_testing_strategy.md - Backend testing pyramid, isolation rules, and pytest harness guardrails for Phase 2 Step 13.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
