@@ -57,5 +57,8 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/34_notifications_and_acceptance.md - Notification model, payload contract, acceptance flow, and forbidden patterns for Phase 2 Step 21.
 - docs/specs/35_contract_generation_pipeline.md - Event-driven contract generation pipeline with idempotency, auditability, and alerting for Phase 2 Step 21.
 
+### Decisions and ADRs
+- docs/specs/adr_assignment_first_contract_derived.md - Decision record establishing assignment-first costing/audit with contracts as derived aggregates and gated issuance.
+
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents
