@@ -24,14 +24,17 @@ def _assert_timestamp_isoformat(timestamp: str) -> None:
     assert parsed.isoformat() == timestamp
 
 
+def _assert_payload(payload: dict[str, object], status: str, checks: dict[str, str]) -> None:
+    assert payload["status"] == status
+    assert payload["checks"] == checks
+    _assert_timestamp_isoformat(str(payload["timestamp"]))
+
+
 def test_health_live_returns_ok_status(client: TestClient) -> None:
     response = client.get("/health/live")
 
     assert response.status_code == 200
-    payload = response.json()
-    assert payload["status"] == "ok"
-    _assert_timestamp_isoformat(payload["timestamp"])
-    assert payload["checks"] == {}
+    _assert_payload(response.json(), "ok", {})
 
 
 def test_health_ready_includes_checks(client: TestClient, readiness_override) -> None:
@@ -40,10 +43,14 @@ def test_health_ready_includes_checks(client: TestClient, readiness_override) ->
     response = client.get("/health/ready")
 
     assert response.status_code == 200
-    payload = response.json()
-    assert payload["status"] == "ok"
-    assert payload["checks"] == {"db": "ok"}
-    _assert_timestamp_isoformat(payload["timestamp"])
+    _assert_payload(response.json(), "ok", {"db": "ok"})
+
+
+def test_health_ready_default_checker_is_safe_in_testing(client: TestClient) -> None:
+    response = client.get("/health/ready")
+
+    assert response.status_code == 200
+    _assert_payload(response.json(), "ok", {"db": "ok"})
 
 
 def test_health_ready_returns_error_status_on_failure(
@@ -54,10 +61,7 @@ def test_health_ready_returns_error_status_on_failure(
     response = client.get("/health/ready")
 
     assert response.status_code == 503
-    payload = response.json()
-    assert payload["status"] == "error"
-    assert payload["checks"] == {"db": "error"}
-    _assert_timestamp_isoformat(payload["timestamp"])
+    _assert_payload(response.json(), "error", {"db": "error"})
 
 
 def test_health_readiness_alias_matches_payload(client: TestClient, readiness_override) -> None:
@@ -66,7 +70,15 @@ def test_health_readiness_alias_matches_payload(client: TestClient, readiness_ov
     response = client.get("/api/v1/health")
 
     assert response.status_code == 200
-    payload = response.json()
-    assert payload["status"] == "ok"
-    assert payload["checks"] == {"db": "ok"}
-    _assert_timestamp_isoformat(payload["timestamp"])
+    _assert_payload(response.json(), "ok", {"db": "ok"})
+
+
+def test_health_readiness_alias_propagates_failures(
+    client: TestClient, readiness_override
+) -> None:
+    readiness_override({"db": "error"})
+
+    response = client.get("/api/v1/health")
+
+    assert response.status_code == 503
+    _assert_payload(response.json(), "error", {"db": "error"})
