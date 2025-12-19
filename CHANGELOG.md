@@ -9,6 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Added
 - Placeholder for upcoming entries.
 
+## [2026-01-12] - Phase 2 Step 17 Rate Limiting and Quotas
+
+### Added
+- docs/specs/25_rate_limiting_and_quotas.md detailing organization-first rate limiting and quota strategy, scope dimensions, Redis keying guidance, enforcement placement, headers/error mapping, audit/observability integration, and failure/fallback behavior for Phase 2 Step 17.
+- Roadmap entry for Phase 2 Step 17 capturing objectives, dependencies, acceptance criteria, and exclusions for the documentation-first delivery.
+- Index updates registering the new specification within docs/specs/INDEX.md, specs/INDEX.md, and roadmap navigation.
+
 ## [2026-01-11] - Phase 2 Step 16 Feature Flags and Configuration Toggles
 
 ### Added
