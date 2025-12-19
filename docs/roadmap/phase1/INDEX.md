@@ -25,6 +25,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-18.md - Phase 1 Step 18: Planning rules and constraints contract (Status: Proposed).
 - docs/roadmap/phase1/step-19.md - Phase 1 Step 19: State machines and lifecycles (Status: Proposed).
 - docs/roadmap/phase1/step-20.md - Phase 1 Step 20: Permissions and responsibility matrix (Status: Proposed).
+- docs/roadmap/phase1/step-21-accounting-and-contracts.md - Phase 1 Step 21: Accounting and Contracts extension via Step 14 amendment (Status: Proposed).
 - docs/roadmap/phase1/diagram.md - Phase 1 diagram showing locked and proposed steps.
 
 ## Notes
@@ -39,6 +40,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - Step 08 captures operational roadmap execution artifacts and relies on Steps 02-04 for ownership, RBAC, audit, and API conventions.
 - Step 09 documents equipment catalog, availability, and conflict rules bound to organization/project scopes under Steps 02-04 constraints.
 - Step 10 records finance and accounting contracts aligned to ownership, RBAC, audit, identifier, and API conventions defined in Steps 02-04.
+- Step 21 extends the finance/accounting scope with accounting and contract specifications under the Step 14 amendment path while preserving organization/project boundaries.
 - Step 14 locks the entire Phase 1 roadmap and requires formal amendment specs for any changes to the sealed artifacts.
 - Step 15 registers the validated UI component contracts without renumbering earlier artifacts and anchors the numbering sequence after the Step 07 registration gap.
 - Step 16 assembles the validated components into page contracts and continues the roadmap numbering for subsequent steps.

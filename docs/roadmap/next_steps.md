@@ -1,7 +1,7 @@
 # Roadmap Next Steps
 
 ## Upcoming Work
-- Phase 1 is LOCKED under docs/roadmap/phase1/step-14.md; no further Phase 1 edits are allowed without formal amendment specs referencing the sealed artifacts.
+- Phase 1 is LOCKED under docs/roadmap/phase1/step-14.md; amendments proceed only through documented steps such as docs/roadmap/phase1/step-21-accounting-and-contracts.md with explicit references to sealed artifacts.
 - Phase 1 documentation baseline is stable and serves as the authoritative reference for future phases.
 - Prepare Phase 2 planning items that consume Phase 1 contracts without altering identifiers, ownership, RBAC, API, or UI rules.
 - Any corrections to Phase 1 must follow the Step 14 amendment path with migration notes and explicit references.
