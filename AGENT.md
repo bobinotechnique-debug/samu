@@ -31,6 +31,11 @@
 
 This document is the **single source of truth** for the repository. AGENT.md overrides all sub-agents, and any conflict is resolved in favor of this file. Codex may update AGENT.md **only** when the version is bumped and a matching entry is recorded in CHANGELOG.md.
 
+Versioning discipline (no auto-bumps):
+- PATCH: documentation or guardrail clarifications with no contract changes.
+- MINOR: additive agent contract or scope expansion without breaking changes.
+- MAJOR: breaking contract changes or roadmap boundary shifts.
+
 ---
 
 ## 1. Global Role / Role Global
@@ -213,7 +218,7 @@ A task is DONE only if:
 ---
 
 ## 16. Error Learning and Feedback Loop
-- Sub-agents MUST document encountered errors and failures in docs/ops/agent_errors.md (mirrored by agent_errors.md at the repo root).
+- Sub-agents MUST document encountered errors and failures in docs/ops/agent_errors.md (canonical).
 - Each entry must include: Date, Phase/Step, Agent, Symptom, Root cause, Fix, Prevention rule.
 - Every Codex failure must be logged once.
 
@@ -238,5 +243,6 @@ Codex acts as the technical and product orchestrator. Projects are the central u
 ## 20. Self Audit and Output Contract
 
 - Every change must include a documented self-audit that confirms roadmap linkage, ASCII-only constraints, scope alignment, and adherence to stop conditions before delivery.
-- Outputs must capture: roadmap reference, updated indexes, changelog entry, and any required updates to docs/ops/agent_errors.md (and the root mirror) when failures occur.
+- Outputs must capture: roadmap reference, updated indexes, changelog entry, and any required updates to docs/ops/agent_errors.md (canonical path) when failures occur.
 - Sub-agents must maintain Self Audit sections within their contracts and reference them in delivery notes.
+- Audit trace (current update): canonical agent error log path reaffirmed; version bump rationale clarified without changing version number.

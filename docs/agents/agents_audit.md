@@ -1,4 +1,7 @@
-# Agents Contract Audit (2026-01-13)
+# Agents Contract Audit
+
+## Audit Metadata
+- Date: 2026-01-13
 
 ## Purpose
 Audit AGENT.md and agents/* for authority clarity, scope enforcement, stop conditions, output contracts, and error capitalization. All proposals below are diff-ready and implemented where noted.
@@ -16,13 +19,14 @@ Audit AGENT.md and agents/* for authority clarity, scope enforcement, stop condi
 - agents/frontend.md: added Authority and Precedence, Output Contract, and Self Audit sections; reinforced ASCII and roadmap rules.
 - agents/devops.md: added Authority and Precedence, Output Contract, and Self Audit sections; reinforced ASCII and roadmap rules.
 - agents/docs.md: added Authority and Precedence, Output Contract, and Self Audit sections; reinforced ASCII and roadmap rules.
-- agent_errors.md and docs/ops/agent_errors.md: hardened strict template ordering, capitalization expectations, and uppercase error/event code rule.
+- agent_errors.md and docs/ops/agent_errors.md: hardened strict template ordering, capitalization expectations, and uppercase error/event code rule; docs/ops/agent_errors.md confirmed as canonical.
 
 ## Residual Ambiguities
-- None detected; authority and escalation paths are explicit, and stop/output contracts are standardized.
+- Future updates must pause if any stop condition, escalation path, or output contract becomes ambiguous; run a fresh self-audit before proceeding.
 
 ## Self Audit
 - Roadmap linkage: documentation-only update aligned with phase0/step-00-bootstrap baseline.
 - ASCII compliance: all content is ASCII-only.
 - Scope alignment: confined to agent contracts and error logging documentation; no business logic or roadmap content modified.
 - Outputs produced: updated AGENT.md version, agent contracts, error templates, and this audit record; CHANGELOG entry added.
+- Patch check: normalized audit date handling, reinforced residual safeguards, and recorded canonical agent error log guidance.

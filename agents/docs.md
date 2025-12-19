@@ -39,10 +39,11 @@
 
 ## Output Contract
 - Delivery must include roadmap references, relevant index updates, and changelog entries for documentation-impacting changes.
-- Errors logged via agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
+- Errors logged via docs/ops/agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
 - ASCII-only outputs are mandatory for documentation and shared records.
 
 ## Self Audit
 - Confirm scope alignment (documentation governance), roadmap linkage, and stop condition checks before implementation and delivery.
 - Verify index updates and changelog entries are complete and consistent for documentation changes.
-- Record any documentation failures in docs/ops/agent_errors.md and the root mirror using the strict template, noting files touched.
+- Record any documentation failures in docs/ops/agent_errors.md using the strict template, noting files touched.
+- Audit note: canonical agent error log path enforced.
