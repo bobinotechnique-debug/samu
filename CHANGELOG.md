@@ -9,6 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Added
 - Placeholder for upcoming entries.
 
+## [2026-01-11] - Phase 2 Step 16 Feature Flags and Configuration Toggles
+
+### Added
+- docs/specs/26_feature_flags.md outlining feature flag and configuration toggle scope, precedence, naming, storage, logging guidance, forbidden patterns, and future extensions for Phase 2 Step 16.
+- Feature flag scaffolding in the backend, including models, provider interface, loader utilities, injectable service, and configuration example for env/global/org overrides without business logic branching.
+- Index, roadmap, and changelog updates registering Phase 2 Step 16 alongside unit tests covering precedence, parsing, and decision sources.
+
 ## [2026-01-10] - Phase 2 Step 15 Resilience and Rate Limiting
 
 ### Added
