@@ -1,6 +1,7 @@
 # Repository Documentation Status Summary
 
 ## Executive Summary
+- Engagement states, notifications/acceptance, and contract generation pipeline are frozen under new Phase 2 Step 21 with specs 33-35 and roadmap registration for auditability and idempotency.[F:docs/specs/33_assignment_engagement_states.md|L1-L89][F:docs/specs/34_notifications_and_acceptance.md|L1-L62][F:docs/specs/35_contract_generation_pipeline.md|L1-L70][F:docs/roadmap/phase2/step-21-engagement-states.md|L1-L26]
 - Phase 1 remains locked by the Step 14 non-regression charter while allowing additive documentation; Phase 2 now starts under the same guardrails.[F:docs/roadmap/phase1/step-14.md|L1-L35][F:docs/roadmap/phase2/INDEX.md|L1-L17]
 - Roadmap coverage now spans Phase 0 through Phase 2, with new Phase 2 Step 01-08 entries registering architecture, data, API, async, security, frontend, and deployment work.[F:docs/roadmap/INDEX.md|L5-L17][F:docs/roadmap/phase2/INDEX.md|L3-L15]
 - Phase 2 architecture artifacts define High Level Architecture, Low Level Architecture, persistence model, API routing, async jobs, security model, frontend architecture, and deployment environments, all mapped to Phase 1 contracts.[F:docs/specs/20_architecture_HLD.md|L1-L36][F:docs/specs/21_architecture_LLD.md|L1-L36][F:docs/specs/22_persistence_model.md|L1-L39][F:docs/api/20_api_architecture.md|L1-L39][F:docs/specs/23_async_jobs.md|L1-L120][F:docs/specs/24_security_model.md|L1-L40][F:docs/ux/20_frontend_architecture.md|L1-L33][F:docs/ops/20_deployment_architecture.md|L1-L38]
@@ -12,9 +13,9 @@
 - Roadmap sequencing continues to emphasize additive work that respects ownership, RBAC, audit, and UI rules established in Phase 1.[F:docs/roadmap/next_steps.md|L1-L11][F:AGENT.md|L71-L110]
 
 ## Current Phase and Step Position
-- Phase: 2 (Starting) with architecture Steps 01-08 registered; Phase 1 remains locked by Step 14 non-regression charter.[F:docs/roadmap/phase2/INDEX.md|L3-L15][F:docs/roadmap/phase1/step-14.md|L1-L35]
+- Phase: 2 (Starting) with architecture Steps 01-20 registered and new engagement Step 21 added; Phase 1 remains locked by Step 14 non-regression charter.[F:docs/roadmap/phase2/INDEX.md|L3-L17][F:docs/roadmap/phase1/step-14.md|L1-L35]
 - Completed/Validated Steps: Phase 0 Steps 00-01; Phase 1 Steps 00-07, 15-16 marked Done; Step 14 locked post-sealing.[F:docs/roadmap/phase0/INDEX.md|L4-L10][F:docs/roadmap/phase1/INDEX.md|L6-L24]
-- Active Work: Phase 1 Step 11 (cross-domain read models and integration rules); Phase 2 architecture documentation underway (Steps 01-08).[F:docs/roadmap/phase1/INDEX.md|L14-L19][F:docs/roadmap/phase2/INDEX.md|L3-L15]
+- Active Work: Phase 1 Step 11 (cross-domain read models and integration rules); Phase 2 documentation underway across Steps 01-21 with Step 11 and Step 21 highlighted for planning coherence.[F:docs/roadmap/phase1/INDEX.md|L14-L19][F:docs/roadmap/phase2/INDEX.md|L3-L17]
 - Proposed/Pending: Phase 1 Steps 08-10, 12-13, 17-20 remain proposed without completion markers.[F:docs/roadmap/phase1/INDEX.md|L13-L24]
 
 ## Document Inventory
@@ -52,6 +53,19 @@
 | Roadmap | docs/roadmap/phase2/step-06-security-and-trust.md | Phase 2 Step 06: Security and trust model | Starting | docs/roadmap/phase2/INDEX.md |
 | Roadmap | docs/roadmap/phase2/step-07-frontend-architecture.md | Phase 2 Step 07: Frontend architecture | Starting | docs/roadmap/phase2/INDEX.md |
 | Roadmap | docs/roadmap/phase2/step-08-deployment-and-environments.md | Phase 2 Step 08: Deployment and environments | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-09-observability-and-operations.md | Phase 2 Step 09: Observability and operations baseline | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-10-implementation-bootstrap.md | Phase 2 Step 10: Implementation bootstrap and runnable skeleton | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-11-first-vertical-slice.md | Phase 2 Step 11: Auth + org context + RBAC hooks vertical slice | In progress | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-12-execution-governance.md | Phase 2 Step 12: Execution governance and invariants | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-13-testing-strategy-and-harness.md | Phase 2 Step 13: Testing strategy and harness | In progress | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-14-observability-and-logging.md | Phase 2 Step 14: Observability, structured logging, and audit hooks | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-15-resilience-and-rate-limiting.md | Phase 2 Step 15: Resilience, error handling, rate limiting, and abuse protections | Done | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-16-feature-flags-and-configuration-toggles.md | Phase 2 Step 16: Feature flags and configuration toggles scaffold | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-17-rate-limiting.md | Phase 2 Step 17: Rate limiting, quotas, and abuse protection alignment | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-18-resilience-and-circuit-breakers.md | Phase 2 Step 18: Circuit breakers, retries, backoff, timeouts, and resilience alignment | Done | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-19-caching-strategy.md | Phase 2 Step 19: Caching strategy for FastAPI backend with tenancy-safe keys, TTLs, invalidation, and observability | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-20-consistency-idempotency.md | Phase 2 Step 20: Consistency and idempotency strategy for sync writes and async jobs | Starting | docs/roadmap/phase2/INDEX.md |
+| Roadmap | docs/roadmap/phase2/step-21-engagement-states.md | Phase 2 Step 21: Engagement state machine, notifications/acceptance model, and contract generation pipeline | Starting | docs/roadmap/phase2/INDEX.md |
 | Specs | docs/specs/00_glossary.md | Terminology baseline | Locked | docs/specs/INDEX.md; specs/INDEX.md |
 | Specs | docs/specs/01_domain_model.md | High-level entities and relationships | Locked | docs/specs/INDEX.md; specs/INDEX.md |
 | Specs | docs/specs/02_project_mission_model.md | Project and mission structure rules | Locked | docs/specs/INDEX.md; specs/INDEX.md |
@@ -79,6 +93,9 @@
 | Specs | docs/specs/22_persistence_model.md | Persistence model (tables, relations, indexes, soft delete) | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
 | Specs | docs/specs/23_async_jobs.md | Async job types, queues, retries, observability | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
 | Specs | docs/specs/24_security_model.md | Security and trust model (auth flows, scopes, isolation) | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
+| Specs | docs/specs/33_assignment_engagement_states.md | Assignment engagement state machine, transitions, invariants, and audit mapping | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
+| Specs | docs/specs/34_notifications_and_acceptance.md | Notification model, payload contract, and acceptance flow | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
+| Specs | docs/specs/35_contract_generation_pipeline.md | Event-driven contract generation pipeline with idempotency, audit, and alerting | Starting | docs/specs/INDEX.md; specs/INDEX.md; docs/roadmap/phase2/INDEX.md |
 | UX | docs/ux/11_planning_timeline.md | Planning timeline view specification | Locked | docs/ux/INDEX.md |
 | UX | docs/ux/12_planning_board.md | Planning board intents and states | Locked | docs/ux/INDEX.md |
 | UX | docs/ux/13_project_mission_flows.md | Mission lifecycle flows with RBAC/audit cues | Locked | docs/ux/INDEX.md |
@@ -133,5 +150,6 @@
 - Phase 1 lock (Step 14) prohibits retroactive edits; any corrections must use formal amendments referencing locked artifacts.[F:docs/roadmap/phase1/step-14.md|L15-L35]
 
 ## Change Log
+- Registered Phase 2 Step 21 covering engagement states, notifications/acceptance, and the contract generation pipeline with new specs, roadmap entry, and index/status updates.[F:docs/specs/33_assignment_engagement_states.md|L1-L89][F:docs/specs/34_notifications_and_acceptance.md|L1-L62][F:docs/specs/35_contract_generation_pipeline.md|L1-L70][F:docs/roadmap/phase2/step-21-engagement-states.md|L1-L26][F:docs/specs/INDEX.md|L8-L22][F:specs/INDEX.md|L8-L22][F:docs/roadmap/phase2/INDEX.md|L3-L17][F:docs/roadmap/INDEX.md|L5-L22][F:docs/STATUS_SUMMARY.md|L20-L109]
 - Registered Phase 2 roadmap with Steps 01-08 and integrated the new phase into the global roadmap index.[F:docs/roadmap/phase2/INDEX.md|L1-L15][F:docs/roadmap/INDEX.md|L5-L17]
 - Authored Phase 2 architecture documents (HLD, LLD, persistence, async jobs, security, API architecture, frontend architecture, deployment) and updated indexes and status inventory accordingly.[F:docs/specs/20_architecture_HLD.md|L1-L36][F:docs/specs/21_architecture_LLD.md|L1-L36][F:docs/specs/22_persistence_model.md|L1-L39][F:docs/specs/23_async_jobs.md|L1-L120][F:docs/specs/24_security_model.md|L1-L40][F:docs/api/20_api_architecture.md|L1-L39][F:docs/ux/20_frontend_architecture.md|L1-L33][F:docs/ops/20_deployment_architecture.md|L1-L38][F:docs/specs/INDEX.md|L8-L19][F:specs/INDEX.md|L8-L19][F:docs/api/INDEX.md|L3-L8][F:docs/ux/INDEX.md|L5-L14][F:docs/ops/INDEX.md|L4-L7][F:docs/STATUS_SUMMARY.md|L5-L118]

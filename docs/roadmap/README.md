@@ -88,6 +88,12 @@ graph TD
   P2 --> S213["Step 13: Testing strategy and harness (In progress)"]
   P2 --> S214["Step 14: Observability and logging (Starting)"]
   P2 --> S215["Step 15: Resilience and rate limiting (Done)"]
+  P2 --> S216["Step 16: Feature flags and configuration (Starting)"]
+  P2 --> S217["Step 17: Rate limiting and quotas (Starting)"]
+  P2 --> S218["Step 18: Circuit breakers and resilience (Done)"]
+  P2 --> S219["Step 19: Caching strategy (Starting)"]
+  P2 --> S220["Step 20: Consistency and idempotency (Starting)"]
+  P2 --> S221["Step 21: Engagement states and contract pipeline (Starting)"]
 ```
 
 See also: [docs/roadmap/phase2/diagram.md](phase2/diagram.md).

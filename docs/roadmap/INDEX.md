@@ -8,7 +8,7 @@ This index routes roadmap documentation and status references governed by agents
 ## Phase Overview
 - **Phase 0: Hardening** - Status: Closed on 2025-12-17 (see docs/roadmap/phase0/step-01-harden-bootstrap.md)
 - **Phase 1: Foundational documentation** - Status: LOCKED (see docs/roadmap/phase1/step-14.md for immutability and non-regression charter). Steps 00-13 are sealed; any amendment requires a new spec referencing the locked artifact and migration guidance.
-- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-20 deliverables bound to Phase 1 contracts).
+- **Phase 2: Technical architecture** - Status: Starting (see docs/roadmap/phase2/INDEX.md for active Step 01-21 deliverables bound to Phase 1 contracts).
 
 ## Files
 - docs/roadmap/README.md - roadmap diagrams and phase overviews.
@@ -46,7 +46,8 @@ This index routes roadmap documentation and status references governed by agents
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
 - docs/specs/21_notifications_and_messaging_contracts.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
-- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-20 listings for architecture, data, API, async, security, frontend, deployment, observability, execution governance, testing harness scaffolding, resilience, rate limiting, feature flags, circuit breakers, caching, and consistency/idempotency.
+- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-21 listings for architecture, data, API, async, security, frontend, deployment, observability, execution governance, testing harness scaffolding, resilience, rate limiting, feature flags, circuit breakers, caching, consistency/idempotency, and engagement states.
+- docs/roadmap/phase2/step-21-engagement-states.md - Phase 2 Step 21: engagement state machine, notifications/acceptance model, and contract generation pipeline (Starting).
 - docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
 
 ## Rules
