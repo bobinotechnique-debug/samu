@@ -11,3 +11,4 @@
 - Implementation planning for later phases must reference Phase 1 outputs and preserve ownership, RBAC, audit, identifier/time, and API conventions.
 - Phase 2 Step 14 must deliver enforceable observability, structured logging, and audit hook guidance aligned to Phase 1 error, audit, and multi-tenancy contracts.
 - Phase 2 Step 15 documents resilience, error handling, and rate limiting so later implementation work can apply bounded retries, clear error propagation, and org-scoped throttling without hidden fallbacks.
+- Phase 2 Step 18 documents circuit breakers, retries, backoff, and timeout standards to prevent cascading failures while preserving auditability and org-scoped rate limits.

@@ -43,6 +43,7 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/25_rate_limiting_and_quotas.md - Organization-first rate limiting and quota strategy with enforcement placement, headers, and failure behavior for Phase 2 Step 17.
 - docs/specs/26_feature_flags.md - Feature flag and configuration toggle scaffolding, precedence, naming, storage, and logging guidance for Phase 2 Step 16.
 - docs/specs/26_rate_limiting_and_abuse_protection.md - Rate limiting scopes, throttling rules, headers, and abuse protection expectations for Phase 2 Step 15.
+- docs/specs/26_resilience_and_circuit_breakers.md - Circuit breaker, retry, timeout, and resilience policies to prevent cascading failures for Phase 2 Step 18.
 
 ## Rules
 - Primary specifications live in specs/INDEX.md.
