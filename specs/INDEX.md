@@ -42,6 +42,7 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/26_feature_flags.md - Feature flag and configuration toggle scaffolding, precedence, naming, storage, and logging guidance for Phase 2 Step 16.
 - docs/specs/26_rate_limiting_and_abuse_protection.md - Rate limiting scopes, throttling rules, headers, and abuse protection expectations for Phase 2 Step 15.
 - docs/specs/26_resilience_and_circuit_breakers.md - Circuit breaker, retry, timeout, and resilience policies to prevent cascading failures for Phase 2 Step 18.
+- docs/specs/26_caching_strategy.md - Caching strategy, key format, TTL rules, invalidation, observability, and safety constraints for Phase 2 Step 19.
 
 ## Ownership
 Docs Agent in collaboration with Backend and DevOps Agents

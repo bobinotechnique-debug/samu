@@ -22,6 +22,7 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-16-feature-flags-and-configuration-toggles.md - Step 16: Feature flags and configuration toggles scaffold (Status: Starting).
 - docs/roadmap/phase2/step-17-rate-limiting.md - Step 17: Rate limiting, quotas, and abuse protection alignment (Status: Starting).
 - docs/roadmap/phase2/step-18-resilience-and-circuit-breakers.md - Step 18: Circuit breakers, retries, backoff, timeouts, and resilience alignment (Status: Done).
+- docs/roadmap/phase2/step-19-caching-strategy.md - Step 19: Caching strategy for FastAPI backend with tenancy-safe keys, TTLs, invalidation, and observability (Status: Starting).
 - docs/roadmap/phase2/diagram.md - Phase 2 diagram capturing architecture steps.
 
 ## Notes
