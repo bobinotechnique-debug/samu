@@ -30,6 +30,9 @@ Catalog technical and product specifications that guide implementation.
 - docs/specs/25_mission_run_sheet.md - Operational run sheet (call sheet) structure, lifecycle, attachments, and governance for missions in Phase 1.
 - docs/specs/27_comptabilite.md - Accounting scope covering invoices, bills, expenses, budget lines, payments, exports, permissions, and audit expectations for Phase 1 extension (Proposed).
 - docs/specs/28_contrats.md - Contracts scope for intermittent/CDDU, artist, vendor, and client agreements with lifecycle, templates, attachments, permissions, and audit rules for Phase 1 extension (Proposed).
+- docs/specs/29_planning_cost_view.md - Planning-derived cost views per day, mission, and project with display-only, reproducible estimates (Phase 1 extension).
+- docs/specs/30_contract_assignment_link.md - Contract-to-assignment linkage rules, lifecycle, and non-blocking completeness alerts for planning coherence (Phase 1 extension).
+- docs/specs/31_cost_centers.md - Project and mission-scoped cost center classification for derived planning reports without accounting ledgers (Phase 1 extension).
 
 ### Phase 2 (In Progress)
 - docs/specs/20_architecture_HLD.md - High Level Architecture (context, boundaries, sync/async flows, trust boundaries) for Phase 2 Step 01.

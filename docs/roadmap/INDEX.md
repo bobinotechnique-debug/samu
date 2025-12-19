@@ -39,6 +39,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-19.md - Phase 1 Step 19: state machines and lifecycles (Proposed).
 - docs/roadmap/phase1/step-20.md - Phase 1 Step 20: permissions and responsibility matrix (Proposed).
 - docs/roadmap/phase1/step-21-accounting-and-contracts.md - Phase 1 Step 21: accounting and contracts extension via Step 14 amendment (Proposed).
+- docs/roadmap/phase1/step-22-planning-economic-extension.md - Phase 1 Step 22: planning economic extension for derived cost views, contract linkage, and cost centers (Proposed).
 - docs/roadmap/phase1/diagram.md - Phase 1 visual sequence.
 - docs/specs/18_cross_domain_read_models.md - Phase 1 Step 11: cross-domain read models and projections (Active).
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).

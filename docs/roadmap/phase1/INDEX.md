@@ -26,6 +26,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-19.md - Phase 1 Step 19: State machines and lifecycles (Status: Proposed).
 - docs/roadmap/phase1/step-20.md - Phase 1 Step 20: Permissions and responsibility matrix (Status: Proposed).
 - docs/roadmap/phase1/step-21-accounting-and-contracts.md - Phase 1 Step 21: Accounting and Contracts extension via Step 14 amendment (Status: Proposed).
+- docs/roadmap/phase1/step-22-planning-economic-extension.md - Phase 1 Step 22: planning economic extension for derived cost views, contract linkage, and cost centers (Status: Proposed).
 - docs/roadmap/phase1/diagram.md - Phase 1 diagram showing locked and proposed steps.
 
 ## Notes
