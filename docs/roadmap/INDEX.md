@@ -50,6 +50,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase2/step-21-engagement-states.md - Phase 2 Step 21: engagement state machine, notifications/acceptance model, and contract generation pipeline (Starting).
 - docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
  - Phase 2 - Step UX-01: UX surface contracts (DONE).
+ - Phase 2 - Step UX-02: User journeys (DONE).
 
 ## Rules
 - Every change must cite a roadmap step before implementation.
