@@ -32,7 +32,7 @@
 - Never share ORM instances across tests; always request a fresh session from the factory fixture. Cross-test data dependencies are forbidden.
 
 ## 5. Async and Background Job Testing Rules
-- Async route handlers should be exercised through FastAPI’s test client; prefer dependency overrides to fake external queues or email/sms senders.
+- Async route handlers should be exercised through FastAPI's test client; prefer dependency overrides to fake external queues or email/sms senders.
 - Background jobs must run in-process with stub transports (in-memory queue or function callbacks). No external brokers or services are permitted in tests.
 - Use deterministic clocks and UUID generators (fixture-provided) to avoid flaky timing; avoid `sleep` and real retries.
 - When asserting retries or idempotency, capture emitted audit/error events via in-memory collectors instead of hitting Redis or external sinks.
