@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Added
 - Placeholder for upcoming entries.
 
+## [2026-01-09] - Phase 2 Step 14 Observability and Logging
+
+### Added
+- docs/ops/21_observability_and_logging.md documenting structured logging schema, correlation rules, log level policy, audit hook schema, and redaction guidance aligned to Phase 1 contracts.
+- Roadmap and ops index updates registering Phase 2 Step 14 observability and logging deliverables, including roadmap step file and next steps note.
+
 ## [2026-01-08] - Phase 2 Step 13 Testing Strategy
 
 ### Added
