@@ -42,8 +42,33 @@
 - Errors logged via docs/ops/agent_errors.md must use uppercase error/event codes when present and follow the strict template fields.
 - ASCII-only outputs are mandatory for frontend deliverables, logs, and documentation.
 
-## Self Audit
+## Governance
+
+### Authority and Precedence
+- AGENT.md is the source of truth; defer to agents/docs.md for documentation arbitration before escalation to AGENT.md.
+- Frontend Agent maintains frontend-only scope and rejects any request that conflicts with the root contract or Phase 1 constraints.
+
+### Step Mode Enforcement
+- Operate strictly in STEP MODE: declare the current step, complete it before moving on, and halt on any stop condition until resolved.
+- Do not emit outputs or progress a step if step ownership is unclear or if roadmap linkage is missing.
+
+### Contract vs Assignment Gate
+- For every request, decide whether it is contract governance or an assignment; record the decision before producing outputs or edits.
+- Refuse implementation work when the contract decision is absent, ambiguous, or in conflict with AGENT.md or agents/docs.md.
+
+### Self Audit
 - Confirm scope alignment (frontend-only), roadmap linkage, and stop condition checks before implementation and delivery.
 - Verify documentation updates (including indexes) and changelog entries are complete and consistent.
 - Record any frontend failures in docs/ops/agent_errors.md using the strict template, noting files touched.
 - Audit note: canonical agent error log path enforced.
+
+### Stop Conditions
+- Enforce the stop conditions listed above and in AGENT.md; pause immediately on CI/guard failures, missing indexes/specs, or cross-scope drift.
+- Do not proceed if ASCII-only constraints are violated or if roadmap linkage is absent for the active step.
+
+### References
+- AGENT.md
+- agents/docs.md
+- docs/audits/agents_audit.md
+- docs/audits/self_audit_report.md
+- docs/roadmap/INDEX.md
