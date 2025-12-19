@@ -59,6 +59,9 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/34_notifications_and_acceptance.md - Notification model, payload contract, acceptance flow, and forbidden patterns for Phase 2 Step 21.
 - docs/specs/35_contract_generation_pipeline.md - Event-driven contract generation pipeline with idempotency, auditability, and alerting for Phase 2 Step 21.
 
+### Decisions and ADRs
+- docs/specs/adr_assignment_first_contract_derived.md - Decision record establishing assignment-first costing/audit with contracts as derived aggregates and gated issuance.
+
 ## Rules
 - Primary specifications live in specs/INDEX.md.
 - Updates must respect AGENT.md stop conditions and roadmap linkage.

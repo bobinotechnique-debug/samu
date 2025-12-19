@@ -33,6 +33,9 @@
   Conflicting documents: docs/specs/28_contrats.md vs. docs/specs/35_contract_generation_pipeline.md  
   Explanation: The contracts spec permits draft contract generation from templates without acceptance prerequisites, whereas the pipeline spec forbids contract generation before explicit acceptance, leaving the pre-acceptance draft workflow undefined and potentially non-compliant. [F:docs/specs/28_contrats.md|L30-L49][F:docs/specs/35_contract_generation_pipeline.md|L7-L38]
 
+## After Fix
+- CT-01 and CT-02 resolved via ADR docs/specs/adr_assignment_first_contract_derived.md and aligned updates to specs 28, 30, 33, and 35 clarifying assignment-first costing, contract aggregation rules, and draft-versus-issued gating.
+
 ## Recommended Fixes
 
 1. Register all existing Phase 1 coherence audits in docs/specs/INDEX.md and specs/INDEX.md under the Step 14 amendment path to restore navigation and guard coverage (map to Phase 1 Step 14).  

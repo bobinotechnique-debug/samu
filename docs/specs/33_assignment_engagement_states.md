@@ -3,7 +3,7 @@
 ## 1. Purpose and Scope
 - Freeze the canonical assignment engagement state machine for Phase 2 so implementation teams can align async workflows, notifications, and contracts without diverging semantics.
 - Applies to all assignments under one organization and project; no cross-organization or cross-project state propagation.
-- Builds on Phase 1 contracts (ownership, RBAC, audit, idempotency) without introducing runtime code changes.
+- Builds on Phase 1 contracts (ownership, RBAC, audit, idempotency) without introducing runtime code changes; aligns with ADR docs/specs/adr_assignment_first_contract_derived.md to keep assignment-first semantics.
 
 ## 2. State Definitions
 - **PROPOSED**: assignment offer created and communicated; awaiting collaborator decision.
@@ -15,7 +15,8 @@
 ## 3. Invariants
 - Project-scoped only; every assignment carries org_id and project_id with authorization enforced per docs/specs/07_data_ownership.md and docs/specs/08_rbac_model.md.
 - No planning exists outside projects; mission_id and project_id required on every assignment mutation.
-- Assignment is the atomic unit of cost; cost estimates and contracts bind to assignment_id, not aggregated missions.
+- Assignment is the atomic unit of cost; cost estimates and contract totals bind to assignment_id even when a contract aggregates multiple assignments inside the same project/org.
+- Contract linkage is optional but limited to 0..1 contract per assignment to avoid double counting; completeness warnings remain non-blocking for uncontracted assignments.
 - Every transition writes an audit event with correlation_id/trace_id and actor metadata per docs/specs/09_audit_and_traceability.md.
 - State transitions must be idempotent; replays with the same correlation_id do not create duplicate timeline entries.
 
