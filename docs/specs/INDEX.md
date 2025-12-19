@@ -30,6 +30,8 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/20_location_and_maps_contracts.md - location identifiers, hierarchy, and read-only map references for Phase 1 Step 12.
 - docs/specs/21_notifications_and_messaging_contracts.md - notification and messaging contracts for Phase 1 Step 13 (Proposed).
 - docs/specs/25_mission_run_sheet.md - operational run sheet (call sheet) structure, lifecycle, attachments, and governance for missions in Phase 1.
+- docs/specs/27_comptabilite.md - accounting scope covering invoices, bills, expenses, budget lines, payments, exports, permissions, and audit expectations for Phase 1 extension (Proposed).
+- docs/specs/28_contrats.md - contracts scope for intermittent/CDDU, artist, vendor, and client agreements with lifecycle, templates, attachments, permissions, and audit rules for Phase 1 extension (Proposed).
 
 ### Phase 2 (In Progress)
 - docs/specs/20_architecture_HLD.md - High Level Architecture (context, boundaries, sync/async flows, trust boundaries) for Phase 2 Step 01.

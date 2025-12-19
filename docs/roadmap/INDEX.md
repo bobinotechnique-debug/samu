@@ -32,6 +32,13 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase1/step-12.md - Phase 1 Step 12: locations and maps contracts (Proposed).
 - docs/roadmap/phase1/step-13-notifications-and-messaging.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/phase1/step-14.md - Phase 1 Step 14: global lock and non-regression charter (Locked).
+- docs/roadmap/phase1/step-15.md - Phase 1 Step 15: UI component contracts reconciliation (Done).
+- docs/roadmap/phase1/step-16.md - Phase 1 Step 16: UI page contracts reconciliation (Done).
+- docs/roadmap/phase1/step-17.md - Phase 1 Step 17: domain object contracts (Proposed).
+- docs/roadmap/phase1/step-18.md - Phase 1 Step 18: planning rules and constraints contract (Proposed).
+- docs/roadmap/phase1/step-19.md - Phase 1 Step 19: state machines and lifecycles (Proposed).
+- docs/roadmap/phase1/step-20.md - Phase 1 Step 20: permissions and responsibility matrix (Proposed).
+- docs/roadmap/phase1/step-21-accounting-and-contracts.md - Phase 1 Step 21: accounting and contracts extension via Step 14 amendment (Proposed).
 - docs/roadmap/phase1/diagram.md - Phase 1 visual sequence.
 - docs/specs/18_cross_domain_read_models.md - Phase 1 Step 11: cross-domain read models and projections (Active).
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
