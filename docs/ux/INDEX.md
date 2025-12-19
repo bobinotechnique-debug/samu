@@ -26,3 +26,4 @@ This index mirrors ux/INDEX.md and consolidates UX research, flow documentation,
 - docs/ux/pages/02_mission.md - mission page contract.
 - docs/ux/pages/03_collaborator.md - collaborator page contract.
 - docs/ux/pages/04_project.md - project page contract.
+- docs/ux/20_ux_surface_contracts.md - Phase 2 UX surface contracts for Planning, Mission, Collaborator, Notifications and Acceptance.
