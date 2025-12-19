@@ -1,4 +1,4 @@
-# Decision 002 — Contract vs Assignment
+# Decision 002 - Contract vs Assignment
 
 Status: LOCKED
 Date: 2025-12-19

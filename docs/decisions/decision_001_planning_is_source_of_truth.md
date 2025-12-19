@@ -1,4 +1,4 @@
-# Decision 001 — Planning Is the Source of Truth
+# Decision 001 - Planning Is the Source of Truth
 
 Status: LOCKED
 Date: 2025-12-19
