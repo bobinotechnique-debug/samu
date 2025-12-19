@@ -28,7 +28,7 @@
 - Amendments create new versions that keep assignment links intact or require replacement assignments when scope changes.
 
 ## Acceptance Gating and Drafts
-- Draft/preview contracts before acceptance are informational only, carry explicit “non-legal preview” status, and emit no legal artifacts, invoices, or payments.
+- Draft/preview contracts before acceptance are informational only, carry explicit "non-legal preview" status, and emit no legal artifacts, invoices, or payments.
 - Issued/active contracts are generated only after explicit assignment acceptance and honor idempotency rules keyed by assignment links.
 
 ## Auditability and Idempotency
