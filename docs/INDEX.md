@@ -12,6 +12,7 @@ Provide a routing map for all high-level documentation artifacts.
 - docs/api/INDEX.md - API documentation routing.
 - docs/ux/INDEX.md - UX documentation routing.
 - docs/ops/INDEX.md - operational records and guards.
+- docs/audits/INDEX.md - audit catalog, including implementation readiness coverage.
 - docs/agents/agents_audit.md - latest audit of agent contracts and error logging rules.
 
 ## Expected Documents

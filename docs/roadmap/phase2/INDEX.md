@@ -25,6 +25,7 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-19-caching-strategy.md - Step 19: Caching strategy for FastAPI backend with tenancy-safe keys, TTLs, invalidation, and observability (Status: Starting).
 - docs/roadmap/phase2/step-20-consistency-idempotency.md - Step 20: Consistency and idempotency strategy for sync writes and async jobs (Status: Starting).
 - docs/roadmap/phase2/step-21-engagement-states.md - Step 21: Engagement state machine, notifications/acceptance model, and contract generation pipeline (Status: Starting).
+- docs/audits/implementation_readiness.md - Implementation readiness audit registered as a prerequisite for Step 10.
 - docs/roadmap/phase2/diagram.md - Phase 2 diagram capturing architecture steps.
 
 ## Notes

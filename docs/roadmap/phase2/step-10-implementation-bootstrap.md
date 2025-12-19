@@ -18,3 +18,4 @@ In progress.
 ## Notes
 - No domain workflows implemented.
 - Defaults target local/CI usage with SQLite fallback in tests to keep pipelines green.
+- Implementation readiness audit recorded at docs/audits/implementation_readiness.md; resolve documented blockers before coding.

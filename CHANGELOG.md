@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Phase 1 Step 21 amendment adding accounting and contracts specifications with coherence audit, roadmap references, and index updates under the Phase 1 lock charter.
 - Phase 1 Step 22 planning economic extension documenting derived cost views, contract-assignment linkage with warnings, and cost center classification with roadmap and index updates.
 - Phase 1 Step 23 amendment detailing engagement ladder, acceptance model, reminders/escalations, engagement timeline, execution documents, and audit journal with new spec, audit doc, roadmap step, and index updates.
+- Phase 2 Step 10 implementation readiness audit (docs/audits/implementation_readiness.md) with roadmap/index registration and blocker tracking for health endpoint alignment.
 
 ### Changed
 - Clarified agent audit metadata, canonicalized agent error log references to docs/ops/agent_errors.md, and reiterated versioning discipline for AGENT.md without changing contracts.
