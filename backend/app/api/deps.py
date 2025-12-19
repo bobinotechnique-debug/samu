@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.core.config import Settings, get_settings
 from app.core.errors import ForbiddenError
+from app.core.feature_flags import FeatureFlagService, get_cached_feature_flag_service
 from app.core.db.session import db_session
 from app.core.security.auth import PrincipalContext, resolve_principal
 
@@ -37,3 +38,7 @@ def require_permission(permission: str):
 
 def get_current_auth_context(principal: PrincipalContext = Depends(get_principal_context)) -> PrincipalContext:
     return principal
+
+
+def get_feature_flag_service(settings: Settings = Depends(get_app_settings)) -> FeatureFlagService:
+    return get_cached_feature_flag_service(settings.environment)

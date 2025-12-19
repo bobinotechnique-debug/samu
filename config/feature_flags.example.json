@@ -1,0 +1,12 @@
+{
+  "global_defaults": {
+    "planning_timeline_v2": false,
+    "missions_assignment_flow": false,
+    "collabs_directory_refinement": false
+  },
+  "org_overrides": {
+    "example-org-123456": {
+      "planning_timeline_v2": true
+    }
+  }
+}

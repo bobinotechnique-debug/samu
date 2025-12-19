@@ -33,6 +33,7 @@ from app.api.context import attach_principal, get_request_context
 from app.api.deps import get_current_auth_context, get_principal_context
 from app.core.db.base import Base
 from app.core.db.session import get_engine, get_session_factory, reset_engine_cache
+from app.core.feature_flags import reset_feature_flag_service_cache
 from app.core.ids import OrgId, UserId
 from app.core.security.auth import PrincipalContext
 from app.main import create_app
@@ -43,6 +44,7 @@ def _reset_state() -> None:
     reset_engine_cache()
     config.get_settings.cache_clear()
     reload(config)
+    reset_feature_flag_service_cache()
 
 
 def _prepare_schema() -> None:

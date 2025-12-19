@@ -37,7 +37,7 @@ This index routes roadmap documentation and status references governed by agents
 - docs/specs/19_domain_integration_rules.md - Phase 1 Step 11: integration guardrails across domains (Active).
 - docs/specs/21_notifications_and_messaging_contracts.md - Phase 1 Step 13: notifications and messaging contracts (Proposed).
 - docs/roadmap/next_steps.md - sequencing of upcoming roadmap work.
-- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-15 listings for architecture, data, API, async, security, frontend, deployment, observability, execution governance, testing harness scaffolding, resilience, and rate limiting.
+- docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-16 listings for architecture, data, API, async, security, frontend, deployment, observability, execution governance, testing harness scaffolding, resilience, rate limiting, and feature flags.
 - docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
 
 ## Rules
