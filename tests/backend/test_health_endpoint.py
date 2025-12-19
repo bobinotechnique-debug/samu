@@ -10,7 +10,7 @@ from app.main import app  # type: ignore  # noqa: E402
 
 def test_health_live_endpoint_returns_status() -> None:
     client = TestClient(app)
-    response = client.get("/api/v1/health/live")
+    response = client.get("/health/live")
 
     assert response.status_code == 200
     assert response.json() == {"status": "live"}
