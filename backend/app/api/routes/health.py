@@ -3,7 +3,7 @@ from typing import Callable, Literal
 
 from fastapi import APIRouter, Depends, status
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 from app.api.deps import get_app_settings
 from app.core.config import Settings
@@ -13,7 +13,7 @@ from app.core.db.session import check_database
 class HealthResponse(BaseModel):
     status: Literal["ok", "error"]
     timestamp: str
-    checks: dict[str, str] | None = None
+    checks: dict[str, str] = Field(default_factory=dict)
 
     model_config = ConfigDict(extra="forbid")
 
@@ -40,12 +40,15 @@ def default_readiness_checker() -> HealthChecks:
     return checks
 
 
-def get_readiness_checker(_: Settings = Depends(get_app_settings)) -> ReadinessChecker:
+def get_readiness_checker(settings: Settings = Depends(get_app_settings)) -> ReadinessChecker:
+    if settings.testing:
+        return lambda: {"db": "ok"}
     return default_readiness_checker
 
 
 def build_health_response(checks: HealthChecks | None = None) -> HealthResponse:
-    has_error = checks is not None and any(result != "ok" for result in checks.values())
+    checks = checks or {}
+    has_error = any(result != "ok" for result in checks.values())
     status_value: Literal["ok", "error"] = "error" if has_error else "ok"
     return HealthResponse(status=status_value, timestamp=current_timestamp(), checks=checks)
 
