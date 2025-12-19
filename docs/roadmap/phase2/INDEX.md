@@ -20,6 +20,7 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-14-observability-and-logging.md - Step 14: Observability, structured logging, and audit hooks (Status: Starting).
 - docs/roadmap/phase2/step-15-resilience-and-rate-limiting.md - Step 15: Resilience, error handling, rate limiting, and abuse protections (Status: Done).
 - docs/roadmap/phase2/step-16-feature-flags-and-configuration-toggles.md - Step 16: Feature flags and configuration toggles scaffold (Status: Starting).
+- docs/roadmap/phase2/step-17-rate-limiting.md - Step 17: Rate limiting, quotas, and abuse protection alignment (Status: Starting).
 - docs/roadmap/phase2/diagram.md - Phase 2 diagram capturing architecture steps.
 
 ## Notes
