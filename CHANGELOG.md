@@ -9,6 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Added
 - Placeholder for upcoming entries.
 
+## [2026-01-10] - Phase 2 Step 15 Resilience and Rate Limiting
+
+### Added
+- docs/specs/25_resilience_and_error_handling.md capturing error categories, retry/timeout ownership, idempotency expectations, degraded mode behavior, and conceptual circuit breaker rules.
+- docs/specs/26_rate_limiting_and_abuse_protection.md defining rate limit scopes, abuse protections, throttle responses, and observability requirements aligned to the API error model.
+- Index and roadmap updates registering Phase 2 Step 15 specifications across docs/specs/INDEX.md, specs/INDEX.md, and roadmap navigation.
+
 ## [2026-01-09] - Phase 2 Step 14 Observability and Logging
 
 ### Added

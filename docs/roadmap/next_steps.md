@@ -10,3 +10,4 @@
 - Next steps must honor Phase 1 contracts without modifying the sealed documentation; any divergence requires a Step 14 amendment.
 - Implementation planning for later phases must reference Phase 1 outputs and preserve ownership, RBAC, audit, identifier/time, and API conventions.
 - Phase 2 Step 14 must deliver enforceable observability, structured logging, and audit hook guidance aligned to Phase 1 error, audit, and multi-tenancy contracts.
+- Phase 2 Step 15 documents resilience, error handling, and rate limiting so later implementation work can apply bounded retries, clear error propagation, and org-scoped throttling without hidden fallbacks.

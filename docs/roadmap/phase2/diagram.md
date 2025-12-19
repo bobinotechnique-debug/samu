@@ -16,6 +16,8 @@ graph TD
   P2 --> S211["Step 11: First vertical slice (In progress)"]
   P2 --> S212["Step 12: Execution governance (Starting)"]
   P2 --> S213["Step 13: Testing strategy and harness (In progress)"]
+  P2 --> S214["Step 14: Observability and logging (Starting)"]
+  P2 --> S215["Step 15: Resilience and rate limiting (Done)"]
 ```
 
 Phase 2 builds on Phase 1 contracts and remains additive to the locked documentation set.
