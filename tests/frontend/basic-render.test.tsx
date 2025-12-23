@@ -5,7 +5,7 @@ import { AppShell } from "../../frontend/src/app/AppShell";
 import { QueryProvider } from "../../frontend/src/app/providers/QueryProvider";
 
 describe("AppShell (cross-repo)", () => {
-  it("renders the planning heading", () => {
+  it("renders the placeholder heading", () => {
     render(
       <MemoryRouter>
         <QueryProvider>
@@ -14,6 +14,6 @@ describe("AppShell (cross-repo)", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /planning/i })).toBeInTheDocument();
+    expect(screen.getByText(/Org context console/i)).toBeInTheDocument();
   });
 });
