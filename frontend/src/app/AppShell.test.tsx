@@ -5,7 +5,7 @@ import { AppShell } from "./AppShell";
 import { QueryProvider } from "./providers/QueryProvider";
 
 describe("AppShell", () => {
-  it("renders placeholder page", () => {
+  it("renders planning page by default", () => {
     render(
       <BrowserRouter>
         <QueryProvider>
@@ -14,6 +14,6 @@ describe("AppShell", () => {
       </BrowserRouter>
     );
 
-    expect(screen.getByText(/Org context console/)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /planning/i })).toBeInTheDocument();
   });
 });

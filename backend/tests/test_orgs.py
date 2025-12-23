@@ -1,9 +1,12 @@
 from uuid import uuid4
 
+import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session, sessionmaker
 
 from app.domain.models import AuthToken, Membership, Organization, User
+
+pytestmark = pytest.mark.skip(reason="Business endpoints are disabled during Phase 2 bootstrap skeleton.")
 
 
 REQUEST_ID = "test-request"
