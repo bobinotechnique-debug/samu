@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Phase 1 Step 23 amendment detailing engagement ladder, acceptance model, reminders/escalations, engagement timeline, execution documents, and audit journal with new spec, audit doc, roadmap step, and index updates.
 - Phase 2 Step 10 implementation readiness audit (docs/audits/implementation_readiness.md) with roadmap/index registration and blocker tracking for health endpoint alignment.
 - Locked planning and contract separation decisions recorded under docs/decisions with index updates.
+- Baseline guard and test lock report recorded under docs/audits/baseline_lock_report.md with index updates.
 
 ### Changed
 - Clarified agent audit metadata, canonicalized agent error log references to docs/ops/agent_errors.md, and reiterated versioning discipline for AGENT.md without changing contracts.
