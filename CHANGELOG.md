@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 
 ### Added
+- Step 3 decision freeze capturing contract versus assignment authority, notification and acceptance state machine, and derived versus stored data classification with index and audit updates.
 - Agent contract audit clarifying authority, stop conditions, output contracts, self-audit requirements, and strict agent error logging format with documentation updates under docs/agents/agents_audit.md.
 - Phase 2 Step 21 documentation freezing assignment engagement states, notifications/acceptance model, and contract generation pipeline with new specifications, roadmap entry, and index/status updates.
 - Phase 2 Step 20 documentation for consistency, idempotency, retries, and concurrency control, including new specification, roadmap entry, and index updates.
@@ -18,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Baseline guard and test lock report recorded under docs/audits/baseline_lock_report.md with index updates.
 
 ### Changed
+- Implementation readiness audit refocused on sealed Step 3 decisions with bootstrap prerequisites and risk signals, and roadmap next steps now call out the decision dependency before metier implementation.
 - Clarified agent audit metadata, canonicalized agent error log references to docs/ops/agent_errors.md, and reiterated versioning discipline for AGENT.md without changing contracts.
 - Refreshed Phase 2 Step 10 implementation readiness audit with updated roadmap mapping and health/readiness alignment plan (roadmap: docs/roadmap/phase2/step-10-implementation-bootstrap.md).
 - Standardized governance sections across agents/*.md to enforce precedence, step mode, contract gating, self-audit, stop conditions, and references.
