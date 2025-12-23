@@ -49,8 +49,8 @@ This index routes roadmap documentation and status references governed by agents
 - docs/roadmap/phase2/INDEX.md - Phase 2 Step 01-21 listings for architecture, data, API, async, security, frontend, deployment, observability, execution governance, testing harness scaffolding, resilience, rate limiting, feature flags, circuit breakers, caching, consistency/idempotency, and engagement states.
 - docs/roadmap/phase2/step-21-engagement-states.md - Phase 2 Step 21: engagement state machine, notifications/acceptance model, and contract generation pipeline (Starting).
 - docs/roadmap/phase2/diagram.md - Phase 2 visual sequence.
- - Phase 2 - Step UX-01: UX surface contracts (DONE).
- - Phase 2 - Step UX-02: User journeys (DONE).
+- docs/ux/20_ux_surface_contracts.md - Phase 2 Step UX-01: UX surface contracts (Done).
+- docs/ux/21_user_journeys.md - Phase 2 Step UX-02: User journeys (Done).
 - docs/audits/implementation_readiness.md - Phase 2 implementation readiness audit (roadmap Step 10 prerequisite).
 
 ## Rules

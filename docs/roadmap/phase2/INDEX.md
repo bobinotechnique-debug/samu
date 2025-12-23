@@ -27,6 +27,8 @@ Starting. Phase 2 focuses on translating Phase 1 contracts into technical archit
 - docs/roadmap/phase2/step-21-engagement-states.md - Step 21: Engagement state machine, notifications/acceptance model, and contract generation pipeline (Status: Starting).
 - docs/audits/implementation_readiness.md - Implementation readiness audit registered as a prerequisite for Step 10.
 - docs/roadmap/phase2/diagram.md - Phase 2 diagram capturing architecture steps.
+- docs/ux/20_ux_surface_contracts.md - Phase 2 Step UX-01: UX surface contracts (Status: Done).
+- docs/ux/21_user_journeys.md - Phase 2 Step UX-02: User journeys (Status: Done).
 
 ## Notes
 - Phase 2 must honor the Phase 1 lock (Step 14) while building additive architecture artifacts.

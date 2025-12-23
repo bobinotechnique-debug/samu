@@ -37,6 +37,8 @@ Catalog technical and product specifications that guide implementation.
 
 ### Coherence Audits
 - docs/specs/phase1_coherence_audit_engagement_acceptance.md - Audit confirming alignment of engagement, acceptance, reminders, and audit timeline scope with Phase 1 constraints.
+- docs/specs/phase1_coherence_audit.md - Audit verifying Phase 1 integration of the Mission Run Sheet specification under Step 08 and Step 14 lock.
+- docs/specs/phase1_coherence_audit_compta_contrats.md - Audit validating the Phase 1 accounting and contracts extensions under the Step 14 amendment path.
 
 ### Phase 2 (In Progress)
 - docs/specs/20_architecture_HLD.md - High Level Architecture (context, boundaries, sync/async flows, trust boundaries) for Phase 2 Step 01.
