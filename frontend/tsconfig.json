@@ -8,10 +8,14 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./node_modules/@types/*", "./node_modules/*"]
+    },
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "strict": true,
-    "types": ["vitest/globals", "vite/client", "@testing-library/jest-dom"]
+    "types": ["vitest/globals", "vite/client", "@testing-library/jest-dom", "react", "react-dom"]
   },
   "include": ["src", "../tests/frontend"],
   "references": []

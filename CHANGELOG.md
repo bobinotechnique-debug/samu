@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Phase 2 Step 10 implementation readiness audit (docs/audits/implementation_readiness.md) with roadmap/index registration and blocker tracking for health endpoint alignment.
 - Locked planning and contract separation decisions recorded under docs/decisions with index updates.
 - Baseline guard and test lock report recorded under docs/audits/baseline_lock_report.md with index updates.
+- Phase 2 Step 10 bootstrap plan and report scaffolding under docs/audits with routing/api client alignment notes for health/meta-only scope.
 
 ### Changed
 - Implementation readiness audit refocused on sealed Step 3 decisions with bootstrap prerequisites and risk signals, and roadmap next steps now call out the decision dependency before metier implementation.
@@ -25,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Standardized governance sections across agents/*.md to enforce precedence, step mode, contract gating, self-audit, stop conditions, and references.
 - Phase 2 Step 10 Iteration 1 - Align health/readiness endpoint contract (docs only) with canonical non-versioned /health/live and /health/ready, optional /api/v1/health compatibility alias, roadmap alignment, and implementation readiness blocker removal.
 - Phase 2 Step 10 Iteration 2 bootstrap - Implemented non-versioned health router with readiness compatibility alias, enforced configuration precedence with local-safe defaults and .env example, and ensured request/correlation IDs surface on operational probes with supporting tests and roadmap alignment.
+- Backend v1 router limited to health/meta during bootstrap, settings precedence tightened for .env.local overrides, frontend routing/API client shell refreshed with placeholder pages only, and CI updated to include frontend lint/build/test coverage alongside guards and backend checks.
 
 ## [2026-01-12] - Phase 2 Step 17 Rate Limiting and Quotas
 
