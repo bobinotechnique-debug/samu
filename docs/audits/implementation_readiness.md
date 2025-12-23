@@ -1,7 +1,7 @@
 # Implementation Readiness Audit
 
 ## Date
-2025-12-24
+2025-12-23
 
 ## Overall status
 READY_PENDING_BOOTSTRAP
@@ -23,3 +23,39 @@ READY_PENDING_BOOTSTRAP
 - Guard or CI failures.
 - Missing index updates for touched documentation.
 - Ambiguity on roadmap step linkage or non-ASCII outputs.
+
+## Phase 2 Bootstrap Implementation
+
+### Sealed inputs
+- AGENT.md (root) and agents/* governance.
+- Phase 2 routing and architecture specs: docs/specs/10_api_conventions.md, docs/specs/11_api_error_model.md, docs/specs/12_api_versioning.md, docs/specs/20_architecture_HLD.md, docs/specs/21_architecture_LLD.md, docs/ux/20_frontend_architecture.md.
+- Roadmap anchor: docs/roadmap/phase2/step-10-implementation-bootstrap.md with health/live-ready alignment notes.
+- Existing CI workflows and guard scripts under tools/guards/.
+
+### Missing items
+- None; bootstrap plan and report capture required wiring and verification coverage.
+
+### Exact next step
+- Execute Phase 2 Step 10 bootstrap implementation (skeleton only) and record outputs in docs/audits/bootstrap_implementation_plan.md and docs/audits/bootstrap_implementation_report.md.
+
+### Stop conditions
+- Any reintroduction of business routers or domain rules beyond health/meta.
+- Divergence from API versioning contract (/api/v1) or health endpoint placement (/health/live, /health/ready, compatibility alias only).
+- Guard, lint, build, or test failures without documented remediation.
+- Non-ASCII content or missing index/changelog updates.
+
+### Verification commands
+- PowerShell 7:
+  - `python .\\tools\\guards\\run_guards.py`
+  - `cd backend; poetry run pytest --maxfail=1`
+  - `cd backend; (run backend lint command if defined)`
+  - `cd frontend; npm test -- --reporter=dot`
+  - `cd frontend; npm run lint`
+  - `cd frontend; npm run build`
+- Cross-platform:
+  - `python tools/guards/run_guards.py`
+  - `cd backend && poetry run pytest --maxfail=1`
+  - `cd backend && (run backend lint command if defined)`
+  - `cd frontend && npm test -- --reporter=dot`
+  - `cd frontend && npm run lint`
+  - `cd frontend && npm run build`

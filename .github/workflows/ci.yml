@@ -40,10 +40,16 @@ jobs:
           ruff check backend --select=E9,F63,F7,F82
 
       - name: Backend tests
-        run: cd backend && pytest
+        run: cd backend && pytest --maxfail=1
 
       - name: Install frontend dependencies
         run: cd frontend && npm ci
 
+      - name: Frontend lint
+        run: cd frontend && npm run lint
+
+      - name: Frontend build
+        run: cd frontend && npm run build
+
       - name: Frontend tests
-        run: cd frontend && npm run test
+        run: cd frontend && npm run test -- --reporter=dot
