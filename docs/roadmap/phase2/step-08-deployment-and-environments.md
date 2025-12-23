@@ -8,6 +8,7 @@ Define how the system runs across environments with configuration, secrets manag
 
 ## Deliverables
 - docs/ops/20_deployment_architecture.md detailing environments, configuration strategy, secrets handling, and deployment topology.
+- docs/ops/22_local_run_flow.md documenting le chemin local/CI (migrations, seed, demarrage des services) aligne sur l architecture deploiement.
 
 ## Dependencies
 - Architecture outputs from Steps 01-07 (docs/specs/20_architecture_HLD.md through docs/ux/20_frontend_architecture.md).
