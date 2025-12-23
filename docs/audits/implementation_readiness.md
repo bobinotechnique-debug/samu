@@ -7,9 +7,9 @@
 READY_PENDING_BOOTSTRAP
 
 ## Sealed
-- docs/decisions/decision_001_contract_vs_assignment.md — authority, linkage, lifecycle ordering, locking, and forbidden states for contracts versus assignments.
-- docs/decisions/decision_002_notification_and_acceptance.md — acceptance and notification state machines with triggers, effects, audit rules, and forbidden transitions.
-- docs/decisions/decision_003_derived_vs_stored_data.md — derived versus stored classification, recomputation rules, and API exposure guidance.
+- docs/decisions/decision_001_contract_vs_assignment.md - authority, linkage, lifecycle ordering, locking, and forbidden states for contracts versus assignments.
+- docs/decisions/decision_002_notification_and_acceptance.md - acceptance and notification state machines with triggers, effects, audit rules, and forbidden transitions.
+- docs/decisions/decision_003_derived_vs_stored_data.md - derived versus stored classification, recomputation rules, and API exposure guidance.
 
 ## Missing
 - Enforcement notes for how the implementation bootstrap will honor sealed decisions across persistence, API design, and async processing.
