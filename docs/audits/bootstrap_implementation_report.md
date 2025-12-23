@@ -23,7 +23,7 @@
 ## Results
 - Backend: health/live and health/ready respond with expected payload; compatibility alias under /api/v1/health remains.
 - Frontend: AppShell renders routing shell and headings only; API client wraps versioned base path and error mapping skeleton; no network calls during tests.
-- Business endpoints remain disabled for bootstrap to honor “health/meta only” scope.
+- Business endpoints remain disabled for bootstrap to honor \"health/meta only\" scope.
 
 ## Checklist
 - Backend
