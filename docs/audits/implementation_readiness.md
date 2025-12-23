@@ -23,9 +23,3 @@ READY_PENDING_BOOTSTRAP
 - Guard or CI failures.
 - Missing index updates for touched documentation.
 - Ambiguity on roadmap step linkage or non-ASCII outputs.
-
-## Phase 2 Bootstrap Implementation
-- Sealed: Phase 1 contracts above remain authoritative; API conventions (docs/specs/10_api_conventions.md), error model (docs/specs/11_api_error_model.md), and versioning (docs/specs/12_api_versioning.md) are locked for routing and envelope wiring; Phase 2 HLD/LLD (docs/specs/20_architecture_HLD.md, docs/specs/21_architecture_LLD.md) define structure only.
-- Missing: Executable backend/frontend skeletons aligned to Phase 2 Step 10 without domain logic; smoke tests for health and app startup; CI guard coverage confirmation; bootstrap plan and report docs.
-- Next step: Execute Phase 2 Step 10 bootstrap per docs/roadmap/phase2/step-10-implementation-bootstrap.md with health-only endpoints and placeholder frontend shell routed per docs/ux/20_frontend_architecture.md.
-- Stop conditions: Any drift into business logic, missing roadmap linkage, failing guards/lint/tests, ambiguity on health endpoint contract (/health/live, /health/ready, optional /api/v1/health alias), or non-ASCII content.
