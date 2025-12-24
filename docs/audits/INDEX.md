@@ -4,6 +4,8 @@
 Track Codex self-audit reports and related coherence checks.
 
 ## Entries
+- docs/audits/documentation_coherence_audit.md - Documentation coherence audit addressing roadmap overlap, authority drift, an
+d orphaned operational guidance.
 - docs/audits/implementation_readiness.md - Phase 2 implementation readiness audit mapping roadmap steps to specs and blocking gaps.
 - docs/audits/bootstrap_implementation_plan.md - Execution plan for Phase 2 Step 10 bootstrap with scope, files, and CI coverage.
 - docs/audits/bootstrap_implementation_report.md - Implementation log for bootstrap execution, commands, and results.

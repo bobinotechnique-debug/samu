@@ -28,3 +28,4 @@ This index mirrors ux/INDEX.md and consolidates UX research, flow documentation,
 - docs/ux/pages/04_project.md - project page contract.
 - docs/ux/20_ux_surface_contracts.md - Phase 2 UX surface contracts for Planning, Mission, Collaborator, Notifications and Acceptance.
 - docs/ux/21_user_journeys.md - Phase 2 UX user journeys across Planning, Mission, Notifications, and Acceptance.
+- docs/ux/36_frontend_shell_contract.md - Frontend app shell wiring contract for Step 10 bootstrap.

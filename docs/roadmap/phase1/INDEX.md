@@ -8,7 +8,7 @@ LOCKED. Phase 1 documentation is sealed; Step 14 enforces immutability and non-r
 - docs/roadmap/phase1/step-01-foundational-domain.md - Phase 1 Step 01: foundational domain baselines (Status: Done).
 - docs/roadmap/phase1/step-02.md - Phase 1 Step 02: architecture guardrails, contracts, and failure patterns (Status: Done).
 - docs/roadmap/phase1/step-03.md - Phase 1 Step 03: data ownership, RBAC, and audit rules (Status: Done).
-- docs/roadmap/phase1/step-04.md - Phase 1 Step 04: API and integration conventions (Status: In progress).
+- docs/roadmap/phase1/step-04.md - Phase 1 Step 04: API and integration conventions (Status: Done; sealed under Phase 1 lock).
 - docs/roadmap/phase1/step-05.md - Phase 1 Step 05: UX visual language and view specifications (Status: Done).
 - docs/roadmap/phase1/step-06.md - Phase 1 Step 06: UI component contracts (Status: Done).
 - docs/roadmap/phase1/step-07.md - Phase 1 Step 07: UI page contracts (Status: Done).

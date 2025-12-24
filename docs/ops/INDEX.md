@@ -7,9 +7,9 @@ This index governs operational records, including guard behaviors and error logs
 ## Files
 - docs/ops/agent_errors.md - mandatory failure memory log.
 - docs/ops/20_deployment_architecture.md - Phase 2 deployment and environment architecture (local, CI, staging, production).
-- docs/ops/21_observability.md - Phase 2 observability baseline (logging, metrics, tracing, health checks, alerting, runbooks) with canonical non-versioned /health/live and /health/ready contracts.
-- docs/ops/21_observability_and_logging.md - Phase 2 Step 14 authoritative observability, structured logging, correlation, and audit hook contract.
-- docs/ops/22_local_run_flow.md - Local vertical slice run flow with migrations, seed, and service startup commands.
+- docs/ops/21_observability.md - Phase 2 Step 09 operations baseline (metrics, tracing, log shipping, health checks, alerting, dashboards, runbooks) with canonical non-versioned /health/live and /health/ready contracts; defers structured logging schema to Step 14.
+- docs/ops/21_observability_and_logging.md - Phase 2 Step 14 authoritative structured logging, correlation, and audit hook contract; excludes metrics/tracing/runbooks covered by Step 09.
+- docs/ops/22_local_run_flow.md - Phase 2 Step 11 vertical slice run flow with migrations, seed, and service startup commands; referenced by roadmap Step 11 deliverables.
 - docker-compose.yml - local/dev service wiring for api, worker, db, cache, and frontend aligned to deployment architecture.
 
 ## Rules

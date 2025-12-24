@@ -6,8 +6,13 @@ Starting.
 ## Purpose
 Establish the observability and operations baseline (logging, metrics, tracing, health checks, minimal alerting, and runbooks) for services, workers, and jobs while honoring Phase 1 security/audit rules and Phase 2 async/deployment decisions.
 
+## Scope
+- Included: shared observability platform (metrics, traces, and log shipping), canonical health/readiness endpoints, alert thresholds, ops dashboards, and runbooks published in docs/ops/21_observability.md.
+- Excluded: application logging schema, audit logging hooks, and correlation rules (owned by Phase 2 Step 14 observability/logging).
+- Deliverable authority: docs/ops/21_observability.md is the canonical output for this step; docs/ops/21_observability_and_logging.md is referenced only as a downstream dependency for application logging rules.
+
 ## Deliverables
-- docs/ops/21_observability.md: JSON logging contract, correlation propagation, metrics/tracing expectations, health endpoints, alerting triggers, and runbooks.
+- docs/ops/21_observability.md: observability platform baseline covering metrics/tracing/health endpoints, log shipping plumbing, alert triggers, dashboards, and runbooks; defers structured logging schema to Step 14.
 - Updated indexes to surface the observability baseline in operations and roadmap navigation.
 
 ## Dependencies

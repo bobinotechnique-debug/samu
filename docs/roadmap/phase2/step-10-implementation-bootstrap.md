@@ -12,6 +12,12 @@ Create runnable scaffolding for backend, frontend, and ops surfaces without addi
 - Docker Compose baseline for api, worker, db, cache, and frontend.
 - Tests for app startup, health probes, and error envelope.
 
+## Deliverables
+- docs/specs/36_bootstrap_backend_wiring_contract.md - backend bootstrap wiring contract for health endpoints, middleware, settings precedence, and adapter stubs.
+- docs/ux/36_frontend_shell_contract.md - frontend shell wiring contract for routing, API client wrapper, and environment handling.
+- docs/specs/37_smoke_test_contract.md - smoke test contract covering backend, frontend, and ops bootstrap surfaces.
+- Index updates in docs/specs/INDEX.md and docs/ux/INDEX.md reflecting the new contracts.
+
 ## Status
 In progress.
 
