@@ -22,6 +22,7 @@ Deliver the first end-to-end slice with persistent auth, strict organization con
 - Persistence tables with alembic migration for users, organizations, memberships, and auth tokens.
 - Seed script for local/dev tokens, user, orgs, and memberships.
 - Frontend thin client to store a token, select org context, list orgs, and list memberships.
+- Operational run flow documented at docs/ops/22_local_run_flow.md covering migrations, seed paths, and service startup for the slice.
 
 ## Acceptance
 

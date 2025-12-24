@@ -4,6 +4,8 @@
 - Baseline observability contract aligned to Phase 1 audit/ownership rules and Phase 2 async/jobs/deployment decisions.
 - Compatible with Windows-first tooling, Docker Compose environments, and GitHub Actions runners.
 - No business-logic changes; only operational instrumentation requirements.
+- Structured logging schema and audit hook ownership live in docs/ops/21_observability_and_logging.md (Phase 2 Step 14); this
+  file focuses on platform instrumentation, health endpoints, and runbooks.
 
 ## Structured logging
 - **Format:** JSON lines with mandatory fields: `timestamp` (UTC ISO8601), `level`, `message`, `service`, `environment`, `org_id`, `project_id` (when available), `request_id` (per inbound HTTP request), `correlation_id` (cross-hop), `span_id` and `trace_id` (when tracing is on), `user_id` (when authenticated), `ip`, `route`, `duration_ms` (for requests/jobs), `outcome` (`success` | `error` | `retry`), and `source` (`api` | `job` | `frontend` | `worker`).

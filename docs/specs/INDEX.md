@@ -54,12 +54,14 @@ This index mirrors the authoritative specs/INDEX.md and is maintained by the Doc
 - docs/specs/25_rate_limiting_and_quotas.md - Organization-first rate limiting and quota strategy with enforcement placement, headers, and failure behavior for Phase 2 Step 17.
 - docs/specs/25_consistency_and_idempotency.md - Consistency model for writes, idempotency contracts for sync and async flows, retry safety, concurrency conflict handling, and audit/trace propagation for Phase 2 Step 20.
 - docs/specs/26_feature_flags.md - Feature flag and configuration toggle scaffolding, precedence, naming, storage, and logging guidance for Phase 2 Step 16.
-- docs/specs/26_rate_limiting_and_abuse_protection.md - Rate limiting scopes, throttling rules, headers, and abuse protection expectations for Phase 2 Step 15.
+- docs/specs/26_rate_limiting_and_abuse_protection.md - Rate limiting scopes, throttling rules, headers, and abuse protection expectations for Phase 2 Step 17 (baseline dependency for Step 15 resilience behaviors).
 - docs/specs/26_resilience_and_circuit_breakers.md - Circuit breaker, retry, timeout, and resilience policies to prevent cascading failures for Phase 2 Step 18.
 - docs/specs/26_caching_strategy.md - Caching strategy, key format, TTL rules, invalidation, observability, and safety constraints for Phase 2 Step 19.
 - docs/specs/33_assignment_engagement_states.md - Assignment engagement state machine, transitions, invariants, and audit rules for Phase 2 Step 21.
 - docs/specs/34_notifications_and_acceptance.md - Notification model, payload contract, acceptance flow, and forbidden patterns for Phase 2 Step 21.
 - docs/specs/35_contract_generation_pipeline.md - Event-driven contract generation pipeline with idempotency, auditability, and alerting for Phase 2 Step 21.
+- docs/specs/36_bootstrap_backend_wiring_contract.md - Backend bootstrap wiring contract for health endpoints, middleware, settings precedence, and adapter stubs (Phase 2 Step 10).
+- docs/specs/37_smoke_test_contract.md - Smoke test expectations for bootstrap surfaces across backend, frontend, and ops (Phase 2 Step 10).
 
 ### Decisions and ADRs
 - docs/specs/adr_assignment_first_contract_derived.md - Decision record establishing assignment-first costing/audit with contracts as derived aggregates and gated issuance.

@@ -8,7 +8,8 @@ Document an organization-first rate limiting and quota strategy for the API that
 
 ## Deliverables
 - docs/specs/25_rate_limiting_and_quotas.md capturing goals, non-goals, threat model, limiting dimensions, quota vs burst distinctions, Redis keying strategy, enforcement placement, headers/error mapping, audit/log interactions, and failure/fallback behavior.
-- Index updates registering the specification under Phase 2 artifacts.
+- docs/specs/26_rate_limiting_and_abuse_protection.md establishing baseline abuse protection, throttling headers, and response shapes; migrated here from Step 15 to consolidate rate limiting ownership.
+- Index updates registering the specifications under Phase 2 artifacts.
 - Roadmap status reflecting completion of the documentation-first scope for Step 17.
 
 ## Dependencies
